@@ -1,14 +1,13 @@
 .col-md-9 {
   text-align: justify;
-
 }
-div #toc-collapse a{
-  color: red;
-  font-size: 1rem;
 
+div #toc-collapse a{
+  color: black;
+  font-size: 1rem;
 }
 
 h1 {
-  color: red;
-  font-size: 2rem;
+  color: black;
+  font-size: 1.5rem;
 }
