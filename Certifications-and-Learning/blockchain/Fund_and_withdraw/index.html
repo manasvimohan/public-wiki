@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Fund and Withdraw - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#fund-and-withdraw" class="nav-link">Fund and Withdraw</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#simply-speaking" class="nav-link">Simply speaking</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#example-code" class="nav-link">Example code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="fund-and-withdraw">Fund and Withdraw</h1>
+<p>https://youtu.be/gyMwXuJrbJQ?t=12859</p>
+<p>How to send token, store token and get token out from the contract</p>
+<p>msg.sender &lt;-- Contract address of the person interacting with the contract
+msg.value  &lt;-- Value of token being sent by the msg.sender</p>
+<h2 id="simply-speaking">Simply speaking</h2>
+<h3 id="fund">Fund</h3>
+<p>require(msg.value); in a function will fund the contract with specified amount of Token</p>
+<h3 id="withdraw">Withdraw</h3>
+<h4 id="using-transfer">Using transfer</h4>
+<p>payable(msg.sender).transfer(address(this).balance);</p>
+<p>Has gas limit of 2300, throws error and auto revert.</p>
+<h4 id="using-send">Using send</h4>
+<p>bool sendSuccess = payable(msg.sender).send(address(this).balance);
+require(sendSuccess, "Send Fail");</p>
+<p>Has gas limit of 2300, throws error if bool false and revert</p>
+<h4 id="using-call">Using call</h4>
+<p>This is a general function in solidity to call anyfunction without an abi. Hence withdraw can also be called using this.</p>
+<p>Format is (bool, bytes) = address.call{value: anyFunction() }("");</p>
+<p>Example for withdraw:
+(bool callSuccess, bytes memory dataReturned) = payable(msg.sender).call{value: address(this).balance}("");
+require(callSuccess, "Call Failed")</p>
+<h2 id="example-code">Example code</h2>
+<pre><code class="language-solidity">contract FundMe{
+
+    // Since only the contract deployer should be able to withdraw funds, we do the following
+    address public owner;
+
+    constructor(){
+        owner = msg.sender;
+    }
+
+    // Ideally modifiers should go to the end of the code
+    modifier onlyOwner {
+        require(msg.sender == owner,  &quot;Sender is not owner!&quot;);
+    }
+    // First we create an array to store people who fund the contract
+    // then a mapping to see who funded this contract with how much, we create a mapping
+    // address to uint256 means that when we search, we search by address
+    // if you wanted to search using amount, it would be uint256 =&gt; address
+    // and the necessary change in the code
+    // Lastly we define the function and update our array
+
+    address[] public funders;
+    mapping(address =&gt; uint256) public addressToAmountFunded;
+
+    function fund() public payable {
+        require(msg.value &gt; 1e18, &quot;Not enough ETH&quot;); // 1e18 is 1 Eth
+        funders.push(msg.sender);
+        addressToAmountFunded[msg.sender] = msg.value;
+    }
+
+    function withdraw() public onlyOwner { // Modifier added here
+        // Here we loop and set all the funder amount to 0
+        // Since we are planning to withdraw all eth
+        // and essentially amount for each funder will go to zero
+        for(uint256 funderIndex=0; funderIndex &lt; funders.length; funderIndex++){
+            address funder = funders[funderIndex];
+            addressToAmountFunded[funder] = 0;
+        }
+
+        // Reset the funders array
+        funders = new address[](0);
+
+        // Finally we withdraw using call. We can use transfer or send too.
+        (bool callSuccess, bytes memory dataReturned) = payable(msg.sender).call{value: address(this).balance}(&quot;&quot;);
+        require(callSuccess, &quot;Call Failed&quot;)
+    }
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

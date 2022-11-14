@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#silverblue-essentials" class="nav-link">Silverblue essentials</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#java" class="nav-link">Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-and-github" class="nav-link">Git and Github</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#screenkey" class="nav-link">Screenkey</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#terminal-setup" class="nav-link">Terminal Setup</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ranger" class="nav-link">Ranger</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#scripts-in-fish" class="nav-link">Scripts in Fish</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#neovim-and-vimviki-and-plug" class="nav-link">Neovim and vimviki and plug</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tor-setup-in-linux" class="nav-link">Tor setup in linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#upload-to-google-drive-from-terminal" class="nav-link">Upload to google drive from terminal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#python" class="nav-link">Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#nodejs-issue" class="nav-link">NodeJS issue</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#installation_1" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installing-different-versions" class="nav-link">Installing different versions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#running-different-versions" class="nav-link">Running different versions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#check-node-versions-installed-on-os" class="nav-link">Check node versions installed on os</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#setting-alias" class="nav-link">Setting Alias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#single-line-commenting-in-various-file-formats" class="nav-link">Single line Commenting in various file formats</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#install-any-website-as-app-onlinux-using-epiphany-browser-like-notion-whatsapp-etc" class="nav-link">Install any website as app on,linux using epiphany browser, like notion whatsapp etc</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#terminal-based-web-explorer" class="nav-link">Terminal based web explorer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#running-custom-scripts-in-nautilus-file-explorer-linux" class="nav-link">Running custom scripts in nautilus file explorer linux</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fedora-filemanager-is-nautilus-and-terminal-is-gnome-terminal-use-them-for-shortcuts" class="nav-link">Fedora filemanager is nautilus and terminal is gnome-terminal ...... use them for shortcuts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#cool-linux-effects" class="nav-link">Cool linux effects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fun" class="nav-link">Fun</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#containers-with-distrobox" class="nav-link">Containers with Distrobox</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#distrobox" class="nav-link">Distrobox</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#podman" class="nav-link">Podman</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#toolbox" class="nav-link">Toolbox</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#terminal-launching-different-containters" class="nav-link">Terminal launching different containters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Silverblue essentials">Silverblue essentials</a><ul>
+<li><a href="#Silverblue essentials#Git and Github">Git and Github</a><ul>
+<li><a href="#Silverblue essentials#Git and Github#Using gh which is Github CLI">Using gh which is Github CLI</a><ul>
+<li><a href="#Silverblue essentials#Git and Github#Using gh which is Github CLI#Repo creation cloning and forking">Repo creation cloning and forking</a></li>
+<li><a href="#Silverblue essentials#Git and Github#Using gh which is Github CLI#Github GIST">Github GIST</a></li>
+<li><a href="#Silverblue essentials#Git and Github#Using gh which is Github CLI#Issues">Issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Silverblue essentials#Screenkey">Screenkey</a></li>
+</ul>
+</li>
+<li><a href="#Terminal Setup">Terminal Setup</a><ul>
+<li><a href="#Terminal Setup#Ranger">Ranger</a><ul>
+<li><a href="#Terminal Setup#Ranger#Change default text editor">Change default text editor</a></li>
+<li><a href="#Terminal Setup#Ranger#Ranger Commands">Ranger Commands</a></li>
+<li><a href="#Terminal Setup#Ranger#Configuring terminal with fish">Configuring terminal with fish</a></li>
+</ul>
+</li>
+<li><a href="#Terminal Setup#Scripts in Fish">Scripts in Fish</a><ul>
+<li><a href="#Terminal Setup#Scripts in Fish#Issues">Issues</a></li>
+<li><a href="#Terminal Setup#Scripts in Fish#Aliases in fish">Aliases in fish</a></li>
+<li><a href="#Terminal Setup#Scripts in Fish#Links">Links</a></li>
+<li><a href="#Terminal Setup#Scripts in Fish#Installation">Installation</a></li>
+</ul>
+</li>
+<li><a href="#Terminal Setup#Neovim and vimviki and plug">Neovim and vimviki and plug</a></li>
+<li><a href="#Terminal Setup#Tmux split screen and session management">Tmux split screen and session management</a><ul>
+<li><a href="#Terminal Setup#Tmux split screen and session management#Configigure FISH in tmux">Configigure FISH in tmux</a></li>
+<li><a href="#Terminal Setup#Tmux split screen and session management#Tmux commands">Tmux commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Tor setup in linux">Tor setup in linux</a></li>
+<li><a href="#Upload to google drive from terminal">Upload to google drive from terminal</a></li>
+<li><a href="#Python">Python</a></li>
+<li><a href="#NodeJS issue">NodeJS issue</a><ul>
+<li><a href="#NodeJS issue#Installation">Installation</a></li>
+<li><a href="#NodeJS issue#Installing different versions">Installing different versions</a></li>
+<li><a href="#NodeJS issue#Running different versions">Running different versions</a></li>
+<li><a href="#NodeJS issue#Check node versions installed on os">Check node versions installed on os</a></li>
+<li><a href="#NodeJS issue#Setting Alias">Setting Alias</a></li>
+<li><a href="#NodeJS issue#Single line Commenting in various file formats">Single line Commenting in various file formats</a></li>
+</ul>
+</li>
+<li><a href="#Install any website as app on,linux using epiphany browser, like notion whatsapp etc">Install any website as app on,linux using epiphany browser, like notion whatsapp etc</a></li>
+<li><a href="#Terminal based web explorer">Terminal based web explorer</a></li>
+<li><a href="#Running custom scripts in nautilus file explorer linux">Running custom scripts in nautilus file explorer linux</a></li>
+<li><a href="#Fedora filemanager is nautilus and terminal is gnome-terminal ...... use them for shortcuts">Fedora filemanager is nautilus and terminal is gnome-terminal ...... use them for shortcuts</a></li>
+<li><a href="#Cool linux effects">Cool linux effects</a></li>
+<li><a href="#Fun">Fun</a></li>
+<li><a href="#Containers with Distrobox">Containers with Distrobox</a><ul>
+<li><a href="#Containers with Distrobox#Distrobox">Distrobox</a><ul>
+<li><a href="#Containers with Distrobox#Distrobox#Basic usage">Basic usage</a></li>
+</ul>
+</li>
+<li><a href="#Containers with Distrobox#Podman">Podman</a></li>
+<li><a href="#Containers with Distrobox#Toolbox">Toolbox</a><ul>
+<li><a href="#Containers with Distrobox#Toolbox#If you wish to make a container from a docker image">If you wish to make a container from a docker image</a></li>
+</ul>
+</li>
+<li><a href="#Containers with Distrobox#Terminal launching different containters">Terminal launching different containters</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="silverblue-essentials">Silverblue essentials</h1>
+<p><a href="https://github.com/containers/podman/issues/13396">podman podman-compose issue in fedora silverblue 36 issue. Below solves it</a>
+rpm-ostree install containernetworking-plugins # Necceary for podman and podman-compose to work properly in version 36 of silverblue fedora</p>
+<p><a href="https://docs.fedoraproject.org/en-US/fedora-silverblue/_attachments/silverblue-cheatsheet.pdf">CheatSheet for Silverblue</a></p>
+<p>rpm-ostree install git wget curl fish tmux fzf gh htop neofetch neovim powerline-fonts
+rpm-ostree install screenkey scrot sox terminator kitty tor xclip</p>
+<p>To prevent issues with python, install below
+rpm-ostree install python3-devel python3-tkinter
+rpm-ostree install go clojure rust cargo</p>
+<p><a href="https://tauri.app/v1/guides/getting-started/prerequisites/">Link for Tauri Pre-Requisites</a>
+rpm-ostree install dbus-devel openssl-devel glib2-devel # This is needed by tauri app development for RUST backend</p>
+<p>rpm-ostree install git wget curl yum ruby ruby-devel
+pip install ranger-fm # To install terminal based file explorer --&gt; https://www.linuxfordevices.com/tutorials/linux/ranger-file-manager
+echo "set preview_images true" &gt;&gt; ~/.config/ranger/rc.conf
+echo "set preview_images false" &gt;&gt; ~/.config/ranger/rc.conf
+--&gt; The above makes viewing images in ranger --&gt; https://www.baeldung.com/linux/view-images-from-terminal</p>
+<p>npm install --global yarn
+rpm-ostree install yum</p>
+<h2 id="java">Java</h2>
+<p>JDK - https://docs.fedoraproject.org/en-US/quick-docs/installing-java/
+SE  - https://www.oracle.com/java/technologies/downloads/</p>
+<p>dnf search openjdk
+sudo dnf install java-latest-openjdk-devel.x86_64</p>
+<p>Intellij Editor
+Instruction - https://www.jetbrains.com/help/idea/installation-guide.html#67c5a40d
+Download - https://www.jetbrains.com/idea/download/#section=linux</p>
+<h2 id="git-and-github">Git and Github</h2>
+<ol>
+<li>ssh-keygen -t rsa -b 4096 -C "manasvimsharma@email.com"</li>
+<li>ssh-add ~/.ssh/id_rsa</li>
+<li>cat ~/.ssh/id_rsa.pub</li>
+<li>Now go to github.com &gt; settings &gt; SSH and GPG Keys &gt; New SSH Key &gt; paste point 3 output into "Key" section.</li>
+<li>Create a new repositor:<ol>
+<li>You will get an SSH link to repo similar to -&gt; git@github.com:YOUR-USERNAME/YOUR-REPO-NAME.git </li>
+</ol>
+</li>
+<li>Adding Project to the created repository:<ol>
+<li>Make a folder and create any project there</li>
+<li>cd into the project folder</li>
+<li>git init</li>
+<li>git add .</li>
+<li>git commit -m "first commit"</li>
+<li>git branch -M master</li>
+<li>Ensure remote --&gt; git remote show origin</li>
+<li>git remote add origin git@github.com:YOUR-USERNAME/YOUR-REPO-NAME.git</li>
+<li>git push -u origin master</li>
+</ol>
+</li>
+</ol>
+<p>All done setting up github and repo</p>
+<h3 id="using-gh-which-is-github-cli">Using gh which is Github CLI</h3>
+<p>https://www.youtube.com/watch?v=BRAG1Kj4-Ss&amp;t=628s
+https://cli.github.com/manual/</p>
+<p>type gh and read the help page and man page</p>
+<h4 id="repo-creation-cloning-and-forking">Repo creation cloning and forking</h4>
+<ol>
+<li>LogIN            --&gt; gh auth login</li>
+<li>Check protocol   --&gt; gh config get git_protocol</li>
+<li>Set protocol     --&gt; gh config set git_protocol ssh</li>
+<li>Set editor       --&gt; gh config set editor "nvim --wait"</li>
+<li>Check editor     --&gt; gh config get editor</li>
+<li>Create Repo      --&gt; gh repo create<ol>
+<li>You can create a brand new one and follow instructions</li>
+<li>You can add the current git init folder as well</li>
+</ol>
+</li>
+<li>Clone a repo     --&gt; gh repo clone expressjs/express &lt;-- This clones but set origin to the original owner</li>
+<li>Update the origin --&gt; gh repo-fork &lt;-- after you cd into clonned repo, Now the clone is in our repo</li>
+<li>Fork a repo      --&gt; gh repo fork expressjs/express &lt;-- Now this way you have your copy. DO THIS ALWAYS!!</li>
+</ol>
+<h4 id="github-gist">Github GIST</h4>
+<ol>
+<li>gh gist create <filename> --public</li>
+<li>gh gist create <filename></li>
+<li>gh gist create -      &lt;--- Wrtie anything in command line and then ctrl-t to submit gist (not working for me in fish, cant stop it)</li>
+<li>gh gist list/edit/delete etc etc</li>
+</ol>
+<h4 id="issues">Issues</h4>
+<ol>
+<li>gh issue create</li>
+</ol>
+<h2 id="screenkey">Screenkey</h2>
+<p>rpm-ostree install screenkey</p>
+<p>screenkey --show-settings
+pkill -9 screenkey   # Stop it
+screenkey            # Start it. Or start from apps drawer</p>
+<h1 id="terminal-setup">Terminal Setup</h1>
+<p>In Silverblue --&gt;
+At top level we have host and container (toolbox distrobox podman) terminals.
+Each Container has its own terminal.
+Now we can use terminal emulators like kitty terminator, on default shell.
+We can then use default shell, or install fish.
+Then we have tmux for terminal session and window management.
+In the tmux.config, we need to tell which default shell to use. So that tmux starts in that, like fish or bash/shell.</p>
+<p>So how it all binds up:
+1. We make a toolbox/ distrobox
+2. We install a base shell like fish OR just go with an emulator like kitty.
+3. Then we install tmux, ranger etc.
+4. Now in tmux.config, we tell that which shell to use, fish or shell.</p>
+<h2 id="ranger">Ranger</h2>
+<p>Link --&gt; https://unix.stackexchange.com/questions/367452/how-to-change-the-default-text-editor-in-ranger</p>
+<p>pip install ranger-fm
+Get all ranger config files --&gt; ranger --copy-config=all</p>
+<h3 id="change-default-text-editor">Change default text editor</h3>
+<p>Open nvim rifle.conf # Get location from above command
+Replace in 2 lines, $EDITOR with nvim or vim or gedit --&gt; 
+label editor = $EDITOR -- "$@" with 
+label editor, ext xml|json|csv|tex|py|pl|rb|js|sh|php = $EDITOR -- "$@"
+Above we set nvim as editor, can select vim or gedit</p>
+<h3 id="ranger-commands">Ranger Commands</h3>
+<p>LINK -&gt; https://manpages.org/ranger
+s &lt;-- open shell in the current folder
+q &lt;-- close/ exit ranger
+yy &lt;-- copy selection
+dd &lt;-- cut selection
+pp &lt;-- paste into the selection
+.d &lt;-- Filter only directories
+.f &lt;-- Filter only files
+.c &lt;-- Remove filters
+z then z &lt;-- Filter by text search</p>
+<p>Running Shell --&gt; s and then tmux, opens tmux in selection
+Sorting Files --&gt; press o and the choose from list. Choose mtime with m, this shows latest edited on the top.
+Hidden Files  --&gt; press z and then choose h option</p>
+<h3 id="configuring-terminal-with-fish">Configuring terminal with fish</h3>
+<p>nvm does not work in fish, hence use fnm</p>
+<p>NOTE --&gt; in fish, to activate python venv use "source venv/bin/activate.fish" instead of "source venv/bin/activate" </p>
+<h2 id="scripts-in-fish">Scripts in Fish</h2>
+<p>To run Fish Scripts add #!/bin/fish on top instead of #!/bin/bash</p>
+<p>OR use fish myscript.sh instead of bash myscript.sh</p>
+<p>In bash we use var="something"
+In fish we use set var "something"</p>
+<h3 id="issues_1">Issues</h3>
+<p>nvm does not work --&gt; https://askubuntu.com/questions/989605/command-not-found-when-using-nvm-in-fish-shell
+Use fnm --&gt; https://github.com/jorgebucaran/nvm.fish</p>
+<p>fisher install jorgebucaran/nvm.fish</p>
+<h3 id="aliases-in-fish">Aliases in fish</h3>
+<p>LINK - https://stackoverflow.com/questions/2762994/define-an-alias-in-fish-shell</p>
+<p>To make long commands short, we can define aliases</p>
+<p>open --&gt; nvim /var/home/silver/.config/fish/config.fish</p>
+<pre><code class="language-bash"># this is config.fish file
+
+alias n=&quot;nvim&quot;
+alias lll=&quot;ls -lrt&quot;
+alias qq=&quot;flatpak run com.notepadqq.Notepadqq&quot;
+alias code=&quot;flatpak run com.visualstudio.code&quot;
+alias n=&quot;nvim&quot;                                      # Opens nvim
+alias nn=&quot;fzf -m | xargs -I{} nvim {}&quot;              # Search and open file or files
+alias nnn=&quot;n -o (fzf -m)&quot;                           # Open all files at once
+alias cdd=&quot;cd (find . -type d -print | fzf)&quot;        # Search and open folder
+
+
+Below are not needed, I wonder why I used them...??...
+funcsave n
+funcsave lll
+funcsave qq
+funcsave code
+</code></pre>
+<p>Now instead of using nvim, you can use n
+Or instead of using ls -lrt, you can use lll</p>
+<h3 id="links">Links</h3>
+<p>Main link - https://github.com/craftzdog/dotfiles-public
+https://github.com/jorgebucaran/fisher
+https://github.com/IlanCosman/tide</p>
+<p>https://fedoramagazine.org/tuning-your-bash-or-zsh-shell-in-workstation-and-silverblue/    &lt;--- Check it out more
+https://fedoramagazine.org/fish-a-friendly-interactive-shell/</p>
+<h3 id="installation">Installation</h3>
+<p>rpm-ostree install fish</p>
+<p>fish # This will run fish shell
+fisher install jorgebucaran/nvm.fish &lt;--- For NVM</p>
+<p>curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source &amp;&amp; fisher install jorgebucaran/fisher</p>
+<p>fisher list
+fisher install ilancosman/tide@v5
+tide configure</p>
+<p>// Finally in the terminal, in the run command instead of shell, enter fish</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Make fish even more powerful
+curl -L https://get.oh-my.fish | fish
+rpm-ostree install powerline-fonts fontawesome-fonts
+omf install bobthefish</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>// Some more omf installations to consider 
+Link -&gt; https://www.milanvit.net/post/my-ultimate-shell-setup-with-fish-shell-and-tmux/
+omf install bobthefish # Theme
+omf install aws        # AWS integration &amp; command completion
+omf install bass       # Allows running heavily Bash-dependant utilities, like nvm
+omf install brew       # Integrate Homebrew paths
+omf install colored-man-pages
+omf install export     # Bring back Bash-like export command
+omf install https://github.com/jhillyerd/plugin-git
+omf install osx        # Finder/macOS integration and utilities
+omf install wifi-password
+omf install z          # Autojump implementation</p>
+<p>Install Nerd Fonts</p>
+<p>git clone --depth=1 https://github.com/ryanoasis/nerd-fonts ~/.nerd-fonts
+cd .nerd-fonts 
+sudo ./install.sh</p>
+<h2 id="neovim-and-vimviki-and-plug">Neovim and vimviki and plug</h2>
+<p>rpm-ostree install neovim
+mkdir -p .config/nvim/
+cd .config/nvim/        # --&gt; this is actually in /var/home/silver/.config/nvim/
+nvim .config/nvim/init.vim</p>
+<p>``` .config/nvim/init.vim
+set nocompatible
+filetype plugin on
+syntax on</p>
+<p>call plug#begin()</p>
+<p>Plug 'vimwiki/vimwiki'</p>
+<p>call plug#end()</p>
+<p>let g:vimwiki_list = [{'path': '/path/to/my/wiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]</p>
+<pre><code>
+:PlugInstall     &lt;--- Run this in vim command to install vimviki
+
+Links:
+https://sudoedit.com/install-vimwiki-neovim/
+https://github.com/junegunn/vim-plug#unix-linux
+
+Might be useful --&gt; https://dev.to/psiho/vimwiki-how-to-automate-wikis-per-project-folder-neovim-3k72
+https://medium.com/weekly-webtips/vim-neovim-silverlight-ctags-make-up-an-awesome-editor-49f3980b575d
+https://github.com/chipsenkbeil/vimwiki.nvim
+
+## Tmux split screen and session management
+LINK - https://fedoramagazine.org/use-tmux-more-powerful-terminal/
+rpm-ostree install tmux
+
+### Configigure FISH in tmux
+find fish path --&gt; which fish or command -s fish
+touch ~/.tmux.conf
+
+```.tmux.conf
+set-option -g default-shell /usr/bin/fish
+set-option -g default-command /usr/bin/fish
+</code></pre>
+<p>The above will run fish inside tmux!</p>
+<p>To run tmux automatically on fish shell refer this link --&gt; https://medium.com/@HazuliFidastian/run-tmux-automatically-on-fish-shell-2b62622661c7</p>
+<h3 id="tmux-commands">Tmux commands</h3>
+<p>Cheat sheet --&gt; https://www.makeuseof.com/tag/cheat-sheet-tmux-commands-cheat-sheet/</p>
+<p>Create and start a session called base
+tmux new-session -d -s base
+tmux attach-session -d -t base</p>
+<p>List sessions
+tmux list-sessions</p>
+<p>Scroll in tmux         --&gt; Ctrl+b, [ and then use arrow key. Once done, press q
+Show Time              --&gt; Ctrl+b, t</p>
+<p>Horizontal split       --&gt; Ctrl+b, “ 
+Vertical split         --&gt; Ctrl+b, %
+Move in splits         --&gt; Ctrl+b, arrow
+Move by number         --&gt; Ctrl+b, q        # Now you will see numbers on each split for 1 sec, type in the number to go to it</p>
+<p>Create new window      --&gt; Ctrl+b, c
+Go to previous window  --&gt; Ctrl+b, p
+Go to next window      --&gt; Ctrl+b, n
+Go directly to window  --&gt; Ctrl+b, (0-9 number)</p>
+<p>Detach from session    --&gt; Ctrl+b, d
+List Sessions          --&gt; tmux list-sessions # This is once we detach
+Attach a session       --&gt; tmux attach-session -t (session number or name)
+Kill all sessions      --&gt; tmux kill-session -a</p>
+<p>Example Workflow:
+1. Create multiple sessions
+    tmux new-session -d -s work
+    tmux new-session -d -s personal
+    tmux new-session -d -s wiki
+2. tmux attach-session -t work
+    make splits, windows, setup etc then press Ctrl+b, d to detach
+3. tmux attach-session -t personal
+    Again do whatever and then then press Ctrl+b, d to detach</p>
+<ol>
+<li>List Sessions</li>
+<li>Kill Specific sessions --&gt; tmux kill-session -t work</li>
+<li>Kill all sessions --&gt; tmux kill-session -a</li>
+</ol>
+<h1 id="tor-setup-in-linux">Tor setup in linux</h1>
+<p>LINK - https://www.geeksforgeeks.org/how-to-setup-proxychains-in-linux-without-any-errors/</p>
+<p>service tor status 
+rpm-ostree install tor
+nano /etc/proxychains.conf</p>
+<h1 id="upload-to-google-drive-from-terminal">Upload to google drive from terminal</h1>
+<p>LINK - https://towardsdatascience.com/uploading-files-to-google-drive-directly-from-the-terminal-using-curl-2b89db28bb06</p>
+<h1 id="python">Python</h1>
+<p>install sudo dnf install python-devel
+python -m pip freeze &gt; requirements.txt
+python -m pip install -r requirements.txt</p>
+<h1 id="nodejs-issue">NodeJS issue</h1>
+<p>Some packages like truffle does not get installed on virtual container based OS or systems.
+Need to find a way to install nodejs to some custom location, where me as a user will have folder access and all global installations can be done.</p>
+<p>MAYBE USE NVM (Node Version Manager) which is similar to pyenv https://realpython.com/intro-to-pyenv/</p>
+<p>Best option is to use toolbox based container to run anything.</p>
+<p>NOTE###########TRY version v14.19.1 for truffle</p>
+<h2 id="installation_1">Installation</h2>
+<p>LINK - https://ostechnix.com/install-node-js-linux/</p>
+<p>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash</p>
+<blockquote>
+<p>Now exit and re-open terminal</p>
+</blockquote>
+<p>command -v nvm</p>
+<blockquote>
+<p>output should be --&gt; nvm</p>
+</blockquote>
+<p>nvm use --delete-prefix v17.9.0     # you might need to run</p>
+<h2 id="installing-different-versions">Installing different versions</h2>
+<p>nvm ls-remote
+nvm install node
+nvm install v16.12.0
+nvm install v14.19.1</p>
+<h2 id="running-different-versions">Running different versions</h2>
+<p>nvm use node v16.12.0
+nvm install v14.19.1
+nvm use node                        #Takes you to the latest version</p>
+<h2 id="check-node-versions-installed-on-os">Check node versions installed on os</h2>
+<p>nvm list
+node --version
+npm -v</p>
+<p>nvm uninstall <node_version></p>
+<p>npm cache clean --force</p>
+<h2 id="setting-alias">Setting Alias</h2>
+<p>nvm alias default v14.19.1
+nvm use default &lt;-- Post setting alias, you can use</p>
+<h2 id="single-line-commenting-in-various-file-formats">Single line Commenting in various file formats</h2>
+<p>css                     --&gt;   /<em> This way </em>/
+html                    --&gt;   <!-- This way -->
+js, json                --&gt;   // This way
+pytho, shell            --&gt;   # This way
+In html part in nextjs  --&gt; {/<em> This way </em>/}</p>
+<h1 id="install-any-website-as-app-onlinux-using-epiphany-browser-like-notion-whatsapp-etc">Install any website as app on,linux using epiphany browser, like notion whatsapp etc</h1>
+<p>https://www.tekbyte.net/install-notion-web-app-on-linux/
+flatpak install flathub org.gnome.Epiphany</p>
+<p>This did not work for me!!!</p>
+<p>Install &gt; google chrome
+Install &gt; https://flathub.org/apps/details/com.github.tchx84.Flatseal</p>
+<p>Now give relevent access in flatseal to google chrome (will ask for following)
+- ~/.local/share/applications
+- ~/.local/share/icons</p>
+<p>Use this link to control effects on linux &gt; https://extensions.gnome.org/local/</p>
+<h1 id="terminal-based-web-explorer">Terminal based web explorer</h1>
+<p>sudo apt-get install lynx</p>
+<blockquote>
+<p>lynx www.google.com</p>
+</blockquote>
+<p>HAVE FUN! LOL</p>
+<h1 id="running-custom-scripts-in-nautilus-file-explorer-linux">Running custom scripts in nautilus file explorer linux</h1>
+<ol>
+<li>Go to                                --&gt; cd ~/.local/share/nautilus/scripts/</li>
+<li>Make your script                     --&gt; nano helloworld.sh</li>
+<li>Make all files in folder executable  --&gt; chmod u+x $(ls)</li>
+<li>Reset Nautilus                       --&gt; nautilus -q</li>
+</ol>
+<p>In the script, at the top add: 
+python  --&gt; #!/usr/bin/env python3
+bash    --&gt; #!/bin/bash</p>
+<h1 id="fedora-filemanager-is-nautilus-and-terminal-is-gnome-terminal-use-them-for-shortcuts">Fedora filemanager is nautilus and terminal is gnome-terminal ...... use them for shortcuts</h1>
+<h1 id="cool-linux-effects">Cool linux effects</h1>
+<p>https://fostips.com/effects-make-ubuntu-fedora-shine/</p>
+<p>More edits on Fedora and Fedora SilverBlue
+https://fedoramagazine.org/how-i-customize-fedora-silverblue-and-fedora-kinoite/</p>
+<p>Make containers with toolbox
+https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/</p>
+<h1 id="fun">Fun</h1>
+<p>cal &lt;-- shows calender in terminal
+date &lt;-- shows date and time in terminal</p>
+<h1 id="containers-with-distrobox">Containers with Distrobox</h1>
+<h2 id="distrobox">Distrobox</h2>
+<p>Make containers with distrobox
+https://github.com/89luca89/distrobox
+https://github.com/89luca89/distrobox/blob/main/docs/compatibility.md#containers-distros</p>
+<p>https://fedoramagazine.org/run-distrobox-on-fedora-linux/</p>
+<p>distrobox-create --name ubuntu-20 --image ubuntu:20.04
+distrobox-create --name arch-distrobox --image archlinux:latest
+distrobox-create --name debian8-distrobox --image debian:8
+distrobox-create --name kali-distrobox --image docker.io/kalilinux/kali-rolling:latest</p>
+<p>distrobox-enter --name ubuntu-20
+distrobox-enter --name kali-distrobox</p>
+<p>NOTE - For KALI LINUX run LINK - https://www.kali.org/docs/general-use/metapackages/
+sudo apt update
+sudo apt install -y kali-linux-default</p>
+<h3 id="basic-usage">Basic usage</h3>
+<p>Create a new distrobox:
+distrobox create -n test</p>
+<p>Enter created distrobox:
+distrobox enter test</p>
+<p>Execute a command in a distrobox:
+distrobox enter test -- command-to-execute</p>
+<p>List running distroboxes:
+distrobox list</p>
+<p>Stop a running distrobox:
+distrobox stop test</p>
+<p>Remove a distrobox
+distrobox rm test</p>
+<h2 id="podman">Podman</h2>
+<p>Run an fedora image --&gt; podman run --rm -it fedora:35 bash
+Run an fedora image and mount a folder --&gt; podman run --rm -it -v ./folder_in_host/:/folder_in_host:Z fedora:35 bash</p>
+<p>pip install podman-compose # Use this to have docker compose like functionality.</p>
+<p>In fedora silverblue 35, things were ok with podman-compose; but with silverblue 36 we need to install:
+rpm-ostree install containernetworking-plugins</p>
+<h2 id="toolbox">Toolbox</h2>
+<p>toolbox create
+toolbox create --distro fedora --release f36
+toolbox enter</p>
+<p>dnf install gcc
+pip3 install wheel</p>
+<h3 id="if-you-wish-to-make-a-container-from-a-docker-image">If you wish to make a container from a docker image</h3>
+<p>toolbox create --image docker.io/ubuntu:latest</p>
+<blockquote>
+<p>Issue is that I am not able to open the terminal with this method</p>
+</blockquote>
+<h2 id="terminal-launching-different-containters">Terminal launching different containters</h2>
+<p>Open terminal preference
+add a profile and name it "something" &gt; Go into command tab &gt; tick box run a custom command instead of my shell &gt; in the customer command put "distrobox-enter --name <nameoftheimage>". Now open settings &gt; shortcuts and in the custom shortcut command type "gnome-terminal --profile=something"</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

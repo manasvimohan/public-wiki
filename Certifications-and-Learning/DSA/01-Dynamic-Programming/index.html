@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#dynamic-programming" class="nav-link">Dynamic Programming</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#very-basics" class="nav-link">Very Basics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#two-ways" class="nav-link">Two Ways</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#methodology" class="nav-link">Methodology</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#optemise-a-fibonacci-function" class="nav-link">Optemise a Fibonacci function</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#grid-traveller" class="nav-link">grid Traveller</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#brute-force" class="nav-link">brute force</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#memoize" class="nav-link">Memoize</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#find-if-given-items-in-list-adds-to-the-given-target" class="nav-link">Find if given items in list adds to the given target</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Dynamic Programming">Dynamic Programming</a></li>
+<li><a href="#Very Basics">Very Basics</a></li>
+<li><a href="#Methodology">Methodology</a></li>
+<li><a href="#Optemise a Fibonacci function">Optemise a Fibonacci function</a></li>
+<li><a href="#grid Traveller">grid Traveller</a><ul>
+<li><a href="#grid Traveller#brute force">brute force</a></li>
+<li><a href="#grid Traveller#Memoize">Memoize</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="dynamic-programming">Dynamic Programming</h1>
+<h1 id="very-basics">Very Basics</h1>
+<p>https://www.youtube.com/watch?v=oBt53YbR9Kk</p>
+<p>Very Good explanation - https://www.youtube.com/watch?v=5dRGRueKU3M</p>
+<p>Recursion is kind of the CORE to it.
+We decompose larger problem into smaller and cache result in each step (memoization).
+Or use tabulation to solve.
+Thing problems in terms of trees</p>
+<h1 id="two-ways">Two Ways</h1>
+<p>Memoization - Store values
+Tabulation -  Make tables out</p>
+<h1 id="methodology">Methodology</h1>
+<ol>
+<li>Make it work by bruteforce:<ol>
+<li>Visualise as tree</li>
+<li>Implement with recursion</li>
+<li>test it for various cases</li>
+</ol>
+</li>
+<li>Make it efficient using memoization:<ol>
+<li>Add memo dict</li>
+<li>add new base case to return memo values</li>
+<li>store return values into the memo</li>
+</ol>
+</li>
+</ol>
+<p>def dib(n):
+    if n&lt;=1:
+        return</p>
+<pre><code>return dib(n-1)             # O(n)
+OR
+return dib(n-1) + dib(n-1)  # O(2^n)
+OR
+return dib(n-1) 
+return dib(n-1) 
+return dib(n-1)             # O(3^n)
+</code></pre>
+<p>Notice if we call:
+dib(n) once, its O(n)       &lt;-- 1d like list
+dib(n) twice, its O(2^n)    &lt;-- 2d like list
+dib(n) thrice, its O(3^n)   &lt;-- 3d like list</p>
+<p>a fib function calls twice</p>
+<h1 id="optemise-a-fibonacci-function">Optemise a Fibonacci function</h1>
+<p>https://youtu.be/oBt53YbR9Kk?t=1933</p>
+<p>Makes O(2^n) to O(n)
+From exponantial to linear !! WOW!</p>
+<p>1 1 2 3 5 8 13 21</p>
+<p>memo = {}</p>
+<p>def fib(n, memo):
+    if n in memo:
+        return memo.n
+    if n&lt;=2:
+        return 1
+    memo.n = fib(n-1, memo) + fib(n-2, memo)
+    return memo.n</p>
+<p>x=fib(5, memo)
+print(x)</p>
+<h1 id="grid-traveller">grid Traveller</h1>
+<p>https://youtu.be/oBt53YbR9Kk?t=2956</p>
+<h2 id="brute-force">brute force</h2>
+<p>def gt(m,n):
+    if m==1 and n==1:
+        return 1
+    if m==0 or n==0:
+        return 0
+    return gt(m-1, n) + gt(m, n-1) # Moving in m direction is m-1,n and for n direction is m, n-1</p>
+<h2 id="memoize">Memoize</h2>
+<p>memo = {}</p>
+<p>def gt(m,n, memo):</p>
+<pre><code>key = m + "," + n
+if key in memo:
+    return memo[key]
+
+if m==1 and n==1:
+    return 1
+if m==0 or n==0:
+    return 0
+
+memo[key] =  gt(m-1, n) + gt(m, n-1)
+return memo[key]
+</code></pre>
+<h1 id="find-if-given-items-in-list-adds-to-the-given-target">Find if given items in list adds to the given target</h1>
+<p>https://youtu.be/oBt53YbR9Kk?t=4225</p>
+<ol>
+<li>Make the root as the target</li>
+<li>root - each item gives difference in the leaf</li>
+<li>if leaf becomes zero, we found our answer</li>
+</ol>
+<p>n = 7
+l = [5,3,4,7]</p>
+<p>def p(n,l):
+    if n == 0:
+        return True
+    if n &lt; 0:
+        return False</p>
+<pre><code>for each in l:
+    m = n - each
+    if p(m, l) == True:
+        return True
+
+return False
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

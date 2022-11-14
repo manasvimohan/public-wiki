@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intro" class="nav-link">Intro</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#array-and-hashing" class="nav-link">Array and Hashing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#two-pointers" class="nav-link">Two Pointers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#sliding-window" class="nav-link">Sliding Window</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#stack" class="nav-link">Stack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#binary-search" class="nav-link">Binary Search</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#linked-list" class="nav-link">Linked List</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#trees" class="nav-link">Trees</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#tries" class="nav-link">Tries</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#heap-priority-que" class="nav-link">Heap/ Priority Que</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#backtracking" class="nav-link">Backtracking</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#graphs" class="nav-link">Graphs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#advanced-graph" class="nav-link">Advanced Graph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#1-d-dynamic-programming" class="nav-link">1-D Dynamic Programming</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#2-d-dynamic-programming" class="nav-link">2-D Dynamic Programming</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#greedy-approach" class="nav-link">Greedy Approach</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intervals" class="nav-link">Intervals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#math-and-geometry" class="nav-link">Math and Geometry</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bit-manipulation" class="nav-link">Bit Manipulation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Intro">Intro</a></li>
+<li><a href="#Array and Hashing">Array and Hashing</a></li>
+<li><a href="#Two Pointers">Two Pointers</a></li>
+<li><a href="#Sliding Window">Sliding Window</a></li>
+<li><a href="#Stack">Stack</a></li>
+<li><a href="#Binary Search">Binary Search</a></li>
+<li><a href="#Linked List">Linked List</a></li>
+<li><a href="#Trees">Trees</a></li>
+<li><a href="#Tries">Tries</a></li>
+<li><a href="#Heap/ Priority Que">Heap/ Priority Que</a></li>
+<li><a href="#Backtracking">Backtracking</a></li>
+<li><a href="#Graphs">Graphs</a></li>
+<li><a href="#Advanced Graph">Advanced Graph</a></li>
+<li><a href="#1-D Dynamic Programming">1-D Dynamic Programming</a></li>
+<li><a href="#2-D Dynamic Programming">2-D Dynamic Programming</a></li>
+<li><a href="#Greedy Approach">Greedy Approach</a></li>
+<li><a href="#Intervals">Intervals</a></li>
+<li><a href="#Math and Geometry">Math and Geometry</a></li>
+<li><a href="#Bit Manipulation">Bit Manipulation</a></li>
+</ul>
+<h1 id="intro">Intro</h1>
+<p>List of 150 Questions that cover all topics and give you the idea.
+Should complete all.</p>
+<p>All Solutions - https://github.com/neetcode-gh/leetcode/tree/main/python</p>
+<h1 id="array-and-hashing">Array and Hashing</h1>
+<p>Gives good idea of how to use loops.
+Creating hashmaps as result usually.</p>
+<p><a href="Contains%20Duplicate/">Contains Duplicate</a>
+<a href="Valid%20Anagram/">Valid Anagram</a>
+<a href="Two%20Sum/">Two Sum</a>
+<a href="Group%20Anagrams/">Group Anagrams</a>
+<a href="Top%20K%20Frequent%20Elements/">Top K Frequent Elements</a>
+<a href="Product%20of%20Array%20Except%20Self/">Product of Array Except Self</a>
+<a href="Valid%20Sudoku/">Valid Sudoku</a>
+<a href="Encode%20and%20Decode%20Strings/">Encode and Decode Strings</a>
+<a href="Longest%20Consecutive%20Sequence/">Longest Consecutive Sequence</a></p>
+<h1 id="two-pointers">Two Pointers</h1>
+<p>Usually used, when reducing O(n^2) complexity to O(n).
+Helpful in sorted lists, kindof.
+When hashmap based problems are to be solved with better complexity.</p>
+<p>Generally, make two pointers left-start and right-end.
+Then, create increment and decrement conditions of pointers.
+Make calculations in between, updating some dict or var.</p>
+<p>Here left initialised to 0 of list, before loop.
+right initialised to -1 of list, meaning end. before loop.</p>
+<p><a href="Valid%20Palindrome/">Valid Palindrome</a>
+<a href="Two%20Sum%20II/">Two Sum II</a>
+<a href="3Sum/">3Sum</a>
+<a href="Container%20with%20Most%20Water/">Container with Most Water</a>
+<a href="Trapping%20Rain%20Water/">Trapping Rain Water</a></p>
+<h1 id="sliding-window">Sliding Window</h1>
+<p>Like two pointers, but this time pointer do not converge from left and right.
+Rather the two pointers move together, right moving faster based on conditions.
+Here left is initialised before loop.
+right is initialised inside loop.</p>
+<p><a href="Best%20Time%20to%20Buy%20%26%20Sell%20Stock/">Best Time to Buy &amp; Sell Stock</a>
+<a href="Longest%20Substring%20Without%20Repeating%20Characters/">Longest Substring Without Repeating Characters</a>
+<a href="Longest%20Repeating%20Character%20Replacement/">Longest Repeating Character Replacement</a>
+Permutation in String <br />
+Minimum Window Substring  <br />
+Sliding Window Maximum</p>
+<h1 id="stack">Stack</h1>
+<p>Usually does not have loops.
+Recursion sometimes.
+A lot of if elses are here.
+When traversing left to right, and in every decision only last value is considered.</p>
+<p><a href="Valid%20Parentheses/">Valid Parentheses</a>
+<a href="Min%20Stack/">Min Stack</a>
+<a href="Evaluate%20Reverse%20Polish%20Notation/">Evaluate Reverse Polish Notation</a>
+<a href="Generate%20Parentheses/">Generate Parentheses</a>
+Daily Temperatures
+Car Fleet
+<a href="Largest%20Rectangle%20in%20Histogram/">Largest Rectangle in Histogram</a></p>
+<h1 id="binary-search">Binary Search</h1>
+<p><a href="Binary%20Search/">Binary Search</a>
+<a href="Search%20a%202D%20Matrix/">Search a 2D Matrix</a>
+<a href="Koko%20Eating%20Bananas/">Koko Eating Bananas</a>
+Search Rotated Sorted Array
+Find Minimum in Rotated Sorted Array
+Time Based Key-Value Store
+<a href="Find%20Median%20of%20Two%20Sorted%20Arrays/">Find Median of Two Sorted Arrays</a></p>
+<h1 id="linked-list">Linked List</h1>
+<p>Not sure; cant see pattern for now.
+Very weird, learn more from youtube.
+Imagine this way --&gt; You only have access to head in linked list.
+Everything else is computed, nth, goining anywhere, removing, reversing etc</p>
+<p>Many design questions and not only algo questions</p>
+<p><a href="Reverse%20Linked%20List/">Reverse Linked List</a>
+<a href="Merge%20Two%20Linked%20Lists/">Merge Two Linked Lists</a>
+<a href="Reorder%20List/">Reorder List</a>
+<a href="Remove%20Nth%20Node%20from%20End%20of%20List/">Remove Nth Node from End of List</a>
+<a href="Copy%20List%20with%20Random%20Pointer/">Copy List with Random Pointer</a>
+<a href="Add%20Two%20Numbers/">Add Two Numbers</a>
+Linked List Cycle
+Find the Duplicate Number
+<a href="LRU%20Cache/">LRU Cache</a>
+Merge K Sorted Lists
+Reverse Nodes in K-Group</p>
+<h1 id="trees">Trees</h1>
+<p>Invert Binary Tree<br />
+Maximum Depth of Binary Tree  <br />
+Diameter of a Binary Tree <br />
+Balanced Binary Tree  <br />
+Same Tree <br />
+Subtree of Another Tree 
+Lowest Common Ancestor of a BST 
+Binary Tree Level Order Traversal <br />
+Binary Tree Right Side View 
+Count Good Nodes in a Binary Tree <br />
+Validate Binary Search Tree 
+Kth Smallest Element in a BST <br />
+Construct Tree from Preorder and Inorder Traversal<br />
+Binary Tree Max Path Sum  <br />
+Serialize and Deserialize Binary Tree</p>
+<h1 id="tries">Tries</h1>
+<p>Implement Trie<br />
+Design Add and Search Word Data Structure <br />
+Word Search II</p>
+<h1 id="heap-priority-que">Heap/ Priority Que</h1>
+<p>first Impression, when we need to consider max and min in a list.
+Operations in such a way only considering max or min at a time.</p>
+<p>We mostly have a list.
+We convert list to heap with some calculation logic.
+Then we perform a loop with heappop() with some logic.</p>
+<p><a href="Kth%20Largest%20Element%20in%20a%20Stream/">Kth Largest Element in a Stream</a>
+<a href="Last%20Stone%20Weight/">Last Stone Weight</a>
+<a href="K%20Closest%20Points%20to%20Origin/">K Closest Points to Origin</a>
+Kth Largest Element in an Array
+Task Scheduler
+<a href="Design%20Twitter/">Design Twitter</a>
+Find Median from Data Stream</p>
+<h1 id="backtracking">Backtracking</h1>
+<p><a href="Subsets/">Subsets</a> <br />
+Combination Sum 
+Permutations  <br />
+Subsets II<br />
+Combination Sum II<br />
+Word Search 
+Palindrome Partitioning 
+Letter Combinations of a Phone Number <br />
+N-Queens</p>
+<h1 id="graphs">Graphs</h1>
+<p>DFS or BFS used based on situation.
+Directions are defined mostly.
+------BFS-------
+If BFS, then queue is used. 
+colletions.deque(). pop(), popleft() append() etc
+BFS is iterative, not recursive.
+Generally, when we need to consider multiple movement in one iteration, BFS used.
+Refer rotten orange.</p>
+<p>Dont confuse yourself by trying to thing double loop
+for r in range(ROWS):
+    for c in range(COLS):
+        if grid [r] [c] ==0;    # Dont try to compute in head what r,c location would be and all
+        if grid [r] [c] ==1;    # Think like. When at r,c location, what to do.
+        if grid [r] [c] ==2;    # Then next, for each different values</p>
+<p>----DFS---
+If DFS, then normal list or hashset or hash is used. 
+set()
+DFS is recursive in nature.
+Generally when we need to consider one movement per iteration, DFS used.</p>
+<hr />
+<p>A hashmap or hashset is always used in some way.</p>
+<p><a href="Number%20of%20Islands/">Number of Islands</a>
+<a href="Clone%20Graph/">Clone Graph</a>
+<a href="Max%20Area%20of%20Island/">Max Area of Island</a> - General logic for all problems here
+Pacific Atlantic Waterflow
+Surrounded Regions
+<a href="Rotting%20Oranges/">Rotting Oranges</a>   -   BFS example
+Walls and Gates
+Course Schedule
+Course Schedule II
+Redundant Connection
+Number of Connected Components in Graph
+Graph Valid Tree
+<a href="Word%20Ladder/">Word Ladder</a></p>
+<h1 id="advanced-graph">Advanced Graph</h1>
+<p>Reconstruct Itinerary <br />
+Min Cost to Connect all Points<br />
+Network Delay Time<br />
+Swim in Rising Water  <br />
+Alien Dictionary  <br />
+Cheapest Flights Within K Stops</p>
+<h1 id="1-d-dynamic-programming">1-D Dynamic Programming</h1>
+<p>Climbing Stairs 
+Min Cost Climbing Stairs  <br />
+House Robber  <br />
+House Robber II 
+Longest Palindromic Substring <br />
+Palindromic Substrings<br />
+Decode Ways 
+Coin Change 
+Maximum Product Subarray  <br />
+Word Break<br />
+Longest Increasing Subsequence<br />
+Partition Equal Subset Sum</p>
+<h1 id="2-d-dynamic-programming">2-D Dynamic Programming</h1>
+<p>Unique Paths  <br />
+Longest Common Subsequence<br />
+Best Time to Buy/Sell Stock With Cooldown <br />
+Coin Change II<br />
+Target Sum<br />
+Interleaving String 
+Longest Increasing Path in a Matrix 
+Distinct Subsequences <br />
+Edit Distance <br />
+Burst Balloons<br />
+Regular Expression Matching</p>
+<h1 id="greedy-approach">Greedy Approach</h1>
+<p>Maximum Subarray  <br />
+Jump Game <br />
+Jump Game II  <br />
+Gas Station 
+Hand of Straights <br />
+Merge Triplets to Form Target Triplet <br />
+Partition Labels  <br />
+Valid Parenthesis String</p>
+<h1 id="intervals">Intervals</h1>
+<p><a href="Insert%20Interval/">Insert Interval</a>
+Merge Intervals
+Non-Overlapping Intervals
+<a href="Meeting%20Rooms/">Meeting Rooms</a>
+Meeting Rooms II
+Minimum Interval to Include Each Query</p>
+<h1 id="math-and-geometry">Math and Geometry</h1>
+<p>Rotate Image  <br />
+Spiral Matrix <br />
+Set Matrix Zeroes <br />
+Happy Number  <br />
+Plus One  <br />
+Pow(x, n) <br />
+Multiply Strings  <br />
+Detect Squares</p>
+<h1 id="bit-manipulation">Bit Manipulation</h1>
+<p>Single Number <br />
+Number of 1 Bits  <br />
+Counting Bits <br />
+Reverse Bits  <br />
+Missing Number<br />
+Sum of Two Integers 
+Reverse Integer</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

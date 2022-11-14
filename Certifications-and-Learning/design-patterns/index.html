@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#design-patterns-lld" class="nav-link">Design Patterns LLD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#basics" class="nav-link">Basics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#principles-and-solid" class="nav-link">Principles and SOLID</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#sections" class="nav-link">Sections</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#behavioural-related-to-classes-and-their-interactions" class="nav-link">Behavioural - related to classes and their interactions.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#structural-related-to-objects-and-their-interactions" class="nav-link">Structural - related to objects and their interactions.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#creational-related-to-creating-objects-from-classes-and-interfaces" class="nav-link">Creational - related to creating objects from classes and interfaces.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Design Patterns LLD">Design Patterns LLD</a></li>
+<li><a href="#Basics">Basics</a></li>
+<li><a href="#Principles">Principles</a></li>
+<li><a href="#Sections">Sections</a><ul>
+<li><a href="#Sections#Behavioural - related to classes and their interactions.">Behavioural - related to classes and their interactions.</a></li>
+<li><a href="#Sections#Structural - related to objects and their interactions.">Structural - related to objects and their interactions.</a></li>
+<li><a href="#Sections#Creational - related to creating objects from classes and interfaces.">Creational - related to creating objects from classes and interfaces.</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="design-patterns-lld">Design Patterns LLD</h1>
+<p>https://codewithmosh.com/courses/759570/lectures/13732272</p>
+<p>Everything to do with OOP. To be a senior developer, you have to know all this. PERIOD.</p>
+<p>The whole topic seems to revolve around removing if..else and switch kind of statements, and make code extensible.
+For every new feature in a code, multiple if..else might be needed, implementation might be required to be updated in many places.
+To solve this, design patterns seems to be used.</p>
+<p>Static Methods  - These can only be accessed from the class level, not object level. These have one memory location.
+Abstract Class  - This can not be instantiated, object can not be made from it. Only child class can extend from it.
+Interface       - Like abstract class, but this can not have any method implementation. These have only method signatures.
+    - extends: use this on interface to create another interface.
+    - implements: use this on interface to create a concrete class from interface.
+Concrete Class  - This is an actual class created from abstract class or interface</p>
+<p>Generic Class   - In typeScript Course - https://codewithmosh.com/courses/1779784/lectures/40256281</p>
+<h1 id="basics">Basics</h1>
+<p><img alt="Image" src="OOP-Pillars.png" />
+Classes - Parent, which has objects and methods
+Coupling - If user class changes, main class breaks and also all other classes are to be re-compiled
+Interfaces - To address coupling issue, interface is made. A template to create class. In python its called abstract class. Keywords - implements override
+Encapsulation - If we need validations in setting a variable given in parent class, so we make private variables in user class, and change them using getter and setter with validations as needed. 
+Abstraction - Removing complexity from end user and then creating a parent method, by chaining complex methods and expose parent method to user. Keyword: private public OR __ in python
+Inheritance - Inheriting methods and vars from parent
+Polymorphism - Many forms. Object instance having many forms. Abstract class in JAVA. Keywords - extends and override.
+<a href="UML/">UML</a> - Unified Modeling Language - https://codewithmosh.com/courses/759570/lectures/13732320
+Composition - When we create class by combining various other classes as needed.</p>
+<h1 id="principles-and-solid">Principles and SOLID</h1>
+<p>Refer <a href="../SOLID-Principles-By-Uncle-Bob/">SOLID Principles By Uncle Bob</a>
+Single Responsibility Principle - Each class should do only one thing.
+Open Closed Principle           - Class should be OPEN for extension and CLOSED for modification.
+Change in one class should not affect other classes - Iterator pattern
+Favor Composition over inheritance</p>
+<h1 id="sections">Sections</h1>
+<h2 id="behavioural-related-to-classes-and-their-interactions">Behavioural - related to classes and their interactions.</h2>
+<p><a href="01-Momento-Pattern/">01 Momento Pattern</a>                  -- Undo pattern - Single Responsibility Principle
+<a href="02-State-Pattern/">02 State Pattern</a>                    -- Based on state of one, the behavior of certain item change 
+<a href="03-Iterator-Pattern/">03 Iterator Pattern</a>                 -- Like browser history, push pop. like momento, but it gets dependent on a Iterator class, which is an interface.
+<a href="04-Strategy-Pattern/">04 Strategy Pattern</a>                 -- Like state pattern, BUT each class item, refers a strategy class, which further have different methods
+<a href="05-Template-Method-Pattern/">05 Template Method Pattern</a>          -- Instead of interface, we use Abstract Methods, to define methods.
+<a href="06-Command-Pattern/">06 Command Pattern</a>                  -- Disconnect Invoker of a command, from the received of the command.
+<a href="07-Observer-Pattern/">07 Observer Pattern</a>                 -- Pull Push, Pub Sub type. Subscribe and unsubscribe.
+<a href="08-Mediator-Pattern/">08 Mediator Pattern</a>                 -- Multiple Objects need to communicate to each other at every instance. A mediator abstract class is introduced.
+<a href="09-Chain-of-Responsibility-Pattern/">09 Chain of Responsibility Pattern</a>  -- Handler and pipline based system.
+<a href="10-Visitor-Pattern/">10 Visitor Pattern</a>                  -- </p>
+<h2 id="structural-related-to-objects-and-their-interactions">Structural - related to objects and their interactions.</h2>
+<p>11-Composite-Pattern                -- Hierarchy data related. Groups or groups.
+12-Adapter-Pattern                  -- We wish to use different types of class, objects, vars using the same class.
+13-Decorator-Pattern                -- Adding features to a base interface and using them in various combinations.
+14-Facade-Pattern                   -- Used to decouple classes. Main class interacts with a class, which further talks to classes.
+15-Flyweight-Pattern                -- Reducing memory usage in class. An object when needs to be shared with various classes.
+16-Bridge-Pattern                   -- When multiple hierarchy present, and each can grow independently. Feature hierarchy is separated from Implementation Hierarchy
+17-Proxy-Pattern                    -- An agent or proxy created between objects. Concept of LAZY INITIALIZATION. Loading only those objects which are needed on demand.</p>
+<h2 id="creational-related-to-creating-objects-from-classes-and-interfaces">Creational - related to creating objects from classes and interfaces.</h2>
+<p>18-Prototype-Pattern                -- A base interface is defined called prototype and concrete classes are created from it. 
+19-Singleton-Pattern                -- When we only need one instance of a class. Like configurations of a script.
+20-Factory-Method-Pattern           -- Defer creation of an object to subclass.
+21-Abstract-Factory-Pattern         -- Provide an interface for creating families of related objects. 
+22-Builder-Pattern                  -- Separate the CONSTRUCTION of an object from its REPRESENTATION. </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

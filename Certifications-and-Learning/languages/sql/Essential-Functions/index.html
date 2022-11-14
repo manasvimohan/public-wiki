@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#essential-functions" class="nav-link">Essential Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#numeric" class="nav-link">Numeric</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#string" class="nav-link">STRING</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#date-and-time" class="nav-link">Date and Time</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#usual" class="nav-link">Usual</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#formatting" class="nav-link">Formatting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#calculations-on-data-time" class="nav-link">Calculations on Data time</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ifnull-and-coalesce" class="nav-link">IFNULL and COALESCE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#if-and-case" class="nav-link">IF and CASE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Essential Functions">Essential Functions</a></li>
+<li><a href="#Numeric">Numeric</a></li>
+<li><a href="#STRING">STRING</a></li>
+<li><a href="#Date and Time">Date and Time</a><ul>
+<li><a href="#Date and Time#Usual">Usual</a></li>
+<li><a href="#Date and Time#Formatting">Formatting</a></li>
+<li><a href="#Date and Time#Calculations on Data time">Calculations on Data time</a></li>
+</ul>
+</li>
+<li><a href="#IFNULL and COALESCE">IFNULL and COALESCE</a></li>
+<li><a href="#IF and CASE">IF and CASE</a></li>
+</ul>
+<h1 id="essential-functions">Essential Functions</h1>
+<p>https://www.w3schools.com/sql/sql_ref_sqlserver.asp
+https://dev.mysql.com/doc/refman/8.0/en/numeric-functions.html</p>
+<h1 id="numeric">Numeric</h1>
+<p>ROUND(5.5523, 3)    -- Round to 3 digits
+TRUNCATE(5.5523, 3) -- Just remove 3 digits
+CEILING(5.5523)     -- Just remove 3 digits
+FLOOR(5.5523)       -- Just remove 3 digits
+ABS(5.5523)         -- Just remove 3 digits
+RAND()              -- random btw 0 and 1</p>
+<h1 id="string">STRING</h1>
+<p>LENGTH
+UPPER
+LOWER
+LTRIM
+RTRIM
+TRIM
+LEFT
+RIGHT
+SUBSTRING("mANASVASDASD",2,5) -- Start from 2 and select 5
+LOCATE('m','ASDJHASMASD')     -- return index of 1st appearance of a substring. Not case sensitive.
+REPLACE
+CONCAT</p>
+<h1 id="date-and-time">Date and Time</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590261</p>
+<h2 id="usual">Usual</h2>
+<p>NOW
+CURDATE
+CURTIME
+YEAR(NOW()), MONTH DAY HOUR MINUTE SECOND DAYNAME MONTHNAME
+EXTRACT(DAY FROM NOW())</p>
+<h2 id="formatting">Formatting</h2>
+<p>DATE_FORMAT(NOW(),'%m %d %Y') -- Google it for full list
+<img alt="See this" src="../sql-date-conversion.png" /></p>
+<h2 id="calculations-on-data-time">Calculations on Data time</h2>
+<p>https://codewithmosh.com/courses/525068/lectures/9590267</p>
+<p>DATE_ADD(NOW(), INTERVAL 1 DAY)
+DATE_ADD(NOW(), INTERVAL 1 YEAR)
+DATE_ADD(NOW(), INTERVAL -1 YEAR)
+DATE_SUB(NOW(), INTERVAL 1 YEAR)
+DATE_SUB(NOW(), INTERVAL -1 YEAR)
+DATEDIFF('2019-01-05','2019-01-01')   -- Gives 4, returns days always, even if you give time.</p>
+<p>TIME_TO_SEC('9:00') - TIME_TO_SEC('9:02') -- Gives -120 seconds</p>
+<h1 id="ifnull-and-coalesce">IFNULL and COALESCE</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590263</p>
+<p>USE database
+SELECT 
+    col1,
+    IFNULL(col2, 'Custom Message') AS something
+    -- COALESCE(col2, col3, col4, 'Custom Message') AS something
+FROM table</p>
+<p>Note IFNULL replace null with one message
+COALESCE will 1st check col2 for null, then col3 for null ... and if all null, then give the custom message
+In case, between various col2, col3 we find value, we fill that in the something col.</p>
+<h1 id="if-and-case">IF and CASE</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590265</p>
+<p>IF(expression, ifTrue, ifFalse)</p>
+<p>https://codewithmosh.com/courses/525068/lectures/9590268</p>
+<p>SELECT *
+    CASE
+        WHEN YEAR(date_col) = YEAR(NOW()) THEN 'Active'
+        WHEN YEAR(date_col) = YEAR(NOW()) - 1 THEN 'Last Year'
+        WHEN YEAR(date_col) &lt; YEAR(NOW()) - 1 THEN 'Archive'
+        ELSE 'Future'
+    END AS Category
+FROM table</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#solidity" class="nav-link">Solidity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#best-practices-and-workflow" class="nav-link">Best Practices and workflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#terms-and-concepts" class="nav-link">Terms and Concepts</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#library" class="nav-link">library</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#interface" class="nav-link">interface</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#modifier" class="nav-link">modifier</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#constant" class="nav-link">constant</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#immutable" class="nav-link">immutable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#error-and-revert" class="nav-link">error and revert</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#receive-and-fallback" class="nav-link">receive() and fallback()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Solidity">Solidity</a></li>
+<li><a href="#Best Practices and workflow">Best Practices and workflow</a></li>
+<li><a href="#Terms and Concepts">Terms and Concepts</a><ul>
+<li><a href="#Terms and Concepts#library">library</a></li>
+<li><a href="#Terms and Concepts#interface">interface</a></li>
+<li><a href="#Terms and Concepts#modifier">modifier</a></li>
+<li><a href="#Terms and Concepts#constant">constant</a></li>
+<li><a href="#Terms and Concepts#immutable">immutable</a></li>
+<li><a href="#Terms and Concepts#error and revert">error and revert</a></li>
+<li><a href="#Terms and Concepts#receive() and fallback()">receive() and fallback()</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="solidity">Solidity</h1>
+<h1 id="best-practices-and-workflow">Best Practices and workflow</h1>
+<p><a href="../Solidity_format/">Solidity_format</a>
+<a href="../Inheritance_Child/">Inheritance_Child and deploying other contracts from a contract</a>
+<a href="../Fund_and_withdraw/">Fund_and_withdraw</a></p>
+<h1 id="terms-and-concepts">Terms and Concepts</h1>
+<p>View functions cost gas if called from contract !!! wierd...</p>
+<h2 id="library">library</h2>
+<p>Like a smart contract but only for calculations, can not send ethers etc. SafeMath was an example, was used a lot in the past by people. Now 0.8 solidity has it inbuilt.</p>
+<h2 id="interface">interface</h2>
+<p>contract1 is contract2: This way one, contract1 inherits all features of contract2</p>
+<p>contructor: &lt;-- This is a special function like receive and fallback
+setting up owner, something like a global variable maybe?? Check...</p>
+<h2 id="modifier">modifier</h2>
+<p>added to any function, and the code runs only if conditions in modifier is met</p>
+<h2 id="constant">constant</h2>
+<p>https://youtu.be/gyMwXuJrbJQ?t=18430</p>
+<p>Saves in bytecode of contract and not in storage
+Hence it saves gas fee
+written in CAPITAL_LETTERS
+If some variable does not change
+Exmaple:
+uint256 public constant ANY_CONSTANT_THING = 50</p>
+<h2 id="immutable">immutable</h2>
+<p>https://youtu.be/gyMwXuJrbJQ?t=18654</p>
+<p>Saves in bytecode of contract and not in storage
+Hence it saves gas fee
+written with i_
+variable in constructor can use it.</p>
+<p>Example
+address public immutable i_owner
+constructor(){
+    i_owner = msg.sender
+}</p>
+<h2 id="error-and-revert">error and revert</h2>
+<p>https://youtu.be/gyMwXuJrbJQ?t=18781</p>
+<p>In the require statements, we save the error message as string, which cost gas, so instead we use error now. This is new and better way.
+Before the contract, below pragma, write the following:
+error NotOwner();
+Then inside the contract, at any function, write
+if(msg.sender != i_owner) { revert NotOwner(); } &lt;-- New method, does not cost gas
+_;
+Old method was --&gt;  require(msg.sender == i_owner, "Sender is not owner");</p>
+<h2 id="receive-and-fallback">receive() and fallback()</h2>
+<p>https://youtu.be/gyMwXuJrbJQ?t=18947</p>
+<p>If someone interacts with with contract without running specific functions in the contract then: </p>
+<p>If there is data send while interacting  --&gt; fallback() is called
+If no data and there is receive function --&gt; receive() is called
+if no data and no receive function       --&gt; fallback() is called
+if no data, no receive and no fallback   --&gt; ERROR</p>
+<p>If someone sends ETH to our contract, and we wish to run a function, we usually put it under receive or fallback. Meaning, if there is no data sent, EVM looks for receive function, if its there good, else it goes to fallback function. If data is send and not empty, fallback function is called. 
+Wrapping each function in receive and fallback seems like a good practice.
+They are special functions in solidity, just like constructor</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

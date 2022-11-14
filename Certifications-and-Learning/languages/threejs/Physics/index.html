@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#physics" class="nav-link">Physics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#basics" class="nav-link">Basics</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#overall-idea" class="nav-link">Overall Idea</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#parts-of-physics" class="nav-link">Parts of physics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#libraries" class="nav-link">Libraries</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#simple-usage" class="nav-link">Simple Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#contact-materials" class="nav-link">Contact Materials</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#forces" class="nav-link">Forces</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#cannon-and-three-combo-util" class="nav-link">CANNON and THREE combo util</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#performance" class="nav-link">Performance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#events" class="nav-link">Events</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#removing-objects-using-dat-gui" class="nav-link">Removing objects using dat gui</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#constraints" class="nav-link">Constraints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#ending-notes" class="nav-link">Ending Notes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#cannon-es" class="nav-link">Cannon-es</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ammojs" class="nav-link">Ammojs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#physijs" class="nav-link">Physijs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Physics">Physics</a></li>
+<li><a href="#Basics">Basics</a><ul>
+<li><a href="#Basics#Overall Idea">Overall Idea</a></li>
+<li><a href="#Basics#Parts of physics">Parts of physics</a></li>
+</ul>
+</li>
+<li><a href="#Libraries">Libraries</a></li>
+<li><a href="#Simple Usage">Simple Usage</a></li>
+<li><a href="#Contact Materials">Contact Materials</a></li>
+<li><a href="#Forces">Forces</a></li>
+<li><a href="#CANNON and THREE combo util">CANNON and THREE combo util</a></li>
+<li><a href="#Performance">Performance</a></li>
+<li><a href="#Events">Events</a></li>
+</ul>
+<h1 id="physics">Physics</h1>
+<p>Tutorial --&gt; https://threejs-journey.com/lessons/22
+Examples --&gt; https://schteppe.github.io/cannon.js/</p>
+<p>Threejs does not have physics inbuilt. It just renders out stuff to a browser.</p>
+<p>For physics we need another library. In fact the very physics in JavaScript is just a bunch of formulas in functions which can be applied to any other variables, and that acts by the formula.</p>
+<p>Hence a physics engine is just a bunch of newton formulas, given in a manageable format.</p>
+<h1 id="basics">Basics</h1>
+<h2 id="overall-idea">Overall Idea</h2>
+<p>What is made in cannon is independent from threejs.</p>
+<ol>
+<li>Make a world visible to cannon.</li>
+<li>Add bounding boxes like shapes to the cannon world.</li>
+<li>Add attributes to shape to create a body.</li>
+<li>Add Cannon materials to body and define contactMaterial properties.</li>
+<li>Map out locations and shapes of cannon body to the ThreeJs meshes.</li>
+<li>Link threejs and cannon by update the threejs world and cannon world with the ticker.</li>
+</ol>
+<h2 id="parts-of-physics">Parts of physics</h2>
+<ol>
+<li>World            &lt;-- This is where all physics happen. Note: Does not know about Threejs</li>
+<li>Shape            &lt;-- Give a shape, sphere box plane etc, like a bounding box</li>
+<li>Body             &lt;-- Add mass, position etc to shape to get body</li>
+<li>Material         &lt;-- The body can have a specific material</li>
+<li>Contact Material &lt;-- Relations between materials defined, like friction etc</li>
+<li>Forces           &lt;-- Forces applied to the bodies</li>
+<li>Events           &lt;-- When body collide, sleep, wakeup etc, we can listen to them to run other functions, like playing sounds or doing something else.</li>
+<li>Constraints      &lt;-- Making multiple bodies move and act in respect to each other. Like a door hinge, or gears.</li>
+</ol>
+<h1 id="libraries">Libraries</h1>
+<p>3d - Ammo.js     &lt;-- Mostly used, but complex
+3d - Cannon.js   &lt;-- Easier and low learning curve
+3d - Oimo.js
+2d - Matter.js
+2d - p2.js
+2d - planck.js
+2d - box2d.js</p>
+<h1 id="simple-usage">Simple Usage</h1>
+<p>yarn add cannon or npm install --save cannon    // Install package</p>
+<p>// The skeleton code
+import CANNON from 'cannon'                     // Import Lib</p>
+<p>const world = new CANNON.World()                // Create a world instance
+world.gravity.set(0, -9.82, 0)                  // Add gravity to it x,y,z</p>
+<p>const sphereShape = new CANNON.Sphere(0.5)      // Make a bounding shape
+const sphereBody  = new CANNON.Body({           // Add physical attr to shape
+    mass: 1,                                    // Like in real world mass
+    position: new CANNON.Vec3(),                // The starting location
+    shape: sphereShape,                         // What shape, give it
+    material: mat1                              // Refer contact materials below
+})
+world.addBody(sphereBody)                       // Finally add body to the world</p>
+<p>// Finally in the ticker
+// sphere          &lt;-- In threejs scene
+// sphereBody      &lt;-- In cannon world
+sphere.position.x = sphereBody.position.x
+sphere.position.y = sphereBody.position.y
+sphere.position.z = sphereBody.position.z</p>
+<p>// OR in one line
+sphere.position.copy(sphereBody.position)</p>
+<h1 id="contact-materials">Contact Materials</h1>
+<p>NOTE: You can use single material throughout too, for granular example, creating two.
+NOTE2: Set a default material in the world by using world.defaultContactMaterial = contactMat</p>
+<p>const mat1 = new CANNON.Material('concrete')
+const mat2 = new CANNON.Material('plastic')</p>
+<p>const mat1Mat2ContactMaterial = new CANNON.ContactMaterial({
+        mat1,
+        mat2,    // In case only single, material like mat1 used, this would also be mat1.
+        {
+            friction:0.1,
+            restitution: 0.9,
+        }</p>
+<p>})</p>
+<p>world.addContactMaterial(mat1Mat2ContactMaterial)</p>
+<p>FINALLY</p>
+<p>body1.material = mat1
+body2.material = mat2</p>
+<h1 id="forces">Forces</h1>
+<p>applyForce          &lt;-- force from a point
+applyImpulse        &lt;-- force in short duration
+applyLocalForce     &lt;-- like force, but point position is local
+applyLocalImpulse   &lt;-- like impulse, but point position is local</p>
+<p>format is --&gt; applyForce(fromPoint, toPoint) // Need to confirm.</p>
+<p>Now we need 3D points, hence we use CANNON.Vec3(x,y,z)</p>
+<p>Example:
+anyBody.applyLocalForce(new CANNON.Vec3(10,0,0), new CANNON.Vec3(0,0,0))</p>
+<h1 id="cannon-and-three-combo-util">CANNON and THREE combo util</h1>
+<p>This section tells how both the libs should be used in sync with each other.</p>
+<p>// A list to track cannon and threejs combo object
+const objectsToUpdate = []</p>
+<p>// Defining the object combo
+const createSphere = (radius, position) =&gt; {
+    // 1. ThreeJs Mesh
+    // 2. Cannon Body
+    // 3. Save them into a list of objects like objectToUpdate</p>
+<pre><code>// ThreeJs Mesh
+const mesh = new THREE.Mesh(
+    new THREE.SphereBufferGeometry(radius,20,20)
+    new THREE.MeshStandardMaterial({
+        metalness: 0.3,
+        roughness: 0.4,
+        envMap: envMapTexture
+    })
+)
+mesh.castShadow = true
+mesh.position.copy(position)
+scene.add(mesh)
+
+// Cannon Body
+const shape = new CANNON.Sphere(radius)
+const body = new CANNON.Body({
+    mass:1,
+    position: new CANNON.Vec3(0,3,0),
+    shape: shape,
+    material: mat1
+})
+body.position.copy(position)
+body.addEventListener('collide', playSound)     // Refer the [Events](#Events) section on this page.
+world.addBody(body)
+
+// Save them into a list of objects like objectsToUpdate
+objectsToUpdate.push({
+    mesh: mesh, 
+    body: body
+    })
+</code></pre>
+<p>}</p>
+<p>// Creating the combo by running the combo function above
+createSphere(0.5, {x: 0, y: 3, z: 0 })
+createSphere(0.7, {x: 0, y: 5, z: 0 })</p>
+<p>// Updating the ticker</p>
+<p>const tick = () =&gt; {
+    for(const object of objectsToUpdate){
+        object.mesh.position.copy(object.body.position)
+    }
+}</p>
+<p>// Adding dat gui controls</p>
+<p>const gui = new dat.GUI()   // Create an instance
+const debugObject = {}      // An empty array</p>
+<p>// Define the function of the dat gui contorller
+debugObject.createSphere = () =&gt; {
+    createSphere(0.5, {x: ,y: ,z: })    // Our combo function is put in here
+}</p>
+<p>gui.add(debugObject,'createSphere')     // dat gui added to the screen</p>
+<h1 id="performance">Performance</h1>
+<p>Two Points:
+1. Broadphase: By default, when physics is calculated, it is done for each object wrt each other object. This processing is useless since out of, say, 100 objects, only 2 are near each other, then why would you want the physics engine to calculate forces for all 100 items, which is 100! (100 factorial).
+2. Sleep: When objects are not interacting, everything is stop, even then calculations are done continuously, so we need to stop calculations on idle. So we use sleep method.
+3. Workers: Javascript is single thread language. So all processing done on single thread. To use multi thread in cannon, workers can be used to calculate different things on different threads etc. Detailed tutorial was not provided, explore by yourself.</p>
+<p>Types of BROADPHASE available.
+NaiveBroadphase     &lt;-- Every body against every body n! This is DEFAULT in CANNON.
+GridBroadphase      &lt;-- Make imaginary cubes, quadrilles the world and then calculates body against those bodies in neighbouring cubes.
+SAPBroadphase       &lt;-- Sweep And Prune - tests bodies on arbitrary axis in multiple steps.</p>
+<p>Using broadphase --&gt; world.broadphase = new CANNON.SAPBroadphase(world)
+Using sleep      --&gt; world.allowSleep = true</p>
+<h1 id="events">Events</h1>
+<p>const someSound = new Audio('./location/to/file.mp3')   // Load sound file.
+const playSound = () =&gt; { someSound.play() }            // Basic function.</p>
+<p>// Note: Multiple collisions create robotic multiple sounds, which is very bad to listen and unnatural.
+// Hence we combine some techniques to control the sound on collition.</p>
+<p>const playSound = (collision) =&gt; {                      // Advance function.
+    const impactStrength = collision.contact.getImpactVelocityAlongNormal()     // Gives us the impact strength</p>
+<pre><code>if(impactStrength &gt; 1.5){                           // Play sound only when strength of imapact above something
+    someSound.volume = Math.random()                // Randomly control volume, feels natural and soothing
+    someSound.currentTime = 0                       // Reset sound to start, so multiple trr trr does not happen
+    someSound.play()                                // Play the sound now
+}
+</code></pre>
+<p>}</p>
+<h1 id="removing-objects-using-dat-gui">Removing objects using dat gui</h1>
+<p>debugObjects.reset = () =&gt; {
+    for(const object in objectsToUpdate)
+    {
+        object.body.removeEventListener('collide', playSound)   // Remove sounds event
+        world.removeBody(object.body)                           // Remove the cannon object
+        scene.remove(object.mesh)                               // Remove the threejs mesh
+    }</p>
+<pre><code>objectsToUpdate.splice(0, objectsToUpdate.length)           // Update the objectsToUpdate array
+</code></pre>
+<p>}</p>
+<h1 id="constraints">Constraints</h1>
+<p>HingeConstraint             &lt;-- door hinge type
+DistanceConstraint          &lt;-- force two bodies to maintain distance between each other
+LockConstraint              &lt;-- merges two bodies as if they were one
+PointToPointConstraint      &lt;-- glues bodies to a specific point on the objects</p>
+<h1 id="ending-notes">Ending Notes</h1>
+<h2 id="cannon-es">Cannon-es</h2>
+<p>Cannon has not been updated for years, but cannon-es is another version which is being updated.
+You can use cannon-es instead as well</p>
+<p>Install --&gt; yarn add cannon-es@0.15.1 # Just search and confirm
+Import  --&gt; import CANNON from 'cannon-es'</p>
+<h2 id="ammojs">Ammojs</h2>
+<p>Written in C++
+More famous maybe; but hard to use
+More examples on net with threejs</p>
+<h2 id="physijs">Physijs</h2>
+<p>Uses Ammojs in back, but easier to use
+Here we do not have to created cannon body and threejs mesh separately. They are done combined.</p>
+<p>Use --&gt;
+box = new Physijs.BoxMesh(
+    new THREE.CubeGeometry(5,5,5)
+    new THREE.MeshBasicMaterial({color: black})
+)</p>
+<p>scene.add(box)</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

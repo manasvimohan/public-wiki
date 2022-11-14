@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#solidiy-format" class="nav-link">Solidiy format</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#overall-structure" class="nav-link">Overall Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#solidity-style-guide" class="nav-link">Solidity style guide</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Solidiy format">Solidiy format</a><ul>
+<li><a href="#Solidiy format#Overall Structure">Overall Structure</a></li>
+<li><a href="#Solidiy format#Solidity style guide">Solidity style guide</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="solidiy-format">Solidiy format</h1>
+<p>Link for coding --&gt; https://docs.soliditylang.org/en/v0.8.15/style-guide.html#introduction
+Natspec Format for documenting code  --&gt; https://docs.soliditylang.org/en/v0.8.15/natspec-format.html
+To document code, we use natspec format in solidity</p>
+<p>Order of Layout:
+Layout contract elements in the following order:
+    Pragma statements
+    Import statements
+    Interfaces
+    Libraries
+    Contracts</p>
+<p>Inside each contract, library or interface, use the following order:
+    Type declarations
+    State variables
+    Events
+    Modifiers
+    Functions</p>
+<h2 id="overall-structure">Overall Structure</h2>
+<ol>
+<li>SPDX-License-Identifier: MIT</li>
+<li>Imports</li>
+<li>Errors</li>
+<li>Interfaces</li>
+<li>Libraries</li>
+<li>Contracts</li>
+<li>Project description lie @title @author etc</li>
+<li>Type declarations</li>
+<li>State variables</li>
+<li>Events</li>
+<li>Constructor</li>
+<li>Modifiers</li>
+<li>Functions:<ol>
+<li>Each Function Description with @dev</li>
+<li>Each logic meaning with</li>
+</ol>
+</li>
+<li>Getter Functions</li>
+</ol>
+<p>//////////////////
+// Example Code //
+//////////////////</p>
+<pre><code class="language-solidity">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+import &quot;./ContractInSameFolder.sol&quot;;
+import &quot;@FromGitHub&quot;;
+
+/* Errors */
+error ContractName__UpkeepNotNeeded(uint256 currentBalance, uint256 numPlayers, uint256 raffleState);
+error ContractName__TransferFailed();      // Note the format. Its contractname then double underscroe then error name
+
+/**@title A sample Raffle Contract
+ * @author Manasvi Mohan Sharma
+ * @notice This contract is for creating a sample raffle contract
+ * @dev This implements the Chainlink VRF Version 2
+ */
+
+contract ContractName  {
+
+    /* Type declarations */
+    enum ChoicesType {
+        OPEN,
+        CALCULATING
+    }
+    /* State variables */
+    // Variables
+    uint64 private immutable i_subscriptionId;          // immutable has i_
+    uint16 private constant REQUEST_CONFIRMATIONS = 3;  // constants are CAPITALISED_YES
+    address private s_recentWinner;                     // state varibles are s_
+    ChoicesType private s_raffleState;                  // declaring from the enum above
+
+    /* Events */
+    event RequestedRaffleWinner(uint256 indexed requestId);
+    event WinnerPicked(address indexed player);
+
+    /* Constructor */
+    constructor(
+        uint256 interval,
+        uint256 entranceFee,
+        uint32 callbackGasLimit
+    ) VRFConsumerBaseV2(vrfCoordinatorV2) {
+        i_interval = interval;
+        i_entranceFee = entranceFee;
+        s_raffleState = RaffleState.OPEN;
+        s_lastTimeStamp = block.timestamp;
+    }
+
+    /* Functions */
+
+    /**
+     * @dev What this function is about
+     * What this function takes in and spits out
+     */
+    function createContractFromImport() public payable {
+        // Creating an instance of imported contract
+        ContractInSameFolder intanceOfContract = new ContractInSameFolder();
+
+        // Calling a function in the imported contract from the created instance
+        instanceOfContract.functionName(inputs);
+
+        // require(s_raffleState == RaffleState.OPEN, &quot;Raffle is not open&quot;);
+        if (s_raffleState != RaffleState.OPEN) {
+            revert Raffle__RaffleNotOpen();
+        }
+
+        // Adding the contract address of user into s_player array
+        s_players.push(payable(msg.sender));
+
+        // Emit an event; and its description
+        emit RaffleEnter(msg.sender);
+    }
+
+
+    /** Getter Functions */
+    function getRaffleState() public view returns (RaffleState) {
+        return s_raffleState;
+    }
+    function getRecentWinner() public view returns (address) {
+        return s_recentWinner;
+    }
+}
+
+</code></pre>
+<h2 id="solidity-style-guide">Solidity style guide</h2>
+<p><a href="https://youtu.be/gyMwXuJrbJQ?t=39609">Patrick's Video</a>
+<a href="https://docs.soliditylang.org/en/v0.8.15/style-guide.html">Official Website</a></p>
+<p>Example:</p>
+<pre><code class="language-solidity">// SPDX-License-Identifier: GPL-3.0
+pragma solidity &gt;=0.8.2 &lt; 0.9.0;
+
+/// @title A simulator for trees
+/// @author Larry A. Gardner
+/// @notice You can use this contract for only the most basic simulation
+/// @dev All function calls are currently implemented without side effects
+/// @custom:experimental This is an experimental contract.
+contract Tree {
+    /// @notice Calculate tree age in years, rounded up, for live trees
+    /// @dev The Alexandr N. Tetearing algorithm could increase precision
+    /// @param rings The number of rings from dendrochronological sample
+    /// @return Age in years, rounded up for partial years
+    function age(uint256 rings) external virtual pure returns (uint256) {
+        return rings + 1;
+    }
+
+    /// @notice Returns the amount of leaves the tree has.
+    /// @dev Returns only a fixed number.
+    function leaves() external virtual pure returns(uint256) {
+        return 2;
+    }
+}
+
+contract Plant {
+    function leaves() external virtual pure returns(uint256) {
+        return 3;
+    }
+}
+
+contract KumquatTree is Tree, Plant {
+    function age(uint256 rings) external override pure returns (uint256) {
+        return rings + 2;
+    }
+
+    /// Return the amount of leaves that this specific kind of tree has
+    /// @inheritdoc Tree
+    function leaves() external override(Tree, Plant) pure returns(uint256) {
+        return 3;
+    }
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

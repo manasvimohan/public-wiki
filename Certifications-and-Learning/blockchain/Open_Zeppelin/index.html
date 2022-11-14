@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#open-zeppelin-and-subpages" class="nav-link">Open Zeppelin and subpages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#links" class="nav-link">Links</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#theory" class="nav-link">Theory</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#extending-contracts" class="nav-link">Extending Contracts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#overriding" class="nav-link">Overriding</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#calling-super" class="nav-link">Calling super</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#using-hooks" class="nav-link">Using Hooks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#access-control" class="nav-link">Access Control</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Open Zeppelin">Open Zeppelin</a></li>
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#Links">Links</a></li>
+<li><a href="#Theory">Theory</a><ul>
+<li><a href="#Theory#Extending Contracts">Extending Contracts</a></li>
+<li><a href="#Theory#Overriding">Overriding</a></li>
+<li><a href="#Theory#Calling super">Calling super</a></li>
+<li><a href="#Theory#Using Hooks">Using Hooks</a><ul>
+<li><a href="#Theory#Using Hooks#Rules of Hooks">Rules of Hooks</a></li>
+</ul>
+</li>
+<li><a href="#Theory#Access Control">Access Control</a><ul>
+<li><a href="#Theory#Access Control#Ownable">Ownable</a></li>
+<li><a href="#Theory#Access Control#Admin basec access control">Admin basec access control</a></li>
+<li><a href="#Theory#Access Control#Access control in the code itself">Access control in the code itself</a></li>
+<li><a href="#Theory#Access Control#Querying Privileged Accounts">Querying Privileged Accounts</a></li>
+<li><a href="#Theory#Access Control#Delayed operation">Delayed operation</a><ul>
+<li><a href="#Theory#Access Control#Delayed operation#Why needed?">Why needed?</a></li>
+<li><a href="#Theory#Access Control#Delayed operation#Using TimelockController">Using TimelockController</a></li>
+<li><a href="#Theory#Access Control#Delayed operation#Concept of minimum delay">Concept of minimum delay</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="open-zeppelin-and-subpages">Open Zeppelin and subpages</h1>
+<p>Tokens:
+<a href="../ERC20/">ERC20</a>
+<a href="../ERC721/">ERC721</a>
+<a href="../ERC777/">ERC777</a>
+<a href="../ERC1155/">ERC1155</a></p>
+<p><a href="../Governance/">Governance</a></p>
+<h1 id="introduction">Introduction</h1>
+<p>The standard for secure blockchain applications
+OpenZeppelin provides security products to build, automate, and operate decentralized applications. We also protect leading organizations by performing security audits on their systems and products.</p>
+<h1 id="links">Links</h1>
+<p>Main Website --&gt; https://www.openzeppelin.com/
+Auto code make simple --&gt; https://docs.openzeppelin.com/contracts/4.x/wizard
+If you find bug, report here and win money -- &gt; https://immunefi.com/bounty/openzeppelin/</p>
+<h1 id="theory">Theory</h1>
+<h2 id="extending-contracts">Extending Contracts</h2>
+<p>Most of the OpenZeppelin Contracts are expected to be used via inheritance
+contract MyToken is ERC20</p>
+<h2 id="overriding">Overriding</h2>
+<p>Inheritance is often used to add the parent contract’s functionality to your own contract, but that’s not all it can do. You can also change how some parts of the parent behave using overrides.</p>
+<p>The old revokeRole is then replaced by our override, and any calls to it will immediately revert. We cannot remove the function from the contract, but reverting on all calls is good enough.</p>
+<p>For example, imagine you want to change AccessControl so that revokeRole can no longer be called</p>
+<pre><code class="language-solidity">// contracts/ModifiedAccessControl.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import &quot;@openzeppelin/contracts/access/AccessControl.sol&quot;;
+
+contract ModifiedAccessControl is AccessControl {
+    // Override the revokeRole function
+    function revokeRole(bytes32, address) public override {
+        revert(&quot;ModifiedAccessControl: cannot revoke roles&quot;);
+    }
+}
+</code></pre>
+<h2 id="calling-super">Calling super</h2>
+<p>Sometimes you want to extend a parent’s behavior, instead of outright changing it to something else. This is where super comes in.
+The super keyword will let you call functions defined in a parent contract, even if they are overridden. This mechanism can be used to add additional checks to a function, emit events, or otherwise add functionality as you see fit.</p>
+<pre><code class="language-solidity">// contracts/ModifiedAccessControl.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import &quot;@openzeppelin/contracts/access/AccessControl.sol&quot;;
+
+contract ModifiedAccessControl is AccessControl {
+    function revokeRole(bytes32 role, address account) public override {
+        require(
+            role != DEFAULT_ADMIN_ROLE,
+            &quot;ModifiedAccessControl: cannot revoke default admin role&quot;
+        );
+
+        super.revokeRole(role, account);
+    }
+}
+</code></pre>
+<h2 id="using-hooks">Using Hooks</h2>
+<p>Sometimes, in order to extend a parent contract you will need to override multiple related functions, which leads to code duplication and increased likelihood of bugs.
+Hooks are simply functions that are called before or after some action takes place. They provide a centralized point to hook into and extend the original behavior.</p>
+<h3 id="rules-of-hooks">Rules of Hooks</h3>
+<ol>
+<li>Whenever you override a parent’s hook, re-apply the virtual attribute to the hook.</li>
+<li>Always call the parent’s hook in your override using super. </li>
+</ol>
+<pre><code class="language-solidity">contract MyToken is ERC20 {
+    function _beforeTokenTransfer(address from, address to, uint256 amount)
+        internal virtual override // Add virtual here!
+    {
+        super._beforeTokenTransfer(from, to, amount); // Call parent hook
+        ...
+    }
+}
+</code></pre>
+<h2 id="access-control">Access Control</h2>
+<h3 id="ownable">Ownable</h3>
+<p>OpenZeppelin Contracts provides Ownable for implementing ownership in your contracts.</p>
+<pre><code class="language-solidity">// contracts/MyContract.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import &quot;@openzeppelin/contracts/access/Ownable.sol&quot;;
+
+contract MyContract is Ownable {
+    function normalThing() public {
+        // anyone can call this normalThing()
+    }
+
+    function specialThing() public onlyOwner {
+        // only the owner can call specialThing()!
+    }
+}
+</code></pre>
+<h3 id="admin-basec-access-control">Admin basec access control</h3>
+<p>OpenZeppelin Contracts provides AccessControl for implementing role-based access control.
+Below we are creating an admin, who can later define minter or burner</p>
+<pre><code class="language-solidity">// contracts/MyToken.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import &quot;@openzeppelin/contracts/access/AccessControl.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC20/ERC20.sol&quot;;
+
+contract MyToken is ERC20, AccessControl {
+    bytes32 public constant MINTER_ROLE = keccak256(&quot;MINTER_ROLE&quot;);
+    bytes32 public constant BURNER_ROLE = keccak256(&quot;BURNER_ROLE&quot;);
+
+    constructor() ERC20(&quot;MyToken&quot;, &quot;TKN&quot;) {
+        // Grant the contract deployer the default admin role: it will be able
+        // to grant and revoke any roles
+        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
+    }
+
+    function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
+        _mint(to, amount);
+    }
+
+    function burn(address from, uint256 amount) public onlyRole(BURNER_ROLE) {
+        _burn(from, amount);
+    }
+}
+</code></pre>
+<h3 id="access-control-in-the-code-itself">Access control in the code itself</h3>
+<p>Here we do not create admin, but define minter burner in the code itself. (Might be usefull at some place, but above is better)</p>
+<pre><code class="language-solidty">// contracts/MyToken.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import &quot;@openzeppelin/contracts/access/AccessControl.sol&quot;;
+import &quot;@openzeppelin/contracts/token/ERC20/ERC20.sol&quot;;
+
+contract MyToken is ERC20, AccessControl {
+    bytes32 public constant MINTER_ROLE = keccak256(&quot;MINTER_ROLE&quot;);
+    bytes32 public constant BURNER_ROLE = keccak256(&quot;BURNER_ROLE&quot;);
+
+    constructor(address minter, address burner) ERC20(&quot;MyToken&quot;, &quot;TKN&quot;) {
+        _setupRole(MINTER_ROLE, minter);
+        _setupRole(BURNER_ROLE, burner);
+    }
+
+    function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
+        _mint(to, amount);
+    }
+
+    function burn(address from, uint256 amount) public onlyRole(BURNER_ROLE) {
+        _burn(from, amount);
+    }
+}
+</code></pre>
+<h3 id="querying-privileged-accounts">Querying Privileged Accounts</h3>
+<p>Because accounts might grant and revoke roles dynamically, it is not always possible to determine which accounts hold a particular role. This is important as it allows to prove certain properties about a system, such as that an administrative account is a multisig or a DAO, or that a certain role has been removed from all users, effectively disabling any associated functionality.</p>
+<p>Under the hood, AccessControl uses EnumerableSet, a more powerful variant of Solidity’s mapping type, which allows for key enumeration. getRoleMemberCount can be used to retrieve the number of accounts that have a particular role, and getRoleMember can then be called to get the address of each of these accounts.</p>
+<pre><code class="language-javascript">const minterCount = await myToken.getRoleMemberCount(MINTER_ROLE);
+
+const members = [];
+for (let i = 0; i &lt; minterCount; ++i) {
+    members.push(await myToken.getRoleMember(MINTER_ROLE, i));
+}
+</code></pre>
+<h3 id="delayed-operation">Delayed operation</h3>
+<h4 id="why-needed">Why needed?</h4>
+<p>Access control is essential to prevent unauthorized access to critical functions. These functions may be used to mint tokens, freeze transfers or perform an upgrade that completely changes the smart contract logic. While Ownable and AccessControl can prevent unauthorized access, they do not address the issue of a misbehaving administrator attacking their own system to the prejudice of their users.</p>
+<p>This is the issue the TimelockController is addressing.</p>
+<p>The TimelockController is a proxy that is governed by proposers and executors. When set as the owner/admin/controller of a smart contract, it ensures that whichever maintenance operation is ordered by the proposers is subject to a delay. This delay protects the users of the smart contract by giving them time to review the maintenance operation and exit the system if they consider it is in their best interest to do so.</p>
+<h4 id="using-timelockcontroller">Using TimelockController</h4>
+<p>By default, the address that deployed the TimelockController gets administration privileges over the timelock.
+1. The first step in configuring the TimelockController is to assign at least one proposer and one executor.
+2. Roles are managed using the AccessControl interface and the bytes32 values for each role are accessible through the ADMIN_ROLE, PROPOSER_ROLE and EXECUTOR_ROLE constants.
+3. There is an additional feature built on top of AccessControl: giving the executor role to address(0) opens access to anyone to execute a proposal once the timelock has expired. This feature, while useful, should be used with caution.
+4. At this point, with both a proposer and an executor assigned, the timelock can perform operations.
+5. An optional next step is for the deployer to renounce its administrative privileges and leave the timelock self-administered. If the deployer decides to do so, all further maintenance, including assigning new proposers/schedulers or changing the timelock duration will have to follow the timelock workflow. This links the governance of the timelock to the governance of contracts attached to the timelock, and enforce a delay on timelock maintenance operations.
+6. With both the proposer and executor roles assigned and the timelock in charge of its own administration, you can now transfer the ownership/control of any contract to the timelock.</p>
+<h4 id="concept-of-minimum-delay">Concept of minimum delay</h4>
+<p>Operations executed by the TimelockController are not subject to a fixed delay but rather a minimum delay. Some major updates might call for a longer delay. For example, if a delay of just a few days might be sufficient for users to audit a minting operation, it makes sense to use a delay of a few weeks, or even a few months, when scheduling a smart contract upgrade.</p>
+<p>The minimum delay (accessible through the getMinDelay method) can be updated by calling the updateDelay function. Bear in mind that access to this function is only accessible by the timelock itself, meaning this maintenance operation has to go through the timelock itself.\</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

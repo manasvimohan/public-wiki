@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#prototypical-inheritance" class="nav-link">Prototypical Inheritance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#calling-super-constructor" class="nav-link">Calling Super Constructor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intermediate-function-inheritance" class="nav-link">Intermediate Function Inheritance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#method-overriding" class="nav-link">Method Overriding</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#polymorphism" class="nav-link">Polymorphism</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#mixins" class="nav-link">Mixins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Prototypical Inheritance">Prototypical Inheritance</a></li>
+<li><a href="#Calling Super Constructor">Calling Super Constructor</a></li>
+<li><a href="#Intermediate Function Inheritance">Intermediate Function Inheritance</a></li>
+<li><a href="#Method Overriding">Method Overriding</a></li>
+<li><a href="#Polymorphism">Polymorphism</a></li>
+<li><a href="#Mixins">Mixins</a></li>
+</ul>
+<h1 id="prototypical-inheritance">Prototypical Inheritance</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881270</p>
+<pre><code class="language-javascript">function Shape(){
+}
+
+Shape.prototype.duplicate = function() {
+    console.log('duplicate')
+}
+
+function Circle(radius) {
+    this.radius = radius
+}
+
+Circle.prototype.draw = function() {
+    console.log('draw')
+}
+
+const s = new Shape()
+const c = new Circle(1)
+</code></pre>
+<p>We have shape object and circle object.
+Default is circle &lt;- proto root
+We want circle &lt;- proto shape &lt;- proto root</p>
+<p>Default under the hood --&gt; Circle.prototype = Object.create(Object.prototype)
+We change to --&gt; 
+Circle.prototype = Object.create(Shape.prototype)
+Circle.prototype.constructor = Cricle // Always update constructor when resetting prototype.</p>
+<p>In ES6 we simple use extends, and above need not to be done.
+This way the chaining has been changed.</p>
+<blockquote>
+<p>Always update the constructor when resetting prototypes, else there could be weird issues https://codewithmosh.com/courses/310571/lectures/4881275</p>
+</blockquote>
+<h1 id="calling-super-constructor">Calling Super Constructor</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881274</p>
+<p>In any object, if you want to call members of other object, use call method.</p>
+<p>function Circle(radius, color) {
+    Shape.call(this, color)
+    this.radius = radius
+}</p>
+<h1 id="intermediate-function-inheritance">Intermediate Function Inheritance</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881276</p>
+<p>So when we define a function to reset constructor proto, its called intermediate function inheritance.</p>
+<p>function extend(Child, Parent) {
+    Parent.prototype = Object.create(Parent.prototype)
+    Child.prototype.constructor = Child
+}</p>
+<h1 id="method-overriding">Method Overriding</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881277</p>
+<h1 id="polymorphism">Polymorphism</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881278</p>
+<h1 id="mixins">Mixins</h1>
+<p>const person = Object.assign({}, canEat, canWalk)</p>
+<p>https://codewithmosh.com/courses/310571/lectures/4881280
+https://codewithmosh.com/courses/310571/lectures/4881279</p>
+<p>Inheritance is very fragile.
+Becomes complex very fast.
+And makes your code hard to read.
+Also, when a new object type is introduced, the inheritance tree can break.</p>
+<p>Composition is another technique.
+Always use composition over inheritance if possible.</p>
+<p>Method - 
+1. We create methods, like canWalk, canEat, canSwim
+2. Then we create object, like Fish, Dog, Human
+3. then we we assign Object.assign(Fish.prototype, canEat, canSwim) etc</p>
+<p>The above is called Composition, when we compose a final object from combining others.</p>
+<p>When we do it using a function, we call it mixins.</p>
+<p>function mixin(target, ...sources){     // Using rest operator ... to get n number of inputs
+    Object.assign(target, ...sources)   // Using spread operator ... to access each element in a array
+}</p>
+<p>Yes, rest and spread operator looks same, they are kind off......</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#complex-queries" class="nav-link">Complex Queries</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#all-any-and-some" class="nav-link">ALL ANY and SOME</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#correlated-sub-queries" class="nav-link">Correlated Sub Queries</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#exists" class="nav-link">EXISTS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#sub-query-in-select" class="nav-link">Sub Query in SELECT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#sub-query-in-from" class="nav-link">Sub Query in FROM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Complex Queries">Complex Queries</a></li>
+<li><a href="#ALL ANY and SOME">ALL ANY and SOME</a></li>
+<li><a href="#Correlated Sub Queries">Correlated Sub Queries</a></li>
+<li><a href="#EXISTS">EXISTS</a></li>
+<li><a href="#Sub Query in SELECT">Sub Query in SELECT</a></li>
+<li><a href="#Sub Query in FROM">Sub Query in FROM</a></li>
+</ul>
+<h1 id="complex-queries">Complex Queries</h1>
+<p>All sections in --&gt; https://codewithmosh.com/courses/525068/lectures/9590240</p>
+<p>This part of the tutorial is just to see how very complex queries are written.</p>
+<p>So not making notes of everything here, only bits that I did not know.</p>
+<p>Use Joins or Sub Queries. Depend case by case, for better readability.
+Sub queries in SELECT clause
+Sub queries in FROM clause
+Using DISTINCT keyword to select uniques
+Combo of above and --&gt; IN, ALL, ANY, EXISTS</p>
+<h1 id="all-any-and-some">ALL ANY and SOME</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590248</p>
+<p>SELECT *
+FROM table
+WHERE col &gt;= ALL (100,120,90,300)    -- return cols with values above all values given in ()</p>
+<p>Hence instead of (100,120...) we can have a subquery as well.</p>
+<p>https://codewithmosh.com/courses/525068/lectures/9590246
+"= ANY () "     &lt;-- Equivalent to "IN ()"
+SOME</p>
+<h1 id="correlated-sub-queries">Correlated Sub Queries</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590242</p>
+<p>When same table is used in outer and sub query.</p>
+<p>Example:
+SELECT *
+FROM table1 t1                  -- Using table1 as t1
+WHERE col &gt; (
+    SELECT SVG(col)
+    FROM table1
+    WHERE col2 = t1.col2        -- Note here we using outer table t1's col2 to compare with inner table1's col2
+)</p>
+<h1 id="exists">EXISTS</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590236</p>
+<p>Used in a correlated sub query, where outer and inner query share same table.</p>
+<p>SELECT *
+FROM table1 t1
+WHERE EXISTS (some sub query ...)       -- better than below case
+WHERE col IN (some sub query ...)       -- not performant in large table</p>
+<h1 id="sub-query-in-select">Sub Query in SELECT</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590238</p>
+<p>SELECT 
+    col1, 
+    col2,
+    (SELECT AVG(col3)
+        FROM table) AS col_average,
+    col3 - (SELECT col_average) AS difference    -- NOTE: we can not use ALIAS defined above here, hence another sub query is used
+FROM table</p>
+<h1 id="sub-query-in-from">Sub Query in FROM</h1>
+<p>https://codewithmosh.com/courses/525068/lectures/9590239</p>
+<p>We use the above example as subquery and then apply WHERE clause</p>
+<p>SELECT *
+FROM (
+    SELECT 
+        col1, 
+        col2,
+        (SELECT AVG(col3)
+            FROM table) AS col_average,
+        col3 - (SELECT col_average) AS difference
+    FROM table) AS summaryTable
+WHERE col3 IS NOT NULL</p>
+<p>What we did above can be achieved using VIEWS, see that section in the index.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

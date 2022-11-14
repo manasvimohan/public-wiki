@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#query" class="nav-link">Query</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#basic-statement" class="nav-link">Basic Statement</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#nitty-gritty" class="nav-link">Nitty Gritty</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#select" class="nav-link">SELECT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#where-with-and-or-not" class="nav-link">WHERE with AND OR NOT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#in" class="nav-link">IN</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#between" class="nav-link">BETWEEN</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#like" class="nav-link">LIKE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#regexp" class="nav-link">REGEXP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#is-null" class="nav-link">IS NULL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#order-by" class="nav-link">ORDER BY</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#limit" class="nav-link">LIMIT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Query">Query</a></li>
+<li><a href="#Basic Statement">Basic Statement</a></li>
+<li><a href="#Nitty Gritty">Nitty Gritty</a><ul>
+<li><a href="#Nitty Gritty#SELECT">SELECT</a></li>
+<li><a href="#Nitty Gritty#WHERE with AND OR NOT">WHERE with AND OR NOT</a></li>
+<li><a href="#Nitty Gritty#IN">IN</a></li>
+<li><a href="#Nitty Gritty#BETWEEN">BETWEEN</a></li>
+<li><a href="#Nitty Gritty#LIKE">LIKE</a></li>
+<li><a href="#Nitty Gritty#REGEXP">REGEXP</a></li>
+<li><a href="#Nitty Gritty#IS NULL">IS NULL</a></li>
+<li><a href="#Nitty Gritty#ORDER BY">ORDER BY</a></li>
+<li><a href="#Nitty Gritty#LIMIT">LIMIT</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="query">Query</h1>
+<h1 id="basic-statement">Basic Statement</h1>
+<p>The order in which these are written matters!</p>
+<p>USE database;</p>
+<p>SELECT col1, col2 AS anything, 'comment' as colName, 'onlyComment', col3*45, col4+6 as AddedSix
+-- SELECT *
+FROM someTable
+-- FROM otherDatabase.someTable     -- If importing from another database
+WHERE col1 = 1                      -- rows where col1 = 1
+ORDER BY col2
+LIMIT 4, 2                          -- Skip 4 records and give 2 remaining
+-- This is a comment in SQL</p>
+<p>Usage of below in sub queries -- meaning everything in between ()
+DISTINCT
+IN</p>
+<h1 id="nitty-gritty">Nitty Gritty</h1>
+<h2 id="select">SELECT</h2>
+<p>SELECT col1, col2, col2*55 AS col3
+FROM table</p>
+<h2 id="where-with-and-or-not">WHERE with AND OR NOT</h2>
+<p>SELECT * FROM table WHERE col &gt; 2 OR col &lt; 5</p>
+<h2 id="in">IN</h2>
+<p>Use IN instead of = whenever we tackle with multiple data points.</p>
+<p>Instead of using many OR, we can give a set of values to look in a col
+SELECT * FROM table 
+WHERE col IN ('a','b','c') -- NOT IN can also be used for exclusion</p>
+<h2 id="between">BETWEEN</h2>
+<p>Instead of using col&gt;5 AND col&lt;10 we can use BETWEEN
+SELECT * FROM table
+WHERE col BETWEEN 5 AND 10</p>
+<p>Can be applied for dates as well.</p>
+<h2 id="like">LIKE</h2>
+<p>WHERE strCol LIKE 'brush%' OR '%brush' -- like * in bash</p>
+<p>'_y' &lt;-- Exact match
+example we have Hello
+'H____o' will return Hello
+'H%o' will also return Hello</p>
+<p>NOT LIKE can also be used</p>
+<h2 id="regexp">REGEXP</h2>
+<p>Advance version of LIKE. Instead of a lot of OR statements, we can use regex. Also in bash or python</p>
+<p>WHERE strCol REGEXP 'something' -- Like %something%
+WHERE strCol REGEXP '^some'     -- Starts with
+WHERE strCol REGEXP 'thing$'    -- Ends With
+WHERE strCol REGEXP 'oneThing|otherThing'   -- Or statement
+WHERE strCol REGEXP '^something|oneThing|otherThing'    -- Combination
+WHERE strCol REGEXP '[some]thing'   -- Specific thing before thing
+WHERE strCol REGEXP '[a-z]thing'    -- from a-z anything before thing</p>
+<h2 id="is-null">IS NULL</h2>
+<p>To find null.
+WHERE col IS NULL
+WHERE col IS NOT NULL</p>
+<h2 id="order-by">ORDER BY</h2>
+<p>https://codewithmosh.com/courses/525068/lectures/9590109</p>
+<p>SELECT * FROM table
+ORDER BY anyCol DESC, otherCol -- default is Accending</p>
+<p>SELECT * FROM table
+ORDER BY 1, 2 DESC, 3 -- Sorting using column numbers</p>
+<p>SELECT col1, col2, 23 AS points -- Note we made an alias to 23, naming it points
+FROM table
+ORDER BY points, colName -- Notice we can use alias here</p>
+<h2 id="limit">LIMIT</h2>
+<p>Limit returned number</p>
+<p>SELECT * FROM table
+LIMIT 20 -- gives 20 rows only</p>
+<p>LIMIT 6, 3 -- This means skip first 6 records and then give 3 after them</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

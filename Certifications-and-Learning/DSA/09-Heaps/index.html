@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#heaps" class="nav-link">Heaps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#video-by-abdul-bari" class="nav-link">Video by Abdul Bari</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#basic-theory" class="nav-link">Basic Theory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#insert-pushing-up-left-to-right-in-list" class="nav-link">Insert - Pushing Up. Left to right in list.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#delete-pushing-down-right-to-left-in-list" class="nav-link">Delete - Pushing down. Right to left in list.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#heap-sort" class="nav-link">Heap Sort</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#heapify-on-pushing-down-right-to-left-in-list" class="nav-link">Heapify O(n) - Pushing Down - Right to left in list.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#priority-queue" class="nav-link">Priority Queue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Heaps">Heaps</a></li>
+<li><a href="#Video by Abdul Bari">Video by Abdul Bari</a><ul>
+<li><a href="#Video by Abdul Bari#Basic Theory">Basic Theory</a></li>
+<li><a href="#Video by Abdul Bari#Insert - Pushing Up. Left to right in list.">Insert - Pushing Up. Left to right in list.</a></li>
+<li><a href="#Video by Abdul Bari#Delete - Pushing down. Right to left in list.">Delete - Pushing down. Right to left in list.</a></li>
+<li><a href="#Video by Abdul Bari#Heap Sort">Heap Sort</a></li>
+<li><a href="#Video by Abdul Bari#Heapify O(n) - Pushing Down - Right to left in list.">Heapify O(n) - Pushing Down - Right to left in list.</a></li>
+<li><a href="#Video by Abdul Bari#Priority Queue">Priority Queue</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="heaps">Heaps</h1>
+<p>https://codewithmosh.com/courses/650827/lectures/11620136</p>
+<p>Python Versions:
+Video - https://www.youtube.com/watch?v=pLIajuc31qk&amp;list=PL3edoBgC7ScWhy0mlNvLPssa_sDGnyUcb&amp;index=1
+Min Heap - https://www.geeksforgeeks.org/min-heap-in-python/
+Max Heap - https://www.geeksforgeeks.org/max-heap-in-python/</p>
+<p>A type of binary tree, which satisfy heap property which is:
+A complete tree.
+    Only last level of tree can be unbalanced.
+    Secondly, left leafs should be filled, right can be empty.
+    In the last, right filled and left empty not allowed.
+All child value less than parent.
+Left child less than root, right child more than root.</p>
+<p>Above is a Max heap
+Min Heap also there, where root has smallest value</p>
+<p>Use?
+Sorting (Heap Sort)
+To implement Graph Algorithms (shortest path)
+Priority queues
+Finding Kth smallest or largest value - Interview important</p>
+<p>While adding nodes, we bubble up and bubble down</p>
+<h1 id="video-by-abdul-bari">Video by Abdul Bari</h1>
+<p>https://www.youtube.com/watch?v=HqPJF2L5h9U&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=32</p>
+<h2 id="basic-theory">Basic Theory</h2>
+<p>Its all about mapping complete binary tree to List DS and vice-versa.
+Image a heap of apples. Like a 2d cone.</p>
+<p>When we convert a binary tree into a list.
+Assume for an item in list, at index i
+Parent -- i/2 ..floor value or round down
+Left Child -- 2<em>i
+Right Child -- 2</em>i + 1</p>
+<p>So when constructing list from binary tree, if node is empty, we need to leave a list item BLANK.
+Hence, a large binary tree will take too much O() space</p>
+<p>If we have missing elements, when converted to array, then it is incomplete binary tree.
+Complete Binary Tree -  when no item is missing
+Full Binary tree, if all nodes full till leaves, at lowest level.</p>
+<p>Heap is a complete Binary Tree</p>
+<p>Max Heap - Root is largest 
+Min Heap - Root is smallest</p>
+<blockquote>
+<p>Following are discussed based on Max Heap.</p>
+</blockquote>
+<h2 id="insert-pushing-up-left-to-right-in-list">Insert - Pushing Up. Left to right in list.</h2>
+<p>New item is not inserted in the ROOT -- common mis conception
+New item is inserted at the bottom left leaf.
+Then comparing with parent/ ancestors in each iteration.
+Time taken is number of swaps, which is the height of the tree.
+Min O(1)        - No swapping needed 
+to 
+Max O(log n)    - Swapping from bottom leaf done</p>
+<h2 id="delete-pushing-down-right-to-left-in-list">Delete - Pushing down. Right to left in list.</h2>
+<p>The root is removed here. Image a heap of apple, the top item is removed, deleted.
+We need to preserve complete binary tree property while performing operation.
+Who takes place of root? The last item in tree, bottom right most item, say I.
+Then we compare the children, the bigger is swapped with I, which was moved up to root.
+This is continued for every iteration, and done.</p>
+<h2 id="heap-sort">Heap Sort</h2>
+<p>https://youtu.be/HqPJF2L5h9U?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;t=1869
+Step 1 - For a list, create a heap by inserting
+Step 2 - Then delete all elements</p>
+<p>Step 1 - O(n log n) - because n items added, which is O(n) and inserting is O(log n)
+Step 2 - O(n log n) - because n items deleted, which is O(n) and deletion is O(log n)</p>
+<p>Hence heap sort takes O(2n log n) which is O(n log n)</p>
+<h2 id="heapify-on-pushing-down-right-to-left-in-list">Heapify O(n) - Pushing Down - Right to left in list.</h2>
+<p>https://youtu.be/HqPJF2L5h9U?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;t=2535</p>
+<p>It is procedure to create HEAP. 
+We did it already, but there it was pushing up, but here its pushing down.</p>
+<p>For creating heap, O(log n)
+For heapify, O(n)</p>
+<h2 id="priority-queue">Priority Queue</h2>
+<p>https://youtu.be/HqPJF2L5h9U?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;t=2875</p>
+<p>NOTE: There is a concept in Operating System of priority queue, THIS IS DIFFERENT, not that.</p>
+<p>Two types
+1. Smallest item being high priority
+2. Largest item being high priority</p>
+<p>Heap is best DS for implementing Priority Queue. Why?
+Insertion and deletion of one item is log n. 
+While in normal list, either deletion is faster or insertion, only one faster at a time - O(n) </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

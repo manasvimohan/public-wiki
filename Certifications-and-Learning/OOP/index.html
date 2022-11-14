@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Objective - Manasvi</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#objective" class="nav-link">Objective</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#common-terms" class="nav-link">Common Terms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#common-practices" class="nav-link">Common Practices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#pillars-of-oop" class="nav-link">Pillars of OOP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#modern-software-design" class="nav-link">Modern Software Design</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mastering-the-tools" class="nav-link">Mastering The Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#principles" class="nav-link">Principles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#being-a-responsible-developer" class="nav-link">Being A Responsible Developer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="objective">Objective</h1>
+<p>To put in OOP principles in one place.
+Comparing all programming languages I learn.</p>
+<h1 id="introduction">Introduction</h1>
+<p>OOP forms the base to the best coding practices and handling large code base.
+Foundation for <a href="../design-patterns/">Design Patterns</a></p>
+<h1 id="common-terms">Common Terms</h1>
+<p>Classes         - Parent, with variables and methods.
+Constructors    - Class contains a root method, which is a blueprint to create basic object.
+Objects         - When class is used to create usable items, called objects.
+Abstract Class  - This can not be instantiated, object can not be made from it. Only child class can extend from it.
+Interface       - Like abstract class, but this can not have any method implementation. These have only method signatures.
+    - extends: use this on interface to create another interface.
+    - implements: use this on interface to create a concrete class from interface.
+Concrete Class  - This is an actual class created from abstract class or interface
+Generic Class   - In typeScript Course - https://codewithmosh.com/courses/1779784/lectures/40256281</p>
+<p>Coupling        - If user class changes, main class breaks and also all other classes are to be re-compiled
+Interfaces      - To address coupling issue, interface is made. A template to create class. In python its called abstract class. Keywords - implements override
+Static Methods  - These can only be accessed from the class level, not object level. These have one memory location.</p>
+<h1 id="common-practices">Common Practices</h1>
+<p>Define class and using constructors - Basic
+Accessing Properties and methods - this, self
+Making properties read-only    - Disabling users from changing exposed internal vars.
+Access Modifiers             - Control vars and methods view to user. Private, Protected, Public
+Getters and Setters         - Expose vars and methods to user in controlled manner.
+Index Signature             - Seen in typescript only
+Creating Static members     - Common location in memory. Access by class, not object.
+Inheritance                 - extends keyword
+Method override         - Changing class method by object in its own instance.
+Abstract Method         - No body, only signatures and methods
+Interface               - implements keyword
+Generics                - This format -&gt; ClassName<K,V>. Making reusable classes, interfaces and functions.
+Decorators              - Enhancing classes, methods etc</p>
+<h1 id="pillars-of-oop">Pillars of OOP</h1>
+<p><img alt="Image" src="OOP-Pillars.png" />
+Encapsulation - If we need validations in setting a variable given in parent class, so we make private variables in user class, and change them using getter and setter with validations as needed. 
+Abstraction - Removing complexity from end user and then creating a parent method, by chaining complex methods and expose parent method to user. Keyword: private public OR __ in python
+Inheritance - Inheriting methods and vars from parent
+Polymorphism - Many forms. Object instance having many forms. Abstract class in JAVA. Keywords - extends and override.
+Composition - When we create class by combining various other classes as needed.</p>
+<p>More on polymorphism --&gt;
+Make a Parent Class with Methods
+Make multiple child class from parent using extends
+Override the methods as needed.
+Create instance objects from child classes.
+In the end, you have multiple child, who act differently coz of override BUT create from a single source.</p>
+<p>Note sure how this is different from interface or abstract class. Sounds the same.</p>
+<p><a href="../design-patterns/UML/">UML</a> - Unified Modeling Language - https://codewithmosh.com/courses/759570/lectures/13732320</p>
+<h1 id="modern-software-design">Modern Software Design</h1>
+<p>https://www.arjancodes.com/mindset</p>
+<h2 id="mastering-the-tools">Mastering The Tools</h2>
+<ul>
+<li>Types And Type Hints - Knowing what types and type hints are and how they work in Python is really important. In this lesson I dive into the details of type systems, how things work in Python, and show you best practices so you get the most out of using type hints.</li>
+<li>Data Structures - A core piece of software design is using data structures correctly. Each data structure has its own pros and cons. Knowing about these is going to help you take better decisions about which data structure to use when.</li>
+<li>Classes And Data Classes - Though this is not a complete introduction of object-oriented programming, I talk about classes and data classes in detail in this lesson and how they fit into software design.</li>
+<li>Inheritance, ABCs And Protocols - In the final lesson of this module, you learn about abstraction, which is a core element of software design. I cover the various ways in which you can achieve abstraction in Python to help you choose the best option for your design.</li>
+</ul>
+<h2 id="principles">Principles</h2>
+<p>The second part of the course presents the 7 Principles Of Modern Software Design. It takes many of the existing design principles and adapts them to the needs of the modern software designer. It goes way beyond object-oriented design by teaching you generic principles that apply to any programming language and paradigm, whether that’s object-oriented, purely procedural, or functional.
+* Single Responsibility Principle - Each class should do only one thing.
+* Open Closed Principle           - Class should be OPEN for extension and CLOSED for modification.
+* Change in one class should not affect other classes - Iterator pattern
+* Favor Composition Over Inheritance - Learn how to approach inheritance in code and use it in a balanced way by looking at several code examples.
+* High Cohesion - Various techniques for making sure that the code you write has clear responsibilities.
+* Low Coupling - Learn how to reduce coupling between different areas of your application so that your code is easier to maintain in the future.
+* Start With The Data - What role does data play in the design process? When should we think about data and data structures in software design? And what is a practical process for modeling the data structures in your software?
+* Depend On Abstractions - Abstractions such as ABCs and Protocols help reduce dependencies. In this lesson I show you how to use these abstractions effectively.
+* Separate Creation From Use - You learn different ways of creating objects in a software system, and how to have better control as a software developer over how and when objects are being created.
+* Keep Things Simple - As a software developer, how do you keep things simple? I talk about different ways to make sure your code stays simple, even if the application itself is complex.</p>
+<h2 id="being-a-responsible-developer">Being A Responsible Developer</h2>
+<ul>
+<li>Mixins - You learn what Mixins are, why you need to be very careful with them, and what the much better alternatives are.</li>
+<li>Dealing With Errors - Any application has to properly deal with errors. Here you learn how error handling works in Python, what the different possibilities are as well as some of the more advanced error handling mechanisms such as context managers.</li>
+<li>Setting Up A Complex Software Project - Learn about files, folders, modules, packages, absolute and relative imports. Learn how to structure your code properly, and what should generally be in a code repository.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#objects" class="nav-link">Objects</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#object-literals" class="nav-link">Object Literals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#factories" class="nav-link">Factories</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#constructors" class="nav-link">Constructors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#constructor-property" class="nav-link">Constructor Property</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#functions-are-also-object" class="nav-link">Functions are also Object</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#value-types-and-reference-types" class="nav-link">Value types and Reference Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#enumerating-properties" class="nav-link">Enumerating Properties</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#abstraction" class="nav-link">Abstraction</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#getters-and-setters" class="nav-link">Getters and Setters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Objects">Objects</a></li>
+<li><a href="#Object Literals">Object Literals</a></li>
+<li><a href="#Factories">Factories</a></li>
+<li><a href="#Constructors">Constructors</a></li>
+<li><a href="#Constructor Property">Constructor Property</a></li>
+<li><a href="#Functions are also Object">Functions are also Object</a></li>
+<li><a href="#Value types and Reference Types">Value types and Reference Types</a></li>
+<li><a href="#Enumerating Properties">Enumerating Properties</a></li>
+<li><a href="#Abstraction">Abstraction</a><ul>
+<li><a href="#Abstraction#Getters and Setters">Getters and Setters</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="objects">Objects</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881076</p>
+<p>In javascript, everything is all about objects.</p>
+<h1 id="object-literals">Object Literals</h1>
+<p>const   - Block level scope and can not be changed. Always use this.
+let     - Block level scope and can be changed. If you want to change the variable for some reason, then use this.
+var     - This has functional level scope, and should not be used now.</p>
+<h1 id="factories">Factories</h1>
+<p>It has a constructor function.
+Does not have this.something etc.
+We do not use "new" while defining new instance.</p>
+<h1 id="constructors">Constructors</h1>
+<p>Like factory, but uses this.something.
+We use "new" to define new instance.</p>
+<h1 id="constructor-property">Constructor Property</h1>
+<p>anything.constructor &lt;-- shows us what anything is made of</p>
+<p>new String()
+new Boolean()
+new Number()</p>
+<p>We have all these. Everything is an object.</p>
+<h1 id="functions-are-also-object">Functions are also Object</h1>
+<p>if "Circle" is a constructor, then to create a new instance we can use either of the two below:</p>
+<p>const another = new Circle(1);  &lt;-- Normally done
+Circle.call({},1)               &lt;-- Under the hood this happens
+Circle.apply({},[1,2,3,4])      &lt;-- Same as call, but here we pass arguments in []</p>
+<p>Above three are same.</p>
+<h1 id="value-types-and-reference-types">Value types and Reference Types</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881080</p>
+<p>Value Types - Number, String, Boolean, Symbol, Undefined, Null
+Reference Types - Object, Function, Array</p>
+<p>Primitives are copied by their value
+Objects are copied by their reference</p>
+<h1 id="enumerating-properties">Enumerating Properties</h1>
+<p>Assume circle is an instance of an object called Circle.</p>
+<pre><code class="language-javascript">// Method 1
+for (let key in circle){
+    if (typeof circle.[key] !== 'function')
+        console.log()
+}
+
+// Method 2
+const keys = Object.keys(circle);
+console.log(keys)
+
+// Method 3
+if ('radius' in circle)
+    console.log('Circle has a radius.')
+</code></pre>
+<h1 id="abstraction">Abstraction</h1>
+<p>https://codewithmosh.com/courses/310571/lectures/4881071</p>
+<p>Using this.something, the methods and properties can be accessed by the user of the object.
+However we would like to hide it. 
+Instead of this.anything.... we use let/ const to define things. Just like factory.</p>
+<p>In nutshell, making vars and funcs private to the class, instead of letting user use them directly.</p>
+<h2 id="getters-and-setters">Getters and Setters</h2>
+<p>Get makes something accessible from outside and is read only.
+To be able to change property from outside, we use setter.
+Object.defineProperty(this, 'defaultLocation',{ 
+    get: function() {           // Getter, read property, read only
+        return something;
+    },
+    set: function(value){       // Setter, make possible to change value.
+        if (!value.x || value.y)        // Showing that we can add validations too
+            throw new Error('Invalid Location')</p>
+<pre><code>    something = value       // Without setter, something is read only
+}
+</code></pre>
+<p>})</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

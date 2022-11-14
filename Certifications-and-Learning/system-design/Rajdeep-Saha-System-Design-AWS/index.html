@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#rocking-system-design" class="nav-link">Rocking System Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#aws-terms" class="nav-link">AWS Terms</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#api-gateway" class="nav-link">API Gateway</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#load-balancing" class="nav-link">Load Balancing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#vm-and-storage" class="nav-link">VM and storage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#scaling" class="nav-link">Scaling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#alternate-to-ec2" class="nav-link">Alternate to EC2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#security" class="nav-link">Security</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#queue-pubsub-messaging-and-streaming" class="nav-link">Queue PubSub Messaging and Streaming</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#database" class="nav-link">Database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#caching" class="nav-link">Caching</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#monolith-vs-micro-services" class="nav-link">Monolith vs Micro Services</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#monolith" class="nav-link">Monolith</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#micro-service" class="nav-link">Micro Service</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#aws-micro-service" class="nav-link">AWS Micro Service</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#alb-vs-nlb" class="nav-link">ALB vs NLB</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#api-and-api-gateway" class="nav-link">API and API Gateway</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#load-balancer-vs-api-gateway" class="nav-link">Load balancer VS API Gateway</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#scaling-horizontal-vs-vertical" class="nav-link">Scaling - Horizontal vs Vertical</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#scaling-types" class="nav-link">Scaling Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#interview-question" class="nav-link">Interview Question</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#ec2" class="nav-link">EC2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lambda-server-less-scaling" class="nav-link">Lambda - Server less scaling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#kubernetes-container-scaling" class="nav-link">Kubernetes - Container Scaling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#synchronous-vs-event-driven-architecture" class="nav-link">Synchronous vs Event Driven Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#queues-vs-pubsub" class="nav-link">Queues VS PubSub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#streaming-vs-messaging" class="nav-link">Streaming VS Messaging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#sql-vs-nosql-vs-aurora-vs-dynamodb" class="nav-link">SQL vs NoSQL vs Aurora vs DynamoDB</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#websockets-for-server-to-client-communication-chatbot" class="nav-link">Websockets for Server to Client Communication - Chatbot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#caching_1" class="nav-link">Caching</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#redis-memcached-and-caching-strategy" class="nav-link">Redis memcached and caching strategy</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#lazy-loading" class="nav-link">Lazy Loading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#write-through" class="nav-link">Write-Through</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#high-availability-vs-fault-tolerance" class="nav-link">High Availability VS Fault Tolerance</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#high-availability" class="nav-link">High Availability</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fault-tolerance" class="nav-link">Fault Tolerance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#distributed-computing" class="nav-link">Distributed Computing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#hashing" class="nav-link">Hashing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#challenges" class="nav-link">Challenges</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#consistent-hashing" class="nav-link">Consistent hashing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#database-sharding-also-called-horizontal-partitioning" class="nav-link">Database Sharding also called Horizontal Partitioning</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#disaster-recovery-dr-rpo-vs-rto" class="nav-link">Disaster recovery (DR) - RPO vs RTO</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#rpo" class="nav-link">RPO</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rto" class="nav-link">RTO</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#strategy" class="nav-link">Strategy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#cap-theorem-nosql-follows-this" class="nav-link">CAP Theorem - NoSQL follows this</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Rocking System Design">Rocking System Design</a></li>
+<li><a href="#AWS Terms">AWS Terms</a><ul>
+<li><a href="#AWS Terms#Load Balancing">Load Balancing</a></li>
+<li><a href="#AWS Terms#VM and storage">VM and storage</a></li>
+<li><a href="#AWS Terms#Scaling">Scaling</a></li>
+<li><a href="#AWS Terms#Alternate to EC2">Alternate to EC2</a></li>
+<li><a href="#AWS Terms#Other">Other</a></li>
+<li><a href="#AWS Terms#Queue PubSub Messaging and Streaming">Queue PubSub Messaging and Streaming</a></li>
+<li><a href="#AWS Terms#Database">Database</a></li>
+<li><a href="#AWS Terms#Caching">Caching</a></li>
+</ul>
+</li>
+<li><a href="#Monolith vs Micro Services">Monolith vs Micro Services</a><ul>
+<li><a href="#Monolith vs Micro Services#Monolith">Monolith</a></li>
+<li><a href="#Monolith vs Micro Services#Micro Service">Micro Service</a></li>
+</ul>
+</li>
+<li><a href="#AWS Micro Service">AWS Micro Service</a></li>
+<li><a href="#ALB vs NLB">ALB vs NLB</a></li>
+<li><a href="#API and API Gateway">API and API Gateway</a></li>
+<li><a href="#Load balancer VS API GAteway">Load balancer VS API GAteway</a></li>
+<li><a href="#Scaling - Horizontal vs Vertical">Scaling - Horizontal vs Vertical</a><ul>
+<li><a href="#Scaling - Horizontal vs Vertical#Scaling Types">Scaling Types</a></li>
+</ul>
+</li>
+<li><a href="#Interview Question">Interview Question</a><ul>
+<li><a href="#Interview Question#EC2">EC2</a></li>
+<li><a href="#Interview Question#Lambda - Server less scaling">Lambda - Server less scaling</a></li>
+<li><a href="#Interview Question#Kubernetes - Container Scaling">Kubernetes - Container Scaling</a></li>
+</ul>
+</li>
+<li><a href="#Synchronous vs Event Driven Architecture">Synchronous vs Event Driven Architecture</a></li>
+<li><a href="#Queues VS PubSub">Queues VS PubSub</a></li>
+<li><a href="#Streaming VS Messaging">Streaming VS Messaging</a></li>
+<li><a href="#SQL vs NoSQL vs Aurora vs DynamoDB">SQL vs NoSQL vs Aurora vs DynamoDB</a></li>
+<li><a href="#Websockets for Server to Client Communication - Chatbot">Websockets for Server to Client Communication - Chatbot</a></li>
+<li><a href="#Caching">Caching</a></li>
+<li><a href="#Redis memcached and caching strategy">Redis memcached and caching strategy</a><ul>
+<li><a href="#Redis memcached and caching strategy#Lazy Loading">Lazy Loading</a></li>
+<li><a href="#Redis memcached and caching strategy#Write-Through">Write-Through</a></li>
+</ul>
+</li>
+<li><a href="#High Availability VS Fault Tolerance">High Availability VS Fault Tolerance</a><ul>
+<li><a href="#High Availability VS Fault Tolerance#High Availability">High Availability</a></li>
+<li><a href="#High Availability VS Fault Tolerance#Fault Tolerance">Fault Tolerance</a></li>
+</ul>
+</li>
+<li><a href="#Distributed Computing">Distributed Computing</a></li>
+<li><a href="#Hashing">Hashing</a><ul>
+<li><a href="#Hashing#Challenges">Challenges</a></li>
+<li><a href="#Hashing#Consistent hashing">Consistent hashing</a></li>
+</ul>
+</li>
+<li><a href="#Database Sharding also called Horizontal Partitioning">Database Sharding also called Horizontal Partitioning</a></li>
+<li><a href="#Disaster recovery (DR) - RPO vs RTO">Disaster recovery (DR) - RPO vs RTO</a><ul>
+<li><a href="#Disaster recovery (DR) - RPO vs RTO#RPO">RPO</a></li>
+<li><a href="#Disaster recovery (DR) - RPO vs RTO#RTO">RTO</a></li>
+<li><a href="#Disaster recovery (DR) - RPO vs RTO#Strategy">Strategy</a></li>
+</ul>
+</li>
+<li><a href="#CAP Theorem - NoSQL follows this">CAP Theorem - NoSQL follows this</a></li>
+</ul>
+<h1 id="rocking-system-design">Rocking System Design</h1>
+<h1 id="aws-terms">AWS Terms</h1>
+<h2 id="api-gateway">API Gateway</h2>
+<h2 id="load-balancing">Load Balancing</h2>
+<p>ELB - Elastic Load Balancer
+    ALB - Application LB    - HTTP - OSI Layer 7 - Application Layer - https://www.forcepoint.com/cyber-edu/osi-model
+    NLB - Network LB        - Any protocol - OSI Layer 4</p>
+<p>ALB Ingress for Kubernetes</p>
+<h2 id="vm-and-storage">VM and storage</h2>
+<p>EC2 - VM
+S3  - Storage - CloudFront for caching</p>
+<h2 id="scaling">Scaling</h2>
+<p>ASG - Auto Scaling Group - for EC2</p>
+<p>HPA - Horizontal Pod AutoScaler - Here, the PODS in the EC2 gets scaled up
+CA - Cluster Auto Scaling - for Kubernetes PODS in EC2 - The EC2 in which POD running gets scaled up</p>
+<p>AWS Fargate - Kubernetes Auto Scaling - For kubernetes but in lambda fasion</p>
+<p>RS - Replica Set for Pods</p>
+<p>AMI - Amazon Machine Image - For high traffic days, AMI size should be small
+IEM - Infrastructure Event Management   - To manage high traffic day
+RDS Proxy for scaling database, managing connections properly</p>
+<h2 id="alternate-to-ec2">Alternate to EC2</h2>
+<p>Lambda - Serverless
+EKS - Elastic Kubernetes - Its inside EC2
+ECS - Elastic Container  - Its inside EC2</p>
+<h2 id="security">Security</h2>
+<p>AWS WAF - Web Application Firewall</p>
+<h2 id="queue-pubsub-messaging-and-streaming">Queue PubSub Messaging and Streaming</h2>
+<p>-Queue - Pull Based in pipe
+SQS - Simple Queue Service - Messaging
+Amazon MQ - Message Queue</p>
+<p>-PubSub - Push Based to topics
+SNS - Simple Notification Service - Push Based
+EventBridge - Push Based - Messaging</p>
+<p>KINESIS Stream - Streaming - Live Data Analysis
+MSK - Managed Service for Kafka - Streaming</p>
+<h2 id="database">Database</h2>
+<p>AZ - Availability Zone
+HA - High Availability</p>
+<p>-SQL
+Amazon RDS - Relation Database Service
+Aurura</p>
+<p>-NoSQL
+DynamoDB - Has DAX Dynamo Accelerator for cache
+DocumentDB - Like Mongodb
+MCS - Managed Cassandra</p>
+<h2 id="caching">Caching</h2>
+<p>TTL - Time To Leave
+ElastiCache
+ElastiCache for redis and memcache</p>
+<p>DAX for DynamoDB
+CloudFront for S3</p>
+<h1 id="monolith-vs-micro-services">Monolith vs Micro Services</h1>
+<h2 id="monolith">Monolith</h2>
+<p>Resource efficient in small scale.
+Scaling is challenge
+API can be used
+get/post/delete --&gt; API gateway/ load balancer --&gt; Amazon EC2 (M5.12xlarge) --&gt; Database
+Entire Monolith to be scaled.</p>
+<h2 id="micro-service">Micro Service</h2>
+<p>get     --&gt; API gateway/ load balancer --&gt; Amazon EC2 (t3.large)  --&gt; Database1
+post    --&gt; API gateway/ load balancer --&gt; Amazon EC2 (t3.medium) --&gt; Database2
+delete  --&gt; API gateway/ load balancer --&gt; Amazon EC2 (t3.micro)  --&gt; Database3</p>
+<p>Polyglot - write in service in different langauge</p>
+<p>Independent
+    Scaling
+    Governance
+    Deployment
+    Testing
+    Functionality</p>
+<h1 id="aws-micro-service">AWS Micro Service</h1>
+<p>Amazon EC2 in Auto Scaling Group with Different scaling criteria</p>
+<p>EC2 scaling
+Elastic Load Balancing + Amazon API Gateway --&gt; get     --&gt; EC2 m5.large - ASG - Auto Scaling Group
+                                            --&gt; post    --&gt; EC2 t3.micro - ASG - Auto Scaling Group
+                                            --&gt; delete  --&gt; EC2 m4.2xlarge - ASG - Auto Scaling Group</p>
+<p>AWS lambda scaling
+Elastic Load Balancing + Amazon API Gateway --&gt; get     --&gt; AWS Lambda
+                                            --&gt; post    --&gt; AWS lambda
+                                            --&gt; delete  --&gt; AWS lambda - scaled automatically</p>
+<p>Container/ Kubernetes Scaling
+Elastic Load Balancing + Amazon API Gateway --&gt; get     --&gt; Amason Elastic Kubernetes Service
+                                            --&gt; post    --&gt; Amazon Eleastic Container Service
+                                            --&gt; delete  --&gt; same above</p>
+<p>Kubernetes
+Ingress ALB (Application load Balancer) --&gt; Service a,b,c --&gt; pod1, pod2, pod3</p>
+<p>Any above combo can be used to, service 1 in ec2, service 2 in aws lambda etc</p>
+<h1 id="alb-vs-nlb">ALB vs NLB</h1>
+<p>Amazon Elastic Load Balancing - Integrates with SSL - exposes a DNS/ address</p>
+<p>ALB - Application Load Balancer
+    Operates on OSI Layer 7 - Routes traffic based on Path, like get post delete - Validate and Terminate SSL
+NLB - Network Load Balancer
+    Operates on OSI Layer 4 - Routes traffic based on protocol and port, udp, tcp etc - SSL pass</p>
+<h1 id="api-and-api-gateway">API and API Gateway</h1>
+<p>Amazon API gateway</p>
+<h1 id="load-balancer-vs-api-gateway">Load balancer VS API Gateway</h1>
+<p>Both integrate with AWS WAF for protection</p>
+<p>API Gateway - 
+Implement rate limit, static endpoint not possible, 
+accepts only HTTPS, request validation possible, can handle spiky traffic, integrate different region and even aws accounts
+Able to export import API using swagger, OPEN API
+Able to cache response
+Timeout is 30 seconds
+Integrates with almost all AWS service
+No Health Check
+pay per use</p>
+<p>Application Load Balancer - 
+Static endpoint possible, HTTP too, 
+ALB is regional service, delay in spiky traffic, pre-allocate LCU availbale but at extra cost
+No direct method to export import rules for cross platforms
+Cant cache
+Timeour is 4000 Seconds
+EC2, Lambda and IP address as backend
+Health check available
+pay for idle too</p>
+<h1 id="scaling-horizontal-vs-vertical">Scaling - Horizontal vs Vertical</h1>
+<p>Vertical Scaling - Bigger server
+Horizontal Scaling - Many server with copy</p>
+<h2 id="scaling-types">Scaling Types</h2>
+<p>Lambda Scales only horizontally</p>
+<p>Kubernetes
+Container in POD and POD in EC2 which is Virtual Machine
+Multiple PODs made in EC2 --&gt; Cluster Auto-Scaler -- NOTE: Container in POD does not increase</p>
+<p>Amazon Fargate -- has no underlying EC2
+Lambda type -- PODs keep on increasing in Fargate</p>
+<h1 id="interview-question">Interview Question</h1>
+<p>https://www.udemy.com/course/rocking-system-design/learn/lecture/28472274#overview</p>
+<p>Handle festival traffic which is very high</p>
+<h2 id="ec2">EC2</h2>
+<p>Using Elastic Load Balancing ELB traffic to  EC2, which put in ASG</p>
+<p>ELB --&gt; Pre Warm Load Balancer
+ASG --&gt; Add Scheduled Scaling
+EC2 --&gt; Lightweight AMI in EC2
+AMI --&gt; Ensure Amazon Machine Image is light
+Database Connection --&gt; Use database proxy eg RDS proxy
+    High traffic means many open unused connections with db, which can be controlled by RDS proxy
+On top off all --&gt; Run IEM (Infrastructre Event Management) to handle high traffic
+Increase Account Limits 
+    There is limit to EC2 instance per account, that needs to be increased by request
+Utilise different Account + Region Combo</p>
+<h2 id="lambda-server-less-scaling">Lambda - Server less scaling</h2>
+<p>client --&gt; API Gateway --&gt; AWS Lambda</p>
+<p>API gateway - Enable API caching, use HTTP API instead of Rest API faster and cheaper
+AWS Lambda -
+    Provisioned Concurrency - Scheduled
+    Optemize Lambda code using X-ray
+    Optemize Lambda Configuration using CloudWatch Insights</p>
+<p>Use RDS proxy for database
+Increase Account Limits
+Utilize different Account + region combo</p>
+<h2 id="kubernetes-container-scaling">Kubernetes - Container Scaling</h2>
+<p>USE ALB (application load balancer) ingress</p>
+<p>HPA - Horizontal Pod AutoScaler
+RS - Replica Set
+CA - Cluster Auto Scaler</p>
+<p>Use replica set to run multiple copies of pod
+Use cluster over provisioner to provision nodes</p>
+<p>Pre Warm ALB
+RDS proxy in between PODS and DataBase</p>
+<p>Account limit and Account/region combo</p>
+<h1 id="synchronous-vs-event-driven-architecture">Synchronous vs Event Driven Architecture</h1>
+<p>In Sync Each component scales up with
+    Same factor
+    Same time</p>
+<p>In Async, components can be scaled up independently</p>
+<p>Scale UP API gateway ---&gt; Amazon Simple Queue Service SQS (messages saved)</p>
+<p>Async is more cost effective</p>
+<p>Combinations can be used. In ordering system, order insert is async, status retrieve is sync</p>
+<h1 id="queues-vs-pubsub">Queues VS PubSub</h1>
+<p>Queue - Pull Model:     A --&gt; Pipe --&gt; B (SQS (Simple Queue Service) and Amazon MQ)
+PubSub - Push Model:    A --&gt; Topic --&gt; Many Bs (SNS Simple Notification Service and Amazon EventBridge)
+    No Message ordering in PubSub</p>
+<h1 id="streaming-vs-messaging">Streaming VS Messaging</h1>
+<p>Message - SQS and EventBridge - 
+    data gets deleted after its processed
+Stream  - KINESIS STREAM and MSK (Message Service for Kafka)- 
+    Enables SQL on stream, perform analytics etc.
+    Data does not get deleted in stream</p>
+<h1 id="sql-vs-nosql-vs-aurora-vs-dynamodb">SQL vs NoSQL vs Aurora vs DynamoDB</h1>
+<p>https://www.udemy.com/course/rocking-system-design/learn/lecture/26100196#overview</p>
+<p>SQL or RDBMS - csv type
+    Predefined Schema
+    Holds Structured Data
+    Good for joins and complex queries
+    ACID - Atomicity, Consistency, Isolation and Durability
+    Generally Scales vertically
+    Example - Oracle, DB2, MS SQL, 
+    AWS RDS and AWS Aurora</p>
+<p>NoSQL - Json type
+    Schemeless
+    Hold structured and unstructured data
+    Not good for complex queries
+    Brewers CAP theorem - Consistency, Availability, Partition Tolerance
+    Scales Horizontally and DynamoDB scales automatically
+    Exmaple - MongoDB, Cassandra
+    AWS DynamoDB, DocumentDB (MongoDB compatible), MCS - Amazon Managed Apache Cassandra Service</p>
+<p>Aurora
+    MySQL (5x) and PostgresSQL (3x) compatible - 1/10 cost (5x means 5 times faster than MySQL)
+    Multi-Master support for MySql - during failure, it allows read/write with zero downtime
+    Cross region Active-Passive replication - Global database - during fail, 1 minute it replicates
+    Multi-AZ and Read Replicas for high availability (AZ is Availability Zone)
+    Serverless Aurora scales automatically, but not very scalable
+    Has integrated caches, cant be adjusted
+    Enable backups, snapshot for DR</p>
+<p>DynamoDb
+    Key-value dcument database, single digit millisecond performance at any scale
+    Multi- Master
+    Cross region Active-Active replication - Global Tables
+    Inherently replicates aross three AZs-HA and Durable (HA is High Availability)
+    Inherently scalable. 10 Trillion request/day OR peak 20 million request/second
+    Provides adjustable in-memory caching via DAX - Dynamo Accelarator
+    inherently durable, Point In Time backups can be enabled</p>
+<h1 id="websockets-for-server-to-client-communication-chatbot">Websockets for Server to Client Communication - Chatbot</h1>
+<p>Connection stays open in websocket
+Load Balancer and API Gateway both can use it</p>
+<h1 id="caching_1">Caching</h1>
+<p>Purpose is to get data faster.
+Its like another database. A subset of data made from db</p>
+<p>First cache is checked then db</p>
+<p>Time to Live (TTL) - Cache gets deleted after specific time
+Cache entries can be updated with backend code</p>
+<p>CACHE IS NOT RESTRICTED TO BACKEND ONLY</p>
+<p>Use managed service cache, like if API gateways provides it, use it. Dont create your own
+If cache service not given, then cache using
+    Amazon ElastiCache
+    Amazon Elasticache for Redis
+    Amazon Elasticache for Memcached</p>
+<p>Amazon API Gateway - Enable API Cache
+DynamoDB - Enable Dynamo Cache (DAX accelarator) - extra cost to be considered
+Amazon Simple Storage Service S3 - for Static Website - Use Amazon CloudFront (CDN service)</p>
+<p>Amazon ElastiCache --&gt; Amazon Elastic Kubernetes Service EKS &lt;--&gt; Amazon RDS
+EKS sits between ELB and RDS and ElastiCache is connected to EKS</p>
+<h1 id="redis-memcached-and-caching-strategy">Redis memcached and caching strategy</h1>
+<h2 id="lazy-loading">Lazy Loading</h2>
+<p>User calls EC2
+EC2 calls Elasticache.
+Elasticache returns - Cache Hit OR Cache Miss
+If Hit, the view to given to viewer
+If Miss, EC2 calls Aurora (any db) gets the data, writes to ElastiCache and present view to user
+    Posibility of stale data
+    Miss case, we get slower</p>
+<h2 id="write-through">Write-Through</h2>
+<p>User calls EC2
+EC2 write/ update db like aurora and ALSO write/update cache like elasticache at the same time
+    Data never stale
+    Writing penalty in terms of time</p>
+<h1 id="high-availability-vs-fault-tolerance">High Availability VS Fault Tolerance</h1>
+<p>https://www.udemy.com/course/rocking-system-design/learn/lecture/26100210#notes</p>
+<p>Ask in interview what to use, high avai.. or fault tol..
+AZ - Availability Zone
+HA - High Availability</p>
+<h2 id="high-availability">High Availability</h2>
+<p>Even if some parts fail, even then system keeps working
+Identify Single Point of Failure</p>
+<p>ELB --&gt; EC2 (even with ASG it is not high available)
+We put EC2 in ASG and then each EC2 in different Availability Zones, like zone 1 zone 2</p>
+<p>Use AWS lambda - High Availability
+Kubernetes?    - No, Pod works in EC2 hence not high available
+    We can put in kubernetes pod in different availability zones.
+    Also use ASG Cluster AutoScaler</p>
+<p>In interview, do not emphasise on COST bcoz, high availability is more important</p>
+<h2 id="fault-tolerance">Fault Tolerance</h2>
+<p>Assume ELB has 100 TPS (transaction per second)
+EC2 can handle 50.</p>
+<p>So you create 2 EC2 instance, in 2 AZ</p>
+<p>When 1 EC2 fails, then what? Problem, till the time next EC2 is spin up in ASG, we miss transactions</p>
+<p>Hence we create 3 EC2 in 3 AZ
+OR we can also create 2 EC2 in one AZ and 2 EC2 in another AZ</p>
+<p>Fault Tolerance is expensive.
+Like a backup EC2 in advance, adding tolerance to TPS</p>
+<h1 id="distributed-computing">Distributed Computing</h1>
+<p>https://www.udemy.com/course/rocking-system-design/learn/lecture/26341612#notes</p>
+<h1 id="hashing">Hashing</h1>
+<p>Say we create an entry in DB with primary key as "Manasvi"
+Hash is applied to "Manasvi" ---&gt; We get a digest.
+Based on the digest, the entry is saved in one of the partition of DB.</p>
+<p>We can have 20 partitions, and digest based formulation can be done to save in one of the partition.</p>
+<p>When user searches for "Manasvi", again hashing is done, then we get digest
+The digest points to partition and help locate the entry very fast.</p>
+<h2 id="challenges">Challenges</h2>
+<p>4 partitions db
+entry = 1
+digest = 10</p>
+<p>Calculation is 10%4 (gives number between 0 and 3)
+Based on calulcation output, we save entry to partition.</p>
+<p>BUT if, one partition db goes down, then calculation becomes 10%3 (0 to 2). PROBLEM
+Now we can not access our data the way we want....</p>
+<h2 id="consistent-hashing">Consistent hashing</h2>
+<p>https://www.udemy.com/course/rocking-system-design/learn/lecture/29166364#notes</p>
+<p>concept of HASH RING</p>
+<p>We hash input
+We also hash server names</p>
+<p>Then we map input hash to server hash</p>
+<p>Now if a server goes down, all input hash goes to next server</p>
+<h1 id="database-sharding-also-called-horizontal-partitioning">Database Sharding also called Horizontal Partitioning</h1>
+<p>Can be done on both SQL and NoSQL dbs</p>
+<p>A big table has 100 rows
+We can create 10 shards, meaning 10 smaller db
+hence now we have 10 db, 1st db has first 10 entry, 2nd db has next 10 entry etc....</p>
+<p>HOWEVER - We use hashing to assign the specific shard</p>
+<p>Scales Horizontaly and support distributed computing
+Faster query response times
+More reliable, only certain part of db fail in outage, rest is ok.</p>
+<p>Unbalanced shards can happen
+Resharding is painful
+Implementing sharding logic is an overhead</p>
+<h1 id="disaster-recovery-dr-rpo-vs-rto">Disaster recovery (DR) - RPO vs RTO</h1>
+<h2 id="rpo">RPO</h2>
+<p>Recovery Point Objective - Amount of DATA allowed to be lost during disaster measurement in time
+Eg we backup every 1 hr, so 1hr is RPO</p>
+<p>Real Time RPO?</p>
+<p>Yes, Replication at another storage at DR region</p>
+<h2 id="rto">RTO</h2>
+<p>Recovery Time Objective - Amount of TIME application can be down during disaster</p>
+<h2 id="strategy">Strategy</h2>
+<p>https://www.udemy.com/course/rocking-system-design/learn/lecture/29200292#notes</p>
+<p>Backup and Restore          - Only Storage copy
+Pilot Light                 - Amazon Route 53 is used in all below
+Warm Standby                - Complete Copy, but less instances on
+Multi-site active/active    - Complete Copy, duplicated into two</p>
+<h1 id="cap-theorem-nosql-follows-this">CAP Theorem - NoSQL follows this</h1>
+<p>https://www.udemy.com/course/rocking-system-design/learn/lecture/31586070#notes</p>
+<p>Consistency - Get data or error
+    Get the right data always, or no data
+Availability - Always get data, no error BUT data recent write not guarenteed
+    Get some data always, could be old data
+Partition Tolerance - System continues despite messages being dropped. 
+    DB always work</p>
+<p>You can have only 2 at a time. CA, CP, AP</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

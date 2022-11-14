@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>AWS - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#aws" class="nav-link">AWS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#started-with" class="nav-link">Started with</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#products-brief" class="nav-link">Products brief</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="aws">AWS</h1>
+<p>https://www.youtube.com/watch?v=JIbIYCM48to</p>
+<h1 id="started-with">Started with</h1>
+<p>Storage
+Compute
+Messaging</p>
+<h1 id="products-brief">Products brief</h1>
+<p>Robomaker - Simulate and test
+IOT COre - Make robiots exchange data
+Ground Station - Sattalite data
+Bracket - Quantom computer</p>
+<p>Commpute
+EC2 - Elastic Compute Cloud - Virtual computer making
+Load Balancing - Distribute traffic to multiople EC2
+Cloud Watch - Collect data from EC2 instances 
+Auto Scale - Based on cloud watch inputs, create auto EC2 for scaling
+Elastic Beanstalk - PaaS, platform as a service. Abstraction over EC2, choose nodejs, python etc... scaling etc happens auto
+LightSail - Static Server. Abstraction over ELastic Beanstalk. Choose django mean wordpress etc and done.
+Lambda - FaaS, function as a service or serverless computing. Upload code, and event, then code runs on the event happens
+Serverless REPO - Like lambda, but ready made functions, you dont write them.
+Outposts - Rent aws apis to run on own servers
+Snow - Little devices which run on hostile environment like antartica, so for scientist its there
+Elastic Container Registry - ECR - upload and Save docker images, for use by other services
+Elastic Container Service - ECS - Run docker images from ECR and create EC2 instances
+Elestic Kubernetes Service - EKS - Running docker in kubernetes for more control over scaling etc 
+Fargate - Runs ECS like servless functions, no need for EC2 instance. More automation.
+APP Runner - If container is simple, easiest to run on App runner. Abstraction over other; handles orchestration and scaling automatically</p>
+<p>File Storage
+Simple Storage Service S3 -  Save image, video, docs etc
+Glacier - If files not accessed a lot, this is cheap, but latency is high, meaning slow.
+Elastic Block Storage - Very fast, data processing type data. Lot of manual configurations.
+Elastic File System - Fast and managed, abstaction of all above, higher cost</p>
+<p>Database
+Simple DB - simple no sql database. One of the first products
+Dynamo DB - cheap, horizontal scaling, fast reads, bad at modeling like joins and limited queries
+Document DB - Exactly like mongo db, controvercial, uses mongodb backend, without telling
+Elastic Search - Full text search engine type
+RDS - Relational Database Service - Man options, many db etc; backups, patching scaling is managed by amazon
+Aurora - Like mySQL, but 5x faster at lower cost.
+    Amazon Aurora Serverless - Exactly aurora but with serverless way of tackling db
+Neptune - Graph database
+Elastic Cache - Managed version of Redis; ultra fast
+Timestream - For time series data, like stock market with analytics too
+Quantum Ledger - Create immutable cryptographically signed transations like blockchain, but not distributed like blockchain</p>
+<p>Analytics
+Redshift - Data warehouse. Put in data from various sources into here, to enable SQL like queries and analytics over them
+Lake Formation - If unstructured data from various soruces, dump raw data here, then extract to redshift or other data warehouse.
+Kinesis - For real time streaming data and visualise into any data visualisation OR use stream processing tech like Apache Spark
+Map Reduce - Operate on Large mAssive data sets</p>
+<p>::Side note --&gt; kafka, flume, hdfs/s3, kinesis, twitter</p>
+<p>MSK - Managed Service for Kafka. This can be used instead of Kinesis.
+Glue - Serverless ETL tool, extract transform load. Can connect to other amazon services
+    Glue Studio - Write jobs here, and everything happens, connect ec2, redshift, cloudwatch, lambda etc
+Data Exchange - Subscribe to 3rd party data providers and services to purchase or subscribe for high quality data.</p>
+<p>Machine Learning
+Sagemaker - tensorflow and pytorch based ML model making. Has managed jupyter notebook too.
+Rekognition - Pre made image recognition classification. Image analysis
+Lex - Conversational ML model, for chat etc, used by alexa too
+Deep Racer - A physical racecar, which can drive as per our machine learning model and do stuff</p>
+<p>Essentials
+IAM - Security Admin to control right on your aws account
+Cognito - Simpe User login and session management tool. Many authentication methods
+Simple Notification Service - SNS - Push notifications to users, maybe with cognito sessions above
+Simple Email Service - SES - Send emails to users</p>
+<p>Provisioning
+Cloud Formation - Yaml/ Json based cloud formation of all amazon services with a BLOODY FILE!! Like dockerfile and compose combo; or pods or maybe like vagrant... for all aws services!
+Amplify - SDKs for connecting and interacting with cloud formation or awas services using frontends, javascript, apple, android, web </p>
+<p>Budgets - Cost explorer for AWS</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

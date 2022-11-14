@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Elixir - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#elixir" class="nav-link">Elixir</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#practice-code" class="nav-link">Practice Code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="elixir">Elixir</h1>
+<p>https://www.youtube.com/watch?v=pBNOavRoNL0</p>
+<h1 id="practice-code">Practice Code</h1>
+<pre><code class="language-elixir">
+# This creates your module which holds all your
+# functions
+defmodule M do
+
+  # Functions start with def, the functions name
+  # and then end
+  def main do
+
+    # gets retrieves user input
+    # trim removes the newline
+    name = IO.gets(&quot;What is your name? &quot;)
+    |&gt; String.trim
+
+    # You can combine string and variable output
+    # with #{}
+    IO.puts &quot;Hello #{name}&quot;
+    data_stuff()
+  end
+
+  # ----- DATA TYPES -----
+  # Variables start with lowercase letters or
+  # underscores and then uppercase letters,
+  # underscores or numbers
+
+  # Once set a variables value can't change
+  # Types Integers, Floats, Atoms, Ranges,
+  # Binaries, Lists, Maps, Tuples
+  def data_stuff do
+
+    # There is no maximum int size
+    my_int = 123
+    IO.puts &quot;Integer #{is_integer(my_int)}&quot;
+
+    # Floats have about 16 digit precision
+    my_float = 3.14159
+    IO.puts &quot;Float #{is_float(my_float)}&quot;
+
+    # An Atoms name is its value
+    IO.puts &quot;Atom #{is_atom(:Pittsburgh)}&quot;
+
+    # Use double quotes for spaces
+    :&quot;New York&quot;
+
+    # Ranges define a start and end using ints
+    one_to_10 = 1..10
+
+    # ----- STRINGS -----
+    # Strings are defined with double quotes
+    my_str = &quot;My Sentence&quot;
+
+    IO.puts &quot;Length : #{String.length(my_str)}&quot;
+
+    # You can combine strings
+    longer_str = my_str &lt;&gt; &quot; &quot; &lt;&gt; &quot;is longer&quot;
+
+    # Compare strings
+    IO.puts &quot;Equal : #{&quot;Egg&quot; === &quot;egg&quot;}&quot;
+
+    # Check if a string contains a string
+    IO.puts &quot;My ? #{String.contains?(my_str, &quot;My&quot;)}&quot;
+
+    # Return first character
+    IO.puts &quot;First : #{String.first(my_str)}&quot;
+
+    # Get character at index
+    IO.puts &quot;Index 4 : #{String.at(my_str, 4)}&quot;
+
+    # Get a substring
+    IO.puts &quot;Substring : #{String.slice(my_str, 3, 8)}&quot;
+
+    # Split a string into a list
+    # Inspect which prints the internal
+    # representation of a value
+    IO.inspect String.split(longer_str, &quot; &quot;)
+
+    # Reverse a string
+    IO.puts String.reverse(longer_str)
+
+    # Uppercase
+    IO.puts String.upcase(longer_str)
+
+    # Lowercase
+    IO.puts String.downcase(longer_str)
+
+    # Capitalize
+    IO.puts String.capitalize(longer_str)
+
+    # Pipe output from one to another
+    4 * 10 |&gt; IO.puts
+
+    # ----- MATH -----
+    IO.puts &quot;5 + 4 = #{5+4}&quot;
+    IO.puts &quot;5 - 4 = #{5-4}&quot;
+    IO.puts &quot;5 * 4 = #{5*4}&quot;
+    IO.puts &quot;5 / 4 = #{5/4}&quot;
+    IO.puts &quot;5 div 4 = #{div(5,4)}&quot;
+    IO.puts &quot;5 rem 4 = #{rem(5,4)}&quot;
+
+    # ----- COMPARISON -----
+    IO.puts &quot;4 == 4.0 : #{4 == 4.0}&quot;
+
+    # Checks for equality of value and type
+    IO.puts &quot;4 === 4.0 : #{4 === 4.0}&quot;
+
+    IO.puts &quot;4 != 4.0 : #{4 != 4.0}&quot;
+
+    # Checks for inequality of value and type
+    IO.puts &quot;4 !== 4.0 : #{4 == 4.0}&quot;
+
+    IO.puts &quot;5 &gt; 4 : #{5 &gt; 4}&quot;
+    IO.puts &quot;5 &gt;= 4 : #{5 &gt;= 4}&quot;
+    IO.puts &quot;5 &lt; 4 : #{5 &lt; 4}&quot;
+    IO.puts &quot;5 &lt;= 4 : #{5 &lt;= 4}&quot;
+
+    # Logical operators
+    age = 16
+    IO.puts &quot;Vote &amp; Drive : #{(age &gt;= 16) and (age &gt;= 18)}&quot;
+
+    IO.puts &quot;Vote or Drive : #{(age &gt;= 16) or (age &gt;= 18)}&quot;
+
+    # Converts true to false vice versa
+    IO.puts not true
+
+    # ----- DECISION MAKING -----
+    # If and Else
+    if age &gt;= 18 do
+      IO.puts &quot;Can Vote&quot;
+    else
+      IO.puts &quot;Can Wait&quot;
+    end
+
+    # Unless
+    unless age === 18 do
+      IO.puts &quot;You're not 18&quot;
+    else
+      IO.puts &quot;You're 18&quot;
+    end
+
+    # Cond works like else if
+    # it only hits the 1st match
+    cond do
+      age &gt;= 14 -&gt; IO.puts &quot;You can wait&quot;
+      age &gt;= 16 -&gt; IO.puts &quot;You can drive&quot;
+      age &gt;= 18 -&gt; IO.puts &quot;You can vote&quot;
+      true -&gt; IO.puts &quot;Default&quot;
+    end
+
+    # Case works like switch
+    case 2 do
+      1 -&gt; IO.puts &quot;Entered 1&quot;
+      2 -&gt; IO.puts &quot;Entered 2&quot;
+      _ -&gt; IO.puts &quot;Default&quot;
+    end
+
+    # Ternary operator
+    IO.puts &quot;Ternary : #{if age &gt; 18, do: &quot;Can Vote&quot;, else: &quot;Can't Vote&quot;}&quot;
+
+    # ----- TUPLES -----
+    # Tuples normally have 2 to 4 values
+    # They can hold any value
+    # They aren't for enumerating, or
+    # cycling through like lists
+    # They ar for pattern matching
+
+    # Create a tuple
+    my_stats = {175, 6.25, :Derek}
+    IO.puts &quot;Tuple #{is_tuple(my_stats)}&quot;
+
+    # You can append values
+    my_stats2 = Tuple.append(my_stats, 42)
+
+    # Retrieve values by index
+    IO.puts &quot;Age #{elem(my_stats2, 3)}&quot;
+
+    # Get tuple size
+    IO.puts &quot;Size #{tuple_size(my_stats2)}&quot;
+
+    # Delete an index
+    my_stats3 = Tuple.delete_at(my_stats2, 0)
+
+    # Insert at an index
+    my_stats4 = Tuple.insert_at(my_stats3, 0, 1974)
+
+    # Create a tuple with the same values
+    # duplicated a number of times
+    many_zeroes = Tuple.duplicate(0, 5)
+
+    # You can use tuples for pattern matching
+    {weight, height, name} = {175, 6.25, :Derek}
+    IO.puts &quot;Weight : #{weight}&quot;
+
+    # ----- LISTS -----
+    # Lists contain lists of data of any data type
+    list1 = [1,2,3]
+    list2 = [4,5,6]
+
+    # You can combine Lists
+    list3 = list1 ++ list2
+
+    # You can subtract Lists
+    list4 = list3 -- list1
+
+    # Verify if an item is in a list
+    IO.puts 6 in list4
+
+    # Separate the head and tail of list
+    [head | tail] = list3
+    IO.puts &quot;Head : #{head}&quot;
+
+    # Write to the screen without a newline
+    IO.write &quot;Tail : &quot;
+
+    # To show the tail use inspect
+    IO.inspect tail
+
+    # Inspect which prints the internal
+    # representation of a
+    # value may give odd results
+    IO.inspect [97,98]
+
+    # You can force inspect to print as a list
+    # like this
+    IO.inspect [97,98], char_lists: :as_lists
+
+    # Enum can enumerate over lists
+    Enum.each tail, fn item -&gt;
+      IO.puts item
+    end
+
+    words = [&quot;Random&quot;, &quot;Words&quot;, &quot;in a&quot;, &quot;list&quot;]
+    Enum.each words, fn word -&gt;
+      IO.puts word
+    end
+
+    # We can use recursion to loop as well
+    display_list(words)
+
+    # Delete deletes the given item from a list
+    IO.puts display_list(List.delete(words,&quot;Random&quot;))
+
+    # Delete item at index
+    IO.puts display_list(List.delete_at(words,1))
+
+    # Insert item at index
+    IO.puts display_list(List.insert_at(words,4, &quot;Yeah&quot;))
+
+    # Get first item
+    IO.puts List.first(words)
+
+    # Get last item
+    IO.puts List.last(words)
+
+    # You can create lists of key value tuples
+    my_stats5 = [name: &quot;Derek&quot;, height: 6.25, weight: 175]
+
+    # ----- MAPS -----
+    # Maps hold collections of key value pairs
+    capitals = %{&quot;Alabama&quot; =&gt; &quot;Montgomery&quot;,
+    &quot;Alaska&quot; =&gt; &quot;Juneau&quot;, &quot;Arizona&quot; =&gt; &quot;Phoenix&quot;}
+
+    # Retrieve values using the key
+    IO.puts &quot;Capital of Alaska is #{capitals[&quot;Alaska&quot;]}&quot;
+
+    # You can use atoms as keys
+    capitals2 = %{alabama: &quot;Montgomery&quot;,
+    alaska: &quot;Juneau&quot;, arizona: &quot;Phoenix&quot;}
+
+    IO.puts &quot;Capital of Arizona is #{capitals2.arizona}&quot;
+
+    # Insert a key / value
+    capitals3 = Dict.put_new(capitals, &quot;Arkansas&quot;, &quot;Big Rock&quot;)
+
+    # ----- PATTERN MATCHING -----
+    # With pattern matching we can retrieve
+    # data from data structures
+
+    [length, width] = [20, 30]
+    IO.puts &quot;Width : #{width}&quot;
+
+    # If you don't care about data use _
+    [_, [_, a]] = [20, [30, 40]]
+    IO.puts &quot;Get Num : #{a}&quot;
+
+    # ----- ANONYMOUS FUNCTIONS -----
+    # An anonymous function has no name and can
+    # be passed to another function
+    get_sum = fn (x, y) -&gt; x + y end
+    IO.puts &quot;5 + 5 = #{get_sum.(5,5)}&quot;
+
+    # Shorthand of th above
+    # Increment the parameter names by 1
+    get_less = &amp;(&amp;1 - &amp;2)
+    IO.puts &quot;7 - 6 = #{get_less.(7,6)}&quot;
+
+    # You can have functions except different
+    # numbers of parameters
+    add_sum = fn
+      {x,y} -&gt; IO.puts &quot;#{x} + #{y} = #{x+y}&quot;
+      {x,y,z} -&gt; IO.puts &quot;#{x} + #{y} + #{z} = #{x+y+z}&quot;
+    end
+
+    add_sum.({1,2})
+    add_sum.({1,2,3})
+
+    # You can set defaults for parameters
+    IO.puts do_it()
+
+    # ----- RECURSION -----
+    # Recursion is the act of a function
+    # calling itself
+    IO.puts &quot;Factorial of 3 : #{factorial(4)}&quot;
+
+    # ----- LOOPING -----
+    # With most languages we loop by
+    # incrementing or decrementing a value
+    # Since all variables are immutable
+    # in Elixir we use recursion to loop
+    IO.puts &quot;Sum : #{sum([1,2,3])}&quot;
+
+    # An Elixir for loop
+    loop(5,1)
+
+    # ----- ENUMERABLES -----
+    # An enumerable can have its items
+    # counted off
+
+    # Check if all values are even
+    IO.puts &quot;Even List : #{Enum.all?([1,2,3],
+    fn(n) -&gt; rem(n,2) == 0 end)}&quot;
+
+    # Check if any items are even
+    IO.puts &quot;Even Item : #{Enum.any?([1,2,3],
+    fn(n) -&gt; rem(n,2) == 0 end)}&quot;
+
+    # Print out each item
+    Enum.each([1,2,3], fn(n) -&gt; IO.puts n end)
+
+    # Double each value in a list
+    dbl_list = Enum.map([1,2,3], fn(n) -&gt; n * 2 end)
+    IO.inspect dbl_list
+
+    # Reduce down to a single value
+    sum_vals = Enum.reduce([1,2,3], fn(n, sum) -&gt; n + sum end)
+    IO.puts &quot;Sum : #{sum_vals}&quot;
+
+    IO.inspect Enum.uniq([1,2,2])
+
+    # ----- LIST COMPREHENSIONS -----
+    # Provides an additonal way to perform
+    # actions on a list
+
+    # Double every list item
+    dbl_list2 = for n &lt;- [1,2,3], do: n * 2
+    IO.inspect dbl_list2
+
+    # Create a list of evens
+    even_list = for n &lt;- [1,2,3,4], rem(n,2) == 0, do: n
+    IO.inspect even_list
+
+    # ----- EXCEPTION HANDLING -----
+    # Allows us to handle errors
+
+    err = try do
+      5 / 0
+    rescue
+      ArithmeticError -&gt; &quot;Can't Divide by Zero&quot;
+    end
+
+    IO.puts err
+
+    # ----- CONCURRENCY -----
+    # Running multiple blocks of code at once
+    # Calling spawn starts a new process that
+    # runs the code specified at an undefined
+    # time
+
+    # Spawn returns a Process ID (PID)
+    spawn(fn() -&gt; loop(50, 1) end)
+    spawn(fn() -&gt; loop(100, 50) end)
+
+    # We can send messgaes between
+    # processes
+
+    # Send a message to this process
+    # and receive it
+    send(self(), {:french, &quot;Bob&quot;})
+
+    receive do
+      {:german, name} -&gt; IO.puts &quot;Guten tag #{name}&quot;
+      {:french, name} -&gt; IO.puts &quot;Bonjour #{name}&quot;
+      {:english, name} -&gt; IO.puts &quot;Hello #{name}&quot;
+
+    # If there is no matching message you can issue
+    # a timeout like I did for 500 milliseconds
+    after
+      500 -&gt; IO.puts &quot;Times up&quot;
+    end
+
+  end
+
+  # ----- RECURSIVE FUNCTIONS -----
+
+  # Output list with recursion
+  def display_list([word|words]) do
+    IO.puts word
+    display_list(words)
+  end
+  def display_list([]), do: nil
+
+  # Calculate a factorial
+  def factorial(num) do
+
+    # This will end the calling of
+    # additional functions
+    if num &lt;= 1 do
+      1
+    else
+      result = num * factorial(num - 1)
+      result
+    end
+  end
+
+  # 1st : result = 4 * factorial(3) = 4 * 6 = 24
+  # 2nd : result = 3 * factorial(2) = 3 * 2 = 6
+  # 3rd : result = 2 * factorial(1) = 2 * 1 = 2
+
+  # Demonstrate looping
+  # Sum values in a list
+  # Decide what happens if we get an empty list
+  def sum([]), do: 0
+
+  # Empty the list as we sum values
+  def sum([h|t]), do: h + sum(t)
+
+  # A Elixir for loop
+  # What happens if the 1st attribute is 0
+  def loop(0,_), do: nil
+
+  def loop(max, min) do
+    if max &lt; min do
+      loop(0, min)
+    else
+      IO.puts &quot;Num : #{max}&quot;
+      loop(max - 1, min)
+    end
+  end
+
+  # ----- DEFINE DEFAULTS -----
+  # Define defaults with \\
+  def do_it(x \\ 1, y \\ 1) do
+    x + y
+  end
+
+end
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

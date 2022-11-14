@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Critical Path Method - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_critical_path_method" class="nav-link">_Critical_Path_Method</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_calculation_of_float" class="nav-link">_Calculation_of_Float</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_forward_pass" class="nav-link">_Forward_Pass</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_backward_pass" class="nav-link">_Backward_Pass</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_schedule_compression" class="nav-link">_Schedule_Compression</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_techniques_and_impacts" class="nav-link">_Techniques_and_impacts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_impact_of_schedule_compression" class="nav-link">_Impact_of_Schedule_Compression</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_critical_path_method">_Critical_Path_Method</h1>
+<p>https://youtu.be/1gP839Y3sJQ?t=5951</p>
+<p>Critical_path_is_the_longest_duration_path_through_a_network_diagram,_which_determines_the_shortest_time_to_complete_the_project.</p>
+<p>Float,_also_called_as_slack_is_calculated_in_a_network_diagram.</p>
+<p>Three_types_of_floats/_slack</p>
+<p>The_amount_of_time_that_a_scheduled_activity_can_be_delayed_or_extended</p>
+<p>1.<em>Total_Float</em>-<em>without_delaying_project_finish_date_or_schedule_constrains
+2._Free_Float</em>-<em>without_delaying_any_successor_start_date_activity
+3._Independent_Float</em>-_All_predecessors_finish_latest_and_All_successors_started_earliest.</p>
+<h1 id="_calculation_of_float">_Calculation_of_Float</h1>
+<p>https://youtu.be/1gP839Y3sJQ?t=6019</p>
+<p>Identify_the_critical_path_of_the_network
+Follow_the_forward_pass_to_find_early_start_and_early_finish_for_each_activity
+Calculate_late_finish_and_late_start_using_backward_pass_method</p>
+<h2 id="_forward_pass">_Forward_Pass</h2>
+<p>ES_-<em>Early_Start
+EF</em>-_Early_Finish</p>
+<h2 id="_backward_pass">_Backward_Pass</h2>
+<p>LF_-<em>Late_Finish
+LS</em>-_Late_Start</p>
+<p>Total_Float_=<em>LS</em>-<em>ES_or_Total_Flaot</em>=<em>LF</em>-_EF</p>
+<p>Example_of_critical_path_--&gt;_https://youtu.be/1gP839Y3sJQ?t=6119</p>
+<h1 id="_schedule_compression">_Schedule_Compression</h1>
+<p>Link_-_https://youtu.be/1gP839Y3sJQ?t=6211</p>
+<h2 id="_techniques_and_impacts">_Techniques_and_impacts</h2>
+<p>Fast_Track_-<em>Adds_risk,_increase_management_time
+Crash</em>-<em>Adds_costs,_increase_management_time
+Reduce_Scope</em>-<em>Saves_time_and_cost,_increase_customer_dissatisfaction
+Cut_quality</em>-<em>Saves_cost_and_resources,_increase_risk
+Resource_Reallocation</em>-_Does_not_add_cost_or_increase_risk</p>
+<h2 id="_impact_of_schedule_compression">_Impact_of_Schedule_Compression</h2>
+<p>LINK_-_https://youtu.be/1gP839Y3sJQ?t=6261</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

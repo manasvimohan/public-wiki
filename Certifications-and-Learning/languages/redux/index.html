@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#intro" class="nav-link">Intro</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#basic-file-structure" class="nav-link">Basic File Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#functional-programming" class="nav-link">Functional Programming</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#functions-are-first-class-citizens" class="nav-link">Functions are First Class Citizens</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#higher-order-functions" class="nav-link">Higher Order Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#function-composition" class="nav-link">Function Composition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#composing-and-piping" class="nav-link">Composing and Piping</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#currying" class="nav-link">Currying</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pure-functions-and-immutability" class="nav-link">Pure Functions and Immutability</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#redux-fundamentals" class="nav-link">Redux Fundamentals</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#three-building-blocks" class="nav-link">Three Building Blocks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#building-redux-steps" class="nav-link">Building redux - steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#files-needed" class="nav-link">Files Needed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#design-store" class="nav-link">Design Store</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#define-actions" class="nav-link">Define Actions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-reducer" class="nav-link">Create Reducer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#set-up-the-store" class="nav-link">Set up the Store</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dispatching-and-subscribing-actions" class="nav-link">Dispatching and Subscribing Actions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#action-types" class="nav-link">Action Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#action-creators" class="nav-link">Action Creators</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#redux-dev-tool" class="nav-link">Redux Dev Tool</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#clean-redux-code" class="nav-link">Clean Redux Code</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#project-structure-recommended" class="nav-link">Project Structure Recommended</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#redux-toolkit" class="nav-link">Redux Toolkit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#advance" class="nav-link">Advance</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#designing-a-store" class="nav-link">Designing a store</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#middleware" class="nav-link">Middleware</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#basic-use" class="nav-link">Basic use</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#parameterizing-middleare" class="nav-link">Parameterizing Middleare</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#redux-thunk" class="nav-link">REDUX THUNK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Intro">Intro</a><ul>
+<li><a href="#Intro#Basic File Structure">Basic File Structure</a></li>
+</ul>
+</li>
+<li><a href="#Functional Programming">Functional Programming</a><ul>
+<li><a href="#Functional Programming#Functions are First Class Citizens">Functions are First Class Citizens</a></li>
+<li><a href="#Functional Programming#Higher Order Functions">Higher Order Functions</a></li>
+<li><a href="#Functional Programming#Function Composition">Function Composition</a></li>
+<li><a href="#Functional Programming#Composing and Piping">Composing and Piping</a></li>
+<li><a href="#Functional Programming#Currying">Currying</a></li>
+<li><a href="#Functional Programming#Pure Functions and Immutability">Pure Functions and Immutability</a><ul>
+<li><a href="#Functional Programming#Pure Functions and Immutability#Updating objects">Updating objects</a></li>
+<li><a href="#Functional Programming#Pure Functions and Immutability#Updating Arrays">Updating Arrays</a></li>
+<li><a href="#Functional Programming#Pure Functions and Immutability#Enforcing Immutability">Enforcing Immutability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Redux Fundamentals">Redux Fundamentals</a><ul>
+<li><a href="#Redux Fundamentals#Three Building Blocks">Three Building Blocks</a></li>
+<li><a href="#Redux Fundamentals#Building redux - steps">Building redux - steps</a></li>
+<li><a href="#Redux Fundamentals#Files Needed">Files Needed</a></li>
+<li><a href="#Redux Fundamentals#Design Store">Design Store</a></li>
+<li><a href="#Redux Fundamentals#Define Actions">Define Actions</a></li>
+<li><a href="#Redux Fundamentals#Create Reducer">Create Reducer</a></li>
+<li><a href="#Redux Fundamentals#Set up the Store">Set up the Store</a></li>
+<li><a href="#Redux Fundamentals#Dispatching and Subscribing Actions">Dispatching and Subscribing Actions</a></li>
+<li><a href="#Redux Fundamentals#Action Types">Action Types</a></li>
+<li><a href="#Redux Fundamentals#Action Creators">Action Creators</a></li>
+</ul>
+</li>
+<li><a href="#Redux Dev Tool">Redux Dev Tool</a></li>
+<li><a href="#Clean Redux Code">Clean Redux Code</a><ul>
+<li><a href="#Clean Redux Code#Project Structure Recommended">Project Structure Recommended</a><ul>
+<li><a href="#Clean Redux Code#Project Structure Recommended#Intuitive">Intuitive</a></li>
+<li><a href="#Clean Redux Code#Project Structure Recommended#Ducks Pattern">Ducks Pattern</a></li>
+</ul>
+</li>
+<li><a href="#Clean Redux Code#Redux Toolkit">Redux Toolkit</a><ul>
+<li><a href="#Clean Redux Code#Redux Toolkit#Store">Store</a></li>
+<li><a href="#Clean Redux Code#Redux Toolkit#Actions">Actions</a></li>
+<li><a href="#Clean Redux Code#Redux Toolkit#Reducers">Reducers</a></li>
+<li><a href="#Clean Redux Code#Redux Toolkit#Slices - FINAL BEST WAY">Slices - FINAL BEST WAY</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Advance">Advance</a><ul>
+<li><a href="#Advance#Designing a store">Designing a store</a><ul>
+<li><a href="#Advance#Designing a store#Combine Reducers">Combine Reducers</a></li>
+<li><a href="#Advance#Designing a store#Normalization">Normalization</a></li>
+<li><a href="#Advance#Designing a store#Selectors and Memoizing Selectors">Selectors and Memoizing Selectors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Middleware">Middleware</a><ul>
+<li><a href="#Middleware#Basic use">Basic use</a></li>
+<li><a href="#Middleware#Parameterizing Middleare">Parameterizing Middleare</a></li>
+<li><a href="#Middleware#REDUX THUNK">REDUX THUNK</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="intro">Intro</h1>
+<p>Flux by facebook
+Redux - Inspired by Flux
+Mobx</p>
+<p>Single Source of Truth.
+Central State Management.</p>
+<p>Strength 
+- How data changed and track UI state change for troubleshooting
+- Time Travel Debugging - Redux dev tools
+- Log Rocket tool - for tracking and time travel debugging
+- Save any state and load later
+- Preserve and Cache states, to prevent re-download or reload</p>
+<p>Pros:
+Predictable state changes, 
+Centralised state, 
+easy debugging, 
+preserve page state
+undo/redo
+Ecosystem of add-ons</p>
+<p>Cons:
+Complexity is high
+Very verbose.</p>
+<h2 id="basic-file-structure">Basic File Structure</h2>
+<p>actiontypes.js  // Action Types are named here and exported.
+actions.js      // Action functions are here, actionTypes imported here.</p>
+<p>reducer.js      // Reducers defined here. Switch cases, actions imported here.
+store.js        // Store is defined here. Import redux lib and createStore from the reducer.js.
+index.js        // All interactions done here. Dispatch and Subscriptions.</p>
+<h1 id="functional-programming">Functional Programming</h1>
+<p>https://codewithmosh.com/courses/783424/lectures/14780302</p>
+<p>Decomposing a program into many smaller functions and then building larger functions.
+Clojure and Haskell are purely functional programming languages.</p>
+<h2 id="functions-are-first-class-citizens">Functions are First Class Citizens</h2>
+<p>When we can
+1. Define function as variable
+2. Return function from a function
+3. Input function as a variable into another function.</p>
+<pre><code class="language-javascript">// Example 1
+function sayHello() {}
+let fn = sayHello       // Not calling function, just refencing it into an object.
+
+fn()        // Same as below
+sayHello()
+
+//Example 2
+function funA(){
+    return function() {
+        return &quot;Hello&quot;;
+    }
+
+let fn = funA();        // Returns internal function.
+let message = fn();     // Calling the defined function.
+}
+</code></pre>
+<h2 id="higher-order-functions">Higher Order Functions</h2>
+<p>If a function takes a function as argument or return function or both.</p>
+<p>Below in javascript are higher order functions
+.map
+setTimeout()</p>
+<h2 id="function-composition">Function Composition</h2>
+<pre><code class="language-javascript">let input = &quot;    Hello   &quot;;
+
+const trim = str =&gt; str.trim();
+const wrapInDiv = str =&gt; `&lt;div&gt;${str}&lt;/div&gt;`
+const toLowerCase = str =&gt; str.toLowerCase()
+
+const result = wrapInDiv(toLowerCase(trim(input)));
+
+// NOTE above too much wrapping and reading from right to left
+</code></pre>
+<h2 id="composing-and-piping">Composing and Piping</h2>
+<pre><code class="language-bash">yarn add lodash
+</code></pre>
+<p>Refer above code</p>
+<pre><code class="language-javascript">import {compose, pipe} from &quot;lodash/fp&quot;;
+
+let input = &quot;    Hello   &quot;;
+
+const trim = str =&gt; str.trim();
+const wrapInDiv = str =&gt; `&lt;div&gt;${str}&lt;/div&gt;`
+const toLowerCase = str =&gt; str.toLowerCase()
+
+//const transform = compose(wrapInDiv, toLowerCase, trim) // to much wrapping is solved, but still read from right to left
+const transform = pipe(trim, toLowerCase, wrapInDiv)    // This is the best, no wrapping and read left to write.
+
+transform(input);
+</code></pre>
+<h2 id="currying">Currying</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780300</p>
+<p>Reducing the number of input parameters variables in a function to single parameter, by making nested functions.</p>
+<p>Now in the above example, pipe function takes in only functions with no varibales.
+How to we pass variables?
+We use currying, where we create function within function and pass 1 variable per function.</p>
+<pre><code class="language-javascript">function add(a){
+    return function(b){
+        return a+b
+    }
+}
+
+add(1)(5)   // Instead of doing add(1,5), we do (1)(5). Meaning calling function, then inner function then inner....
+
+const add2 = a =&gt; b =&gt; a+b  // instead of (a,b) =&gt; a+b, we use this.
+</code></pre>
+<p>Our Example:</p>
+<pre><code class="language-javascript">import {compose, pipe} from &quot;lodash/fp&quot;;
+
+let input = &quot;    Hello   &quot;;
+
+const trim = str =&gt; str.trim();
+//const wrap = (type,str) =&gt; `&lt;${type}&gt;${str}&lt;/${type}&gt;`     // Instead of this
+const wrap = type =&gt; str =&gt; `&lt;${type}&gt;${str}&lt;/${type}&gt;`    // Do this
+const toLowerCase = str =&gt; str.toLowerCase()
+
+const transform = pipe(trim, toLowerCase, wrap(&quot;div&quot;))    // Now we can pass two variables
+
+transform(input);
+</code></pre>
+<h2 id="pure-functions-and-immutability">Pure Functions and Immutability</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780287</p>
+<p>If a function takes an argument and always gives the same output, then its pure.
+We can not mutate parameters in pure functions.
+Example MATH.random, datetime etc are not pure functions.</p>
+<p>Pros:
+Self-documented
+Easily testable
+Concurrency
+Cacheable</p>
+<p>In javascript const items can not me mutated. But arrays can be mutated by changing values with in.
+Hence javascript is a multi paradigm language.</p>
+<p>If we can not mutate a variable once defined, its called immutability and that is a good thing.</p>
+<p>Why good?
+Predictability
+Faster Change Detection
+Concurrency</p>
+<p>Cons
+Performance issue when large number of objects
+Memory overhead</p>
+<h3 id="updating-objects">Updating objects</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780289</p>
+<p>Shallow vs Deep Copy</p>
+<pre><code class="language-javascript">const person = {name: &quot;Hello&quot;,
+                address: {
+                    state: &quot;Haryana&quot;,
+                    city: &quot;Gurugram&quot;
+                }}
+
+// Shallow copy. Here creating a new object then changing it also changes the parent.
+const updated = Object.assign(...person, name: &quot;Bye&quot;)
+
+// Deep copy. Now we created a full copy, and this object is independent from parent.
+const updated = {
+        ...person,      // Copy on level
+        address: {
+            ...person.address   // copy second level
+        },
+        name: &quot;Bye&quot;)        // Changing a value 
+        }
+</code></pre>
+<h3 id="updating-arrays">Updating Arrays</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780298</p>
+<h3 id="enforcing-immutability">Enforcing Immutability</h3>
+<p>Good Libraries
+Immutable - https://codewithmosh.com/courses/783424/lectures/14780290
+Immer - https://codewithmosh.com/courses/783424/lectures/14780301
+Mori</p>
+<p>Immer is preferred.</p>
+<h1 id="redux-fundamentals">Redux Fundamentals</h1>
+<p>https://codewithmosh.com/courses/783424/lectures/14780381</p>
+<p>yarn add redux</p>
+<h2 id="three-building-blocks">Three Building Blocks</h2>
+<ol>
+<li>Store   (where we store)</li>
+<li>Action  (should be called events)</li>
+<li>Reducer (a function that handles store and action. Like an event handler)
+        "Event handler" name is used in context when we do mutations, but in 
+        functional programming, we deal with immutables, hence instead of
+        event handler, a new name was needed, and we called it reducer.</li>
+</ol>
+<h2 id="building-redux-steps">Building redux - steps</h2>
+<ol>
+<li>Design Store</li>
+<li>Define Actions</li>
+<li>Create Reducers</li>
+<li>Set up the Store</li>
+<li>Dispatching Actions and Subscribing Actions</li>
+</ol>
+<h2 id="files-needed">Files Needed</h2>
+<p>actiontypes.js  // Action Types are named here and exported.
+actions.js      // Action functions are here, actionTypes imported here.</p>
+<p>reducer.js      // Reducers defined here. Switch cases, actions imported here.
+store.js        // Store is defined here. Import redux lib and createStore from the reducer.js.
+index.js        // All interactions done here. Dispatch and Subscriptions.</p>
+<h2 id="design-store">Design Store</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780373</p>
+<p>[
+    {
+        id:1,
+        desc: "",
+        resolved: false
+    },
+    {...},  //Object
+    [...],  //Or Array
+    [...],
+]</p>
+<h2 id="define-actions">Define Actions</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780377</p>
+<p>Add, Mark Resolve, Delete etc etc anything</p>
+<p>{
+    type: "bugAdded",       // many people use BUG_ADDED
+    payload: {              // The miniman amount of information for the action
+        id: 1,
+        description: "Something meaningfull"
+    }
+}</p>
+<h2 id="create-reducer">Create Reducer</h2>
+<pre><code class="language-javascript">// reducer.js
+function reducer(state = [], action){   // We use state = [] else, javascript will make it undefined
+
+    switch (action.type){
+
+        case &quot;bugAdded&quot;:
+            return ........
+        case &quot;bugRemoved&quot;:
+            return ........
+        default:
+            return state
+
+    }
+}
+
+export default reducer
+</code></pre>
+<h2 id="set-up-the-store">Set up the Store</h2>
+<pre><code class="language-javascript">//store.js
+
+import { createStore } from 'redux';
+import reducer from './reducer';
+
+const store = createStore(reducer);
+
+export default store
+</code></pre>
+<h2 id="dispatching-and-subscribing-actions">Dispatching and Subscribing Actions</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780384
+https://codewithmosh.com/courses/783424/lectures/14780375</p>
+<pre><code class="language-javascript">// index.js
+
+import store from './store';
+console.log(store)
+
+/////////////////// Subscribe
+// NOTE: Subscribe function returns a function called unsubscribe
+//       Which can be called later to remove subscription.
+//       Pretty Weird!
+const unsubscribe = store.subscribe(()=&gt;{
+    console.log(&quot;Store Changed&quot;, store.getState())
+})
+
+/////////////////// Dispatch
+// We will get notification for the below action bevause we subscribed above
+store.dispatch({
+    type: &quot;bugAdded&quot;,
+    payload: {
+        description: &quot;Bug1&quot;
+    }
+})
+
+unsubscribe()               // Calling this will unsubscribe. READ WEIRD NOTE ABOVE!
+
+// We will not get notification now for below action
+store.dispatch({
+    type: &quot;bugRemoved&quot;,
+    payload: {
+        id: &quot;1&quot;
+    }
+})
+
+console.log(store.getState())
+
+</code></pre>
+<h2 id="action-types">Action Types</h2>
+<pre><code class="language-javascript">//actionTypes.js
+
+export const BUG_ADDED = &quot;bugAdded&quot;
+export const BUG_REMOVED = &quot;bugREMOVED&quot;
+</code></pre>
+<pre><code class="language-javascript">//Everywhere in reducer.js and index.js
+
+import * as actions from './actionTypes';
+
+//replace &quot;bugAdded&quot; with actions.BUG_ADDED
+//replace &quot;bugRemoved&quot; with actions.BUG_REMOVED
+
+}
+</code></pre>
+<h2 id="action-creators">Action Creators</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780380</p>
+<pre><code class="language-javascript">// actions.js
+import * as actions from './actionTypes';
+
+export function bugAdded(desc) {
+    return {
+        type: actions.BUG_ADDED,
+        payload:{
+            desc: &quot;Bug1&quot;
+        }
+    }
+}
+</code></pre>
+<h1 id="redux-dev-tool">Redux Dev Tool</h1>
+<p>https://codewithmosh.com/courses/783424/lectures/14780553</p>
+<h1 id="clean-redux-code">Clean Redux Code</h1>
+<h2 id="project-structure-recommended">Project Structure Recommended</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780635</p>
+<h3 id="intuitive">Intuitive</h3>
+<p>src
+    store
+        auth
+            actions.js
+            actionTypes.js
+            reducer.js
+        bugs
+        projects
+        etc</p>
+<h3 id="ducks-pattern">Ducks Pattern</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780632</p>
+<p>Here actions, actionTypes and reducer moved to single FILE as per role.</p>
+<p>src
+    store
+        auth.js
+        bugs.js
+        projects.js
+        etc etc</p>
+<h2 id="redux-toolkit">Redux Toolkit</h2>
+<p>Use this instead of redux. Many helpful functions.</p>
+<p>Download - https://codewithmosh.com/courses/783424/lectures/14780626</p>
+<h3 id="store">Store</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780629</p>
+<pre><code class="language-javascript">// configureStore.js which was store.js
+
+import { configureStore } from &quot;@reduxjs/toolkit&quot;;
+import reducer from './bugs';
+
+export default function() {
+    return configureStore({reducer});
+}
+
+</code></pre>
+<h3 id="actions">Actions</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780628</p>
+<pre><code class="language-javascript">// bugs.js
+import { createAction } from &quot;@reduxjs/toolkit&quot;;
+
+//Basic example:
+//const action = createAction(&quot;bugUpdated&quot;)
+//console.log(action(payload)) // Payload can be object, variable anything
+
+// Action Types - Not Needed anymore, as action.type or action.toString() gives the name
+// Action Creators
+const bugAdded = createAction(&quot;bugAdded&quot;)
+const bugRemoved = createAction(&quot;bugRemoved&quot;)
+const bugResolved = createAction(&quot;bugresolved&quot;)
+
+//Reducer - this is where switch statement for various cases was used.
+case bugAdded.type:     // Instead of case BUG_ADDED
+case bugRemoved.type:     // Instead of case BUG_REMOVED
+case bugResolved.type:     // Instead of case BUG_RESOLVED
+</code></pre>
+<h3 id="reducers">Reducers</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780633</p>
+<pre><code class="language-javascript">// bugs.js
+import { createAction, createReducer } from &quot;@reduxjs/toolkit&quot;;
+
+// Action Creators
+const bugAdded = createAction(&quot;bugAdded&quot;)
+const bugRemoved = createAction(&quot;bugRemoved&quot;)
+const bugResolved = createAction(&quot;bugresolved&quot;)
+
+//Reducer - this is where switch statement for various cases was used.
+export default createReducer([], {
+    bugAdded: (state, action) =&gt; { state.push({ STATE_GOES_HERE }) },           // Directly refer the var name
+    [bugRemoved.type]: (state, action) =&gt; { state.push({ STATE_GOES_HERE }) },  // Of refer by .type
+    [bugResolved.type]: (state, action) =&gt; { state.push({ STATE_GOES_HERE }) }  // Both ways allowed, .type preferred; coz we can change creatAction(&quot;Name&quot;) anytime.
+})
+
+</code></pre>
+<h3 id="slices-final-best-way">Slices - FINAL BEST WAY</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780630</p>
+<p>This is a combination of Actions and Reducers all at once</p>
+<pre><code class="language-javascript">// bugs.js
+import { createSlice } from &quot;@reduxjs/toolkit&quot;;
+
+const slice = createSlice({
+    name: 'bugs',
+    initialState: [],
+    reducers: {
+        bugAdded: (bugs, action) =&gt; {bugs.push({ STATE_GOES_HERE })},
+        bugRemoved: (bugs, action) =&gt; {bugs.push({ STATE_GOES_HERE })},
+        bugResolved: (bugs, action) =&gt; {bugs.push({ STATE_GOES_HERE })}
+    }
+})
+
+export const {bugAdded, bugRemovec, bugResolver} = slice.actions;
+export default slice.reducer;
+
+// Action Creators -- Not Needed Now
+// Reducers -- Not Needed Now
+
+</code></pre>
+<h1 id="advance">Advance</h1>
+<h2 id="designing-a-store">Designing a store</h2>
+<h3 id="combine-reducers">Combine Reducers</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780682</p>
+<p>NOTE: Concept of entities reducer in video, but not written here.
+What is done is, we make multiple files of conbineReducers, which has similar relating reducers.
+Then we create a Parent combineReducer to combine them all.
+This helps in debugging.</p>
+<pre><code class="language-javascript">//reducer.js
+import { combineReducers } from &quot;redux&quot;;
+import reducerA from &quot;./A&quot;;                 // Made using slices
+import reducerB from &quot;./B&quot;;                 // here we have many reducers
+import reducerC from &quot;./C&quot;;
+
+export default combineReducers({
+    A: reducerA,
+    B: reducerB,
+    C: reducerC
+})
+
+//configureStore.js
+
+import reducer from &quot;reducer&quot;;
+
+</code></pre>
+<h3 id="normalization">Normalization</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780675</p>
+<p>git link - paularmstrong / normalizr</p>
+<h3 id="selectors-and-memoizing-selectors">Selectors and Memoizing Selectors</h3>
+<p>https://codewithmosh.com/courses/783424/lectures/14780679</p>
+<p>yarn add reselect </p>
+<pre><code class="language-javascript">//bugs.js
+import { createSelector } from &quot;reselect&quot;;
+
+createSelector (
+    state =&gt; state.entities.bugs,
+    state =&gt; state.entities.projects,           // Include all reducers here
+    (bugs, projects) =&gt; bugs.filter(bug =&gt; !bug.resolved)
+)
+
+</code></pre>
+<h1 id="middleware">Middleware</h1>
+<p>Use?
+* Calling APIs
+* Error Reporting
+* Analytics
+* Autherization</p>
+<p>https://codewithmosh.com/courses/783424/lectures/14780721</p>
+<h2 id="basic-use">Basic use</h2>
+<p>Image we making a logger</p>
+<pre><code class="language-javascript">//middleware/logger.js
+
+const logger = store =&gt; next =&gt; action =&gt; {     // Using currying here. Remember as SNA
+    console.log(&quot;store&quot;, store);
+    console.log(&quot;next&quot;, next);
+    console.log(&quot;action&quot;, action);
+
+    next(action);
+};
+export default logger;
+
+//configureStore.js
+
+import logger from &quot;./middleware/logger&quot;
+
+export default function() {
+    return configureStore({
+        reducer,
+        middleware: [logger]        // Any number of middlewares
+    })
+}
+
+// We we do not use redux toolkit, then
+// index.js
+
+import { createStore, applyMiddleware } from &quot;redux&quot;;
+import reducer from &quot;./store/reducer&quot;;
+
+const store = createStore(reducer, applyMiddleware(logger)); //applyMiddleware is called Store Enhancer
+
+</code></pre>
+<h2 id="parameterizing-middleare">Parameterizing Middleare</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780719</p>
+<pre><code class="language-javascript">//middleware/logger.js
+
+const logger = param =&gt; store =&gt; next =&gt; action =&gt; {    // Notice param added
+    console.log(&quot;Logging&quot;, param);                      // notice param
+
+    next(action);
+};
+export default logger;
+
+// configureStore.js
+export default function() {
+    return configureStore({
+        reducer,
+        middleware: [logger(&quot;console&quot;)]                 // A change here, now we can give in arguments
+    })
+}
+</code></pre>
+<h2 id="redux-thunk">REDUX THUNK</h2>
+<p>https://codewithmosh.com/courses/783424/lectures/14780722</p>
+<p>Something to do with dispatching functions, to handle async, api calls etc.
+Not sure, and dont have energy to understand it.
+See it later.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

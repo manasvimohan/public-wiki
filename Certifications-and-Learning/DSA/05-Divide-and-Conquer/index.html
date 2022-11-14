@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Contents - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contents" class="nav-link">Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#divide-and-conquer" class="nav-link">Divide and Conquer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#general-problems-which-can-be-solved-using-this" class="nav-link">General Problems which can be solved using this</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#recurrence-relation" class="nav-link">Recurrence Relation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#masters-theorem-decreasing-function-httpswwwyoutubecomwatchvcyknhzbfmqclistpldn4rrl48xkpzkf03iyfl-o29szjtrs_oindex23" class="nav-link">Masters theorem decreasing function - https://www.youtube.com/watch?v=CyknhZbfMqc&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=23</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#masters-theorem-for-dividing-functions" class="nav-link">Masters Theorem for Dividing Functions:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#when-passing-root-n-in-the-recursive-call" class="nav-link">When passing root n in the recursive call</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#binary-search" class="nav-link">Binary Search</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#heap" class="nav-link">Heap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#merge-sort-general-omn-on" class="nav-link">Merge Sort - General O(m+n) -&gt; O(n)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#2-way-merge-sort-on-log-n" class="nav-link">2-way merge sort O(n log n)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#merge-sort-algo-this-is-divide-and-conquer-on-log-n" class="nav-link">Merge sort Algo - This is divide and conquer O(n log n)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pros-and-con" class="nav-link">Pros and Con</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#quick-sort-on-log-n-to-on2" class="nav-link">Quick Sort O(n log n) to O(n^2)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#improvement" class="nav-link">Improvement?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#strassens-matrix-multiplication" class="nav-link">Strassen's Matrix Multiplication</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#Divide and Conquer">Divide and Conquer</a></li>
+<li><a href="#General Problems which can be solved using this">General Problems which can be solved using this</a></li>
+<li><a href="#Recurrence Relation">Recurrence Relation</a><ul>
+<li><a href="#Recurrence Relation#Masters theorem decreasing function - https://www.youtube.com/watch?v=CyknhZbfMqc&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=23">Masters theorem decreasing function - https://www.youtube.com/watch?v=CyknhZbfMqc&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=23</a></li>
+<li><a href="#Recurrence Relation#Masters Theorem for Dividing Functions:">Masters Theorem for Dividing Functions:</a></li>
+<li><a href="#Recurrence Relation#When passing root n in the recursive call">When passing root n in the recursive call</a></li>
+</ul>
+</li>
+<li><a href="#Binary Search">Binary Search</a></li>
+<li><a href="#Heap">Heap</a></li>
+<li><a href="#Merge Sort - General O(m+n) -&gt; O(n)">Merge Sort - General O(m+n) -&gt; O(n)</a><ul>
+<li><a href="#Merge Sort - General O(m+n) -&gt; O(n)#2-way merge sort O(n log n)">2-way merge sort O(n log n)</a></li>
+<li><a href="#Merge Sort - General O(m+n) -&gt; O(n)#Merge sort Algo - This is divide and conquer O(n log n)">Merge sort Algo - This is divide and conquer O(n log n)</a></li>
+<li><a href="#Merge Sort - General O(m+n) -&gt; O(n)#Pros and Con">Pros and Con</a></li>
+</ul>
+</li>
+<li><a href="#Quick Sort O(n log n) to O(n^2)">Quick Sort O(n log n) to O(n^2)</a><ul>
+<li><a href="#Quick Sort O(n log n) to O(n^2)#Improvement?">Improvement?</a></li>
+</ul>
+</li>
+<li><a href="#Strassen's Matrix Multiplication">Strassen's Matrix Multiplication</a></li>
+</ul>
+<h1 id="divide-and-conquer">Divide and Conquer</h1>
+<p>https://www.youtube.com/watch?v=2Rr2tW9zvRg&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=18</p>
+<p>Problem of input size P, which has solution S
+If P is large, we can divide into smaller problems P1 P2 P3 ....
+We can get Solutions for sub problems and get S1 S2 S3</p>
+<p>Combine all S1 S2 ... to get S using a METHOD.</p>
+<p>Note: Every sub problem is similar to parent problem.
+If problem is sort, then sub problem is also sort.</p>
+<p>HENCE - Recursive way to solve problem.</p>
+<h1 id="general-problems-which-can-be-solved-using-this">General Problems which can be solved using this</h1>
+<p>Binary Search
+Finding Max and Min
+MergeSort
+QuickSort
+Strassen's Matrix Multiplication</p>
+<h1 id="recurrence-relation">Recurrence Relation</h1>
+<h2 id="masters-theorem-decreasing-function-httpswwwyoutubecomwatchvcyknhzbfmqclistpldn4rrl48xkpzkf03iyfl-o29szjtrs_oindex23">Masters theorem decreasing function - https://www.youtube.com/watch?v=CyknhZbfMqc&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=23</h2>
+<p>Here in recursive call, the next recursion in recursion, n-1 is given as input.</p>
+<p>T(n) = T(n-1) + 1     --&gt;  Like a print function O(n)
+T(n) = T(n-1) + n     --&gt; <em>Loop, increment is O(n+1) i++ or i-- --&gt; O(n^2)
+T(n) = T(n-1) + log n --&gt; </em>Loop, increment is O(log n) i * 2    --&gt; O(n log n)
+T(n) = 2 T(n-1) + 1   --&gt;  Recursion called twice within function --&gt; O(2^n) </p>
+<p>*Loop inside the recursion function</p>
+<p>https://www.youtube.com/watch?v=MhT7XmxhaCE&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=21
+Notice: Overall O(n) is just multiply equation by n</p>
+<p>T(n) = T(n-1) + 1       --&gt; O(n)
+T(n) = T(n-1) + n       --&gt; O(n^2)
+T(n) = T(n-1) + log n   --&gt; O(n log n)
+T(n) = T(n-1) + n^2     --&gt; O(n^3) 
+T(n) = 2 T(n-1) + 1     --&gt; O(2^n)
+T(n) = 3 T(n-1) + 1     --&gt; O(3^n)
+T(n) = 2 T(n-1) + n     --&gt; O(n2^n)</p>
+<h2 id="masters-theorem-for-dividing-functions">Masters Theorem for Dividing Functions:</h2>
+<p>Here in the recursive call, next recursion in recursion, n/2 is passed as input.
+In Binary search uses n/2 since left OR right being processed.</p>
+<p>T(n) = T(n/2) + 1     --&gt; O(log n)   - No loop within
+T(n) = T(n/2) + n     --&gt; O(n)       - One loop within
+T(n) = 2 T(n/2) + n   --&gt; O(n log n) - Two recursion calls
+T(n) = 2 T(n/2) + n^2   --&gt; O(n^2) - Two recursion calls
+T(n) = 4 T(n/2) + 1   --&gt; O(n^2)
+T(n) = 4 T(n/2) + n   --&gt; O(n^2)</p>
+<p>Final explanation - https://www.youtube.com/watch?v=OynWkEj0S-s&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=27</p>
+<h2 id="when-passing-root-n-in-the-recursive-call">When passing root n in the recursive call</h2>
+<p>T(n) = T(root of n) + 1   --&gt; O(loglog <em>base 2</em> n)</p>
+<h1 id="binary-search">Binary Search</h1>
+<p>https://www.youtube.com/watch?v=C2apEw9pgtw&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=30
+https://www.youtube.com/watch?v=C2apEw9pgtw&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=31
+Assumed list is sorted
+Iterative approach O(1) to O(log n)  -- If search item at middle, O(1)
+Recursive approach O(log n)</p>
+<h1 id="heap">Heap</h1>
+<p><a href="../09-Heaps/">Heaps</a> - Main file</p>
+<h1 id="merge-sort-general-omn-on">Merge Sort - General O(m+n) -&gt; O(n)</h1>
+<p>https://www.youtube.com/watch?v=6pV2IF0fgKY&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=33
+We have two sorted list. A and B. We make two index i and j
+We create third empty list. C. We make an index k for C.
+We compare first element in A with first element in B, the smaller of the two is put in C.
+We continue till all elements of A and B are compared, and C is full.</p>
+<p>Size of A n and B is m. So O(m+n) which is O(n)</p>
+<p>If we have multiple lists A B C D E F
+Watch --&gt; https://youtu.be/6pV2IF0fgKY?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;t=529</p>
+<p>M-way merging   - Merging M lists - We take M lists, compare all at once then merge.
+2-way merging   - Merging 2 lists - We take 2 lists at a time, merge them, then take next list.. so on
+4-way merging   - Merging 4 lists - We take 4 lists at a time, merge them, then take next three lists.. so on</p>
+<p>NOTE THE DIFFERENCE:
+Merge Sort          - This is recursive algo
+2-way Merge Sort    - This is iterative algo</p>
+<h2 id="2-way-merge-sort-on-log-n">2-way merge sort O(n log n)</h2>
+<p>https://youtu.be/6pV2IF0fgKY?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;t=806
+<img alt="image example" src="../2-way-merge-sort.png" />
+Also watch Optimal Merge Pattern, which two list selected to start with - https://www.youtube.com/watch?v=HHIc5JZyenI&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=42</p>
+<p>Image a single list.
+Assume each item in list is a list. Each item is not an actual list, its just a number.
+So if a list A has 8 items, so we think like we are sorting 8 lists.
+But since each item in the list is a number, its already sorted; its just a number.</p>
+<p>Jargon - 1st pass, 2nd pass. See image example.</p>
+<h2 id="merge-sort-algo-this-is-divide-and-conquer-on-log-n">Merge sort Algo - This is divide and conquer O(n log n)</h2>
+<p>https://www.youtube.com/watch?v=mB5HXBb_HY8&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=34</p>
+<p>Break a list into smaller smaller, half half and perform comparison on last items.</p>
+<h2 id="pros-and-con">Pros and Con</h2>
+<p>https://www.youtube.com/watch?v=ak-pz7tS5DE&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=35</p>
+<p>Pros
+    Large size list
+    Linked List - Only pointer can be changed without creating 3rd empty list
+    External Sorting - Image two large files 10gb each. We can bring files in chunks.
+    Stable - Duplicates arrangement is also maintained. In a list 2 duplicates, in final sort, 1st duplicate comes before 2nd duplicate.</p>
+<p>Cons
+    Extra Space (not in place sort)
+    No small problem - if n&lt;=15 then merge sort is better
+    Recursive - O(n+log n) space where log n is stack space.</p>
+<h1 id="quick-sort-on-log-n-to-on2">Quick Sort O(n log n) to O(n^2)</h1>
+<p>https://www.youtube.com/watch?v=7h1s2SojIRw&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=36</p>
+<p>Imagine a class and teacher asks children to stand in line height wise.
+Shortest guy knows he is shortest, goes in front, the tallest at back, and rest speak to each other and sort.</p>
+<p>Idea is, each item looks who is infront and back, and stands.
+In list, an item only ensures that item on left is smaller and item on right is larger.</p>
+<p>This is quick sort.</p>
+<p>Jargon - Pivot, Partition</p>
+<p>Pivot - The item in the list, from which we start our procedure. It could be 1st item or middle or random.</p>
+<p>If Partition done on middle and pivot is 1st item then O(n log n)
+If list already sorted, partition in middle and pivot at 1st, worst case is O(n^2)</p>
+<h2 id="improvement">Improvement?</h2>
+<p>Always take the starting pivot as middle element
+Maybe one can take a random element as pivot.... but above is better.</p>
+<h1 id="strassens-matrix-multiplication">Strassen's Matrix Multiplication</h1>
+<p>https://www.youtube.com/watch?v=0oJyNmEbS4w&amp;list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&amp;index=38</p>
+<p>Time taken to multiply two matrix is O(n^3).
+Basically 3 loops are needed to multiply two matrix. That is why O(n^3)</p>
+<p>Assumption that dimensions are in power of 2. 2x2, 4x4, 8x8.....
+If not in powers of 2, we can fill in 0 to make them in power of two.</p>
+<p>Normal multiplication   - O(n^3)
+Strassen's              - O(n^2.81) - slightly faster</p>
+<p>OPEN PROBLEM - A better way to multiply matrix is needed on earth.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

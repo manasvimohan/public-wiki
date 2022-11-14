@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Importing Models - Manasvi</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#importing-models" class="nav-link">Importing Models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#formats" class="nav-link">Formats</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#gltf" class="nav-link">GLTF</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#three-types" class="nav-link">Three types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#how-to-use-gltf-loader" class="nav-link">How to use GLTF Loader</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#default-gltf-loader" class="nav-link">Default GLTF loader</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#draco-loader" class="nav-link">Draco Loader</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#handeling-scale-and-animation" class="nav-link">Handeling scale and Animation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="importing-models">Importing Models</h1>
+<p>Tutorial --&gt; https://threejs-journey.com/lessons/23#
+Online editor --&gt; https://threejs.org/editor/</p>
+<h1 id="formats">Formats</h1>
+<p>OBJ
+3DS
+GLTF etc
+Or make your own LOL</p>
+<h1 id="gltf">GLTF</h1>
+<p>Getting popular, pretty light and includes lot of features.</p>
+<h2 id="three-types">Three types</h2>
+<p>Default. Made of following three files
+    .gltf   &lt;-- JSON file with all information.
+    .bin    &lt;-- Binary file with 3d related information like normals, positions, uv coordinates etc. 
+    .png    &lt;-- Texture that wraps.
+Binary      &lt;-- Simple binary file
+    .glb    &lt;-- Easy to load and work with since only one file; but hard to alter the file.
+Draco       &lt;-- Like default, has multiple files, but much lighter as uses draco algo to compress.
+Embedded    &lt;-- One file like binary, but readable like json, but very heavy. Can be altered.</p>
+<p>Now when gltf is loaded it has:</p>
+<p>just console.log(loaded-model) to study the structure.</p>
+<p>animations
+asset
+cameras
+parser
+scene
+    children
+        Object 1
+            children
+                Mesh
+                Camera etc
+            position
+            quaternion
+            rotation
+            scale etc etc
+        Object 2
+        Object 3 ....
+scenes
+userData</p>
+<h1 id="how-to-use-gltf-loader">How to use GLTF Loader</h1>
+<h2 id="default-gltf-loader">Default GLTF loader</h2>
+<p>import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+const gltfLoader = new GLTFLoader()</p>
+<p>gltfLoader.load{
+    './location/of/the/file.gltf',      // Locaiton of fille
+    () =&gt; {console.log('Hi')},          // Any number of functions
+    () =&gt; {},                           // Any other like fail loaded etc...</p>
+<pre><code>// Load a single mesh in the children
+(gltf) =&gt; { scene.add(gltf.scene.children[0]) },
+
+// Load model with many meshes in children
+(gltf) =&gt; { 
+    while(gltf.scene.children.length) {
+        scene.add(gltf.scene.children[0])
+    }
+},
+
+// BEST WAY --&gt; Load model with many meshes in children
+(gltf) =&gt; { 
+    const children = [...gltf.scene.children]           // using "..." to copy a part of parent into a varibale
+    for(const child of children) { scene.add(child) }   // running a for loop simple
+},
+
+// Easiest and shortest way
+(gltf) =&gt; { 
+    gltf.scene.scale.set(x,y,z)     // If object too big or small, scale during import. 0-1 scale.
+    scene.add(glft.scene)           // Just add the whole scene
+}
+</code></pre>
+<p>}</p>
+<h2 id="draco-loader">Draco Loader</h2>
+<p>Logic is, since the draco is just compressed version of gltf, we need to set a decoder and then after that load the gltf model.</p>
+<p>import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
+const dracoLoader = new DRACOLoader()
+dracoLoader.setDecoderPath('./draco/')   // Folder is in &gt; ./node_modules/three/examples/js/libs/draco</p>
+<p>const gltfLoader = new GLTFLoader()
+gltfLoader.setDRACOLoader(dracoLoader)</p>
+<p>rest is same as default.</p>
+<h2 id="handeling-scale-and-animation">Handeling scale and Animation</h2>
+<h3 id="scale">Scale</h3>
+<p>(gltf) =&gt; { 
+        gltf.scene.scale.set(x,y,z)     // If object too big or small, scale during import. 0-1 scale.
+        scene.add(glft.scene)           // Just add the whole scene
+    }</p>
+<h3 id="animation">Animation</h3>
+<p>let mixer = null; // Set this outside the loader, globally</p>
+<p>(gltf) =&gt; {
+        mixer = new THREE.AnimationMixer(gltf.scene)        //create threejs mixer
+        const action = mixer.clipAction(gltf.animation[0])  // Load the first animation</p>
+<pre><code>    action.play()                   // Play the animation
+
+    gltf.scene.scale.set(x,y,z)     // If object too big or small, scale during import. 0-1 scale.
+    scene.add(glft.scene)           // Just add the whole scene
+}
+</code></pre>
+<p>finally down in the code at </p>
+<p>const tick = () =&gt; 
+{
+    if(mixer !== null) { mixer.update(deltaTime) }      // Read more here.
+}</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
