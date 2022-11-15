@@ -88,6 +88,31 @@
             
             <li class="nav-item" data-level="1"><a href="#pillars-of-oop" class="nav-link">Pillars of OOP</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#encapsulation" class="nav-link">Encapsulation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#abstraction" class="nav-link">Abstraction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#inheritance" class="nav-link">Inheritance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#polymorphism" class="nav-link">Polymorphism</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#composition" class="nav-link">Composition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#uml-unified-modeling-language" class="nav-link">UML - Unified Modeling Language</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
             
@@ -123,7 +148,7 @@ Foundation for <a href="../design-patterns/">Design Patterns</a></p>
 <li>Classes         - Parent, with variables and methods.</li>
 <li>Constructors    - Class contains a root method, which is a blueprint to create basic object.</li>
 <li>Objects         - When class is used to create usable items, called objects.</li>
-<li>Abstract Class  - This can not be instantiated, object can not be made from it. Only child class can extend from it.</li>
+<li>Abstract Class  - This can not be instantiated, object can not be made from it. Only child class can extend from it. Method signature and implementation, both possible.</li>
 <li>Interface       - Like abstract class, but this can not have any method implementation. These have only method signatures.<ul>
 <li>extends: use this on interface to create another interface.</li>
 <li>implements: use this on interface to create a concrete class from interface.</li>
@@ -138,36 +163,48 @@ Foundation for <a href="../design-patterns/">Design Patterns</a></p>
 </li>
 <li>Interfaces      - To address coupling issue, interface is made. A template to create class. In python its called abstract class. Keywords - implements override</li>
 <li>Static Methods  - These can only be accessed from the class level, not object level. These have one memory location.</li>
+<li>Protocols       - Specific in Python I think, not sure, explore</li>
 </ul>
 <h1 id="common-practices">Common Practices</h1>
-<p>Define class and using constructors - Basic
-Accessing Properties and methods - this, self
-Making properties read-only    - Disabling users from changing exposed internal vars.
-Access Modifiers             - Control vars and methods view to user. Private, Protected, Public
-Getters and Setters         - Expose vars and methods to user in controlled manner.
-Index Signature             - Seen in typescript only
-Creating Static members     - Common location in memory. Access by class, not object.
-Inheritance                 - extends keyword
-Method override         - Changing class method by object in its own instance.
-Abstract Method         - No body, only signatures and methods
-Interface               - implements keyword
-Generics                - This format -&gt; ClassName<K,V>. Making reusable classes, interfaces and functions.
-Decorators              - Enhancing classes, methods etc</p>
+<ul>
+<li>Define class and using constructors - Basic</li>
+<li>Accessing Properties and methods - this, self</li>
+<li>Making properties read-only    - Disabling users from changing exposed internal vars.</li>
+<li>Access Modifiers             - Control vars and methods view to user. Private, Protected, Public</li>
+<li>Getters and Setters         - Expose vars and methods to user in controlled manner.</li>
+<li>Index Signature             - Seen in typescript only</li>
+<li>Creating Static members     - Common location in memory. Access by class, not object.</li>
+<li>Inheritance                 - <strong>extends</strong> keyword</li>
+<li>Method override         - Changing class method by object in its own instance.</li>
+<li>Abstract Method         - No body, only signatures and methods</li>
+<li>Interface               - <strong>implements</strong> keyword</li>
+<li>Generics                - This format -&gt; ClassName<K,V>. Making reusable classes, interfaces and functions.</li>
+<li>Decorators              - Enhancing classes, methods etc</li>
+<li>Enums                 - Defing Constants to be accessed like a list.</li>
+</ul>
 <h1 id="pillars-of-oop">Pillars of OOP</h1>
-<p><img alt="Image" src="OOP-Pillars.png" />
-Encapsulation - If we need validations in setting a variable given in parent class, so we make private variables in user class, and change them using getter and setter with validations as needed. 
-Abstraction - Removing complexity from end user and then creating a parent method, by chaining complex methods and expose parent method to user. Keyword: private public OR __ in python
-Inheritance - Inheriting methods and vars from parent
-Polymorphism - Many forms. Object instance having many forms. Abstract class in JAVA. Keywords - extends and override.
-Composition - When we create class by combining various other classes as needed.</p>
-<p>More on polymorphism --&gt;
-Make a Parent Class with Methods
-Make multiple child class from parent using extends
-Override the methods as needed.
-Create instance objects from child classes.
-In the end, you have multiple child, who act differently coz of override BUT create from a single source.</p>
-<p>Note sure how this is different from interface or abstract class. Sounds the same.</p>
-<p><a href="../design-patterns/UML/">UML</a> - Unified Modeling Language - https://codewithmosh.com/courses/759570/lectures/13732320</p>
+<p><img alt="Image for reference" src="OOP-Pillars.png" /></p>
+<h2 id="encapsulation">Encapsulation</h2>
+<p>If we need validations in setting a variable given in parent class, so we make private variables in user class, and change them using getter and setter with validations as needed. </p>
+<h2 id="abstraction">Abstraction</h2>
+<p>Removing complexity from end user and then creating a parent method, by chaining complex methods and expose parent method to user. Keyword: private public OR __ in python</p>
+<h2 id="inheritance">Inheritance</h2>
+<p>Inheriting methods and vars from parent</p>
+<h2 id="polymorphism">Polymorphism</h2>
+<p>Many forms. Object instance having many forms. Abstract class in JAVA. Keywords - extends and override.</p>
+<p>Basic skeleton of polymorphism:
+1. Make a Parent Class with Methods
+2. Make multiple child class from parent using extends
+3. Override the methods as needed.
+4. Create instance objects from child classes.
+5. In the end, you have multiple child, who act differently coz of override BUT create from a single source.</p>
+<blockquote>
+<p>Note: See  how this is different from interface or abstract class. Sounds the same.</p>
+</blockquote>
+<h2 id="composition">Composition</h2>
+<p>When we create class by combining various other classes as needed.</p>
+<h1 id="uml-unified-modeling-language">UML - Unified Modeling Language</h1>
+<p><a href="../design-patterns/UML/">UML - Tutorial File</a></p>
 <h1 id="modern-software-design">Modern Software Design</h1>
 <p>https://www.arjancodes.com/mindset</p>
 <h2 id="mastering-the-tools">Mastering The Tools</h2>

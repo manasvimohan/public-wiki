@@ -65,17 +65,12 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#simple-solution-but-not-efficient" class="nav-link">Simple solution - But not efficient</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p>class Solution:
+<pre><code class="language-python">class Solution:
     def isPalindrome(self, s: str) -&gt; bool:
         l, r = 0, len(s) - 1
         while l &lt; r:
@@ -89,34 +84,42 @@
                 return False
             # Move pointers left and right
             l += 1
-            r -= 1</p>
-<pre><code>    # If code completes then true
-    return True
+            r -= 1
 
-# Could write own alpha-numeric function
-def alphanum(self, c):
-    return (
-        ord("A") &lt;= ord(c) &lt;= ord("Z")
-        or ord("a") &lt;= ord(c) &lt;= ord("z")
-        or ord("0") &lt;= ord(c) &lt;= ord("9")
-    )
-</code></pre>
-<p>"""
-https://leetcode.com/problems/valid-palindrome/</p>
-<p>Problem:
+        # If code completes then true
+        return True
+
+    # Could write own alpha-numeric function
+    def alphanum(self, c):
+        return (
+            ord(&quot;A&quot;) &lt;= ord(c) &lt;= ord(&quot;Z&quot;)
+            or ord(&quot;a&quot;) &lt;= ord(c) &lt;= ord(&quot;z&quot;)
+            or ord(&quot;0&quot;) &lt;= ord(c) &lt;= ord(&quot;9&quot;)
+        )
+
+&quot;&quot;&quot;
+https://leetcode.com/problems/valid-palindrome/
+
+Problem:
 Given a string, check palindrom, meaning reverse is same as string.
-Ignore case, and consider alphanumeric only. Ignore + ; . etc</p>
-<p>Complexity:</p>
-<p>Concepts:
+Ignore case, and consider alphanumeric only. Ignore + ; . etc
+
+Complexity:
+
+
+Concepts:
 ord() is used. 
-isalnum() can be used. not used in solution. isalnum() returns bool if alphanumeric.</p>
-<h1 id="simple-solution-but-not-efficient">Simple solution - But not efficient</h1>
-<p>newStr = ""
+isalnum() can be used. not used in solution. isalnum() returns bool if alphanumeric.
+
+# Simple solution - But not efficient
+newStr = &quot;&quot;
 for c in string:
     if c.isalnum():
         newStr += c.lower()
-return newStr == newStr[::-1]</p>
-<p>"""</p></div>
+return newStr == newStr[::-1]
+
+&quot;&quot;&quot;
+</code></pre></div>
             </div>
         </div>
 
