@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Theory of Software Testing - Manasvi</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../../css/extra.css" rel="stylesheet">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Manasvi</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#sdlc-software-development-life-cycle" class="nav-link">SDLC Software Development Life Cycle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#testing-activities" class="nav-link">Testing Activities</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bug-reporting" class="nav-link">Bug Reporting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bug-life-cycle-kanban-can-be-used" class="nav-link">Bug Life Cycle - KANBAN can be used</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#bug-reporting-practice" class="nav-link">Bug Reporting Practice</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#software-requirement-specification" class="nav-link">Software requirement Specification</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#test-cases-and-checklist" class="nav-link">Test Cases and Checklist</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#test-cases" class="nav-link">Test Cases</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#checklist" class="nav-link">Checklist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#black-box-testing" class="nav-link">Black Box Testing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#types" class="nav-link">Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#techniques" class="nav-link">Techniques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#test-coverage" class="nav-link">Test Coverage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#black-box-vs-white-box" class="nav-link">Black Box vs White Box</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#techniques_1" class="nav-link">Techniques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#testing-mindset" class="nav-link">Testing Mindset</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#black-boxing-testing-techniques" class="nav-link">Black Boxing Testing Techniques</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#equivalence-testing" class="nav-link">Equivalence Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#boundary-wall-analysis" class="nav-link">Boundary Wall Analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#decision-table-testing" class="nav-link">Decision Table Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#state-transition-table" class="nav-link">State Transition Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#use-case-testing" class="nav-link">Use Case Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#negative-testing" class="nav-link">Negative Testing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#scenarios" class="nav-link">Scenarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#smoke-sanity-and-regression-testing" class="nav-link">Smoke, Sanity and Regression Testing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#smoke-testing" class="nav-link">Smoke Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sanity-testing-or-surface-level-testing" class="nav-link">Sanity Testing OR Surface Level Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#regression-testing" class="nav-link">Regression Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#experience-based-testing" class="nav-link">Experience Based Testing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#error-guessing" class="nav-link">Error Guessing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#exploratory-testing" class="nav-link">Exploratory Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#checklist-based-testing" class="nav-link">Checklist Based Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#risk-based-testing" class="nav-link">Risk based testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#static-and-dynamic-testing" class="nav-link">Static and Dynamic Testing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dynamic-testing" class="nav-link">Dynamic Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#static-testing" class="nav-link">Static Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#test-planning-and-estimation" class="nav-link">Test Planning and Estimation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#test-management" class="nav-link">Test Management</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#development-and-testing-environments" class="nav-link">Development and Testing Environments</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#stages-environments" class="nav-link">Stages/ Environments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#back-end-mobile-and-web-testing" class="nav-link">Back end, Mobile and Web testing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#backend-testing" class="nav-link">Backend Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mobile-testing-strategies" class="nav-link">Mobile Testing Strategies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#software-testing-tools" class="nav-link">Software Testing Tools</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#jira-for-bug-reporting" class="nav-link">Jira for Bug Reporting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#confluence" class="nav-link">Confluence</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#github" class="nav-link">GitHub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testrail" class="nav-link">TestRail</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testlodge" class="nav-link">TestLodge</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#miro" class="nav-link">Miro</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#charles-proxy" class="nav-link">Charles Proxy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>Link - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14062723#overview</p>
+<h1 id="sdlc-software-development-life-cycle">SDLC Software Development Life Cycle</h1>
+<p>Planning - What we want
+    Identification of the system development
+    Feasibility assessment
+    Creation of project plan
+Defining - How we get what we want
+    Gathering Business Requirements
+    Creating Process Diagrams
+    Performing a detailed analysis
+    Designing of IT infrastructure
+Building - Create what we want
+    Development of IT infra
+    Development of DB and code
+Testing - Did we get what we want?
+    Writing test cases
+    Execution of test cases
+Deploy - Lets start using what we got
+Maintain - Lets get this closer to what we want</p>
+<h1 id="testing-activities">Testing Activities</h1>
+<p>Test Planning
+    Testing scope
+    Testing activities
+Test Specifications
+    Design test cases - How
+    Build test cases - Implement
+Test Execution - Match expectation. Most important feature test first.
+Test Completion 
+    Check if all activities completed
+    All high level bugs solved
+    Product ready to deliver</p>
+<h1 id="bug-reporting">Bug Reporting</h1>
+<p>Visual Bugs
+Functional Bugs
+Performance Bugs</p>
+<p>Bug Report - Simple and with Photos</p>
+<h1 id="bug-life-cycle-kanban-can-be-used">Bug Life Cycle - KANBAN can be used</h1>
+<p>New Bug
+Assigned
+Active - Reopened - Rejected
+Test
+Verified
+Closed</p>
+<h1 id="bug-reporting-practice">Bug Reporting Practice</h1>
+<p>::i Templates and all - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049623#overview</p>
+<h1 id="software-requirement-specification">Software requirement Specification</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049579#overview</p>
+<p>Defined by Business Analyst or Product Owner
+::i Cost of bugs in the end - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049579#overview </p>
+<h1 id="test-cases-and-checklist">Test Cases and Checklist</h1>
+<p>Theory - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049585#overview
+Practice Example - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049617#overview</p>
+<h2 id="test-cases">Test Cases</h2>
+<p>Parameters are:
+- Test Scenario
+- Test Description
+- Test Steps
+- Preconditions - What is to be done before the action to see the bug
+- Test Data
+- Expected Result
+- Priority
+- Environment Information</p>
+<h2 id="checklist">Checklist</h2>
+<p>Similar to test cases but has information
+Useful to use it if team more experienced</p>
+<h1 id="black-box-testing">Black Box Testing</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049639#overview</p>
+<p>Here internal implementation of the function is not known by the tester.
+Attempts to:
+    Incorrect or missing functions
+    Interface/ Visual Errors
+    Behavior issues
+    Initialization and termination errors</p>
+<h2 id="types">Types</h2>
+<ol>
+<li>Functional Testing - Related to functional requirement</li>
+<li>Non-Functional Testing - Related to performance, usability, reliability etc</li>
+<li>Regression Testing - When change to current code has not broken any existing functionality</li>
+</ol>
+<p>Functional
+    Unit and Integration testing
+    Smoke testing
+    Sanity testing or Surface Level Testing
+    Regression or System or Verification testing
+Non-Functional
+    Load/Performance testing
+    Stress/Volume testing
+    Security testing
+    Installation testing</p>
+<h2 id="techniques">Techniques</h2>
+<ul>
+<li>Equivalence Class Testing - One test for each member</li>
+<li>Boundary Value Testing - Values are boundaries</li>
+<li>Decision Table Testing - Visual representation for which action to perform depending on given conditions</li>
+<li>State Transition Testing</li>
+<li>Use Case Testing</li>
+</ul>
+<h2 id="test-coverage">Test Coverage</h2>
+<p>Cover all parts of the code</p>
+<h1 id="black-box-vs-white-box">Black Box vs White Box</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049661#overview</p>
+<p>In white box, internal structure/ design or implementation of the item is known by the tester.</p>
+<h2 id="techniques_1">Techniques</h2>
+<ul>
+<li>Unit Testing</li>
+<li>Statement Testing</li>
+</ul>
+<h1 id="testing-mindset">Testing Mindset</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049663#overview</p>
+<p>Developer write code to pass the tests.
+Testers try to fail them. LOL</p>
+<h1 id="black-boxing-testing-techniques">Black Boxing Testing Techniques</h1>
+<p>Practice - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050255#overview</p>
+<h2 id="equivalence-testing">Equivalence Testing</h2>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050241#overview</p>
+<p>Test the given function, think of inputs</p>
+<h2 id="boundary-wall-analysis">Boundary Wall Analysis</h2>
+<p>Check the Boundary values.
+Usually in dates and times</p>
+<h2 id="decision-table-testing">Decision Table Testing</h2>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050245#overview</p>
+<p>Specify condition and steps
+For each condition check steps</p>
+<h2 id="state-transition-table">State Transition Table</h2>
+<p>Theory - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050245#overview
+Practice - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/21277196#overview</p>
+<p>Case 1 to situation
+Case 2 to situation</p>
+<p>UX designer
+    Eg. Landing page -&gt; Search Result</p>
+<p>Used when sequence of events are to be tested
+When application dependent on conditions, values or events of the past</p>
+<h2 id="use-case-testing">Use Case Testing</h2>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050251#overview</p>
+<p>Real Life Use Cases
+In AGILE environment</p>
+<p>Actor and System - Actor perform action, system responds</p>
+<h1 id="negative-testing">Negative Testing</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050261#overview</p>
+<p>Positive also called Happy Testing - If this happen then that should happen
+Negative - If this happen then that should not happen</p>
+<p>Ensures application handle invalid inputs gracefully
+Purpose is to detect situations to prevent failures
+Helps improve code quality a lot</p>
+<h2 id="scenarios">Scenarios</h2>
+<p>Populating Required Fields
+Allowed data boundary limits</p>
+<h1 id="smoke-sanity-and-regression-testing">Smoke, Sanity and Regression Testing</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/21201426#overview
+::i A nice sanity, smoke and regression testing diagram here - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/21201426#overview</p>
+<ul>
+<li>Initial Build -&gt; Smoke Testing</li>
+<li>Stable Build --&gt; Sanity Testing</li>
+<li>If both above test pass --&gt; System/ Regression/ Verification Testing</li>
+</ul>
+<h2 id="smoke-testing">Smoke Testing</h2>
+<p>Performed at the initial development stage to ensure core functionalities are working fine.
+Not intended to be deep, but to verify core or main functionalities</p>
+<p>When developers provide a fresh build to the QA team.
+When new module added to existing functionality.</p>
+<h2 id="sanity-testing-or-surface-level-testing">Sanity Testing OR Surface Level Testing</h2>
+<p>Similar to Smoke, but here it happens after stable build gets a minor change or new module or functionality</p>
+<h2 id="regression-testing">Regression Testing</h2>
+<p>Check if even after all changes made, code still works.
+Its like ensuring enhancements or bug fixes</p>
+<p>Here new tests are not created, but previously created tests are re-executed.</p>
+<p>In short, after sanity testing, all impacted features are to be tested again. This is regression testing. 
+Now you can see where the term regression comes from.</p>
+<p>Runs after successful deployments.</p>
+<p>Most commonly discussed. For each change, developer tests at his level, then ask senior/ team to run regression test to ensure.</p>
+<p>::i Very nice table comparing sanity, smoke and regression tests - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/21201426#overview</p>
+<h1 id="experience-based-testing">Experience Based Testing</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/25227782#overview</p>
+<h2 id="error-guessing">Error Guessing</h2>
+<p>Anticipate errors, defects and failures</p>
+<h2 id="exploratory-testing">Exploratory Testing</h2>
+<ul>
+<li>Simultaneous learning, test design and execution</li>
+<li>Informal tests designed, executed, logged and evaluated dynamically</li>
+<li>When we have few or inadequate specifications or significant time pressure</li>
+<li>Should be encouraged.</li>
+</ul>
+<p>::i Nice template on Exploratory testing at 5th Minute - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/25227782#overview</p>
+<h2 id="checklist-based-testing">Checklist Based Testing</h2>
+<p>Already discussed earlier.</p>
+<h1 id="risk-based-testing">Risk based testing</h1>
+<p>Theory - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050275#overview
+Practice - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/21255166#overview</p>
+<p>Each problem has probability of happening.</p>
+<p>Helps prioritize testing to obtain higher level of quality
+Risk is problem that might happen. More likely to happen, then riskier it is.</p>
+<p>Use when other methods demand more time or resources than what can be afforded.</p>
+<p>Risk = Impact x Likelihood</p>
+<p>Over the period, technology will reveal <strong>pattern of characteristic problems</strong></p>
+<h1 id="static-and-dynamic-testing">Static and Dynamic Testing</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050279#overview</p>
+<h2 id="dynamic-testing">Dynamic Testing</h2>
+<p>Dynamic testing requires execution of code being tested</p>
+<p>When:
+- Implementation
+- Acceptance Testing</p>
+<h2 id="static-testing">Static Testing</h2>
+<p>Applied in the early stages of SDLC.
+Static testing is manual examination of test case or code reviews.</p>
+<p>Asking for feedback on some test, its static testing.</p>
+<p>When:
+- Requirement analysis and specification
+- Top-level design
+- Detailed Design</p>
+<p>Example of what can be examined:
+- Business requirements
+- Test Cases
+- Code
+- User Guides
+- Contracts, project plans, schedules and budgets</p>
+<h1 id="test-planning-and-estimation">Test Planning and Estimation</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
+<p>Objectives, Resources and Processes for specific test</p>
+<ul>
+<li>What to test</li>
+<li>How to test</li>
+<li>How much time you'll spend to test</li>
+</ul>
+<h2 id="test-management">Test Management</h2>
+<ul>
+<li>Test Organisation</li>
+<li>Test planning and estimation</li>
+<li>Test Monitoring and Control</li>
+<li>Configuration Management</li>
+<li>Defect Management</li>
+</ul>
+<p>::i Test planning activity at 2 min - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
+<p>Entry Criteria - When to start
+Exit Criteria - When to stop</p>
+<p>::i Interesting Slide at 5 min - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
+<h1 id="development-and-testing-environments">Development and Testing Environments</h1>
+<p>Theory - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050295#overview
+Practice Questions and Answers - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050307#overview</p>
+<h2 id="stages-environments">Stages/ Environments</h2>
+<ol>
+<li>Development - All development work</li>
+<li>Testing - Most test cases performed, should be similar to production environment, but is far from it</li>
+<li>Staging - Mimics the actual production environment, and all testing done.</li>
+<li>Production - The actual test are found here.</li>
+</ol>
+<p>::i Good articles on testing - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14158767#overview</p>
+<h1 id="back-end-mobile-and-web-testing">Back end, Mobile and Web testing</h1>
+<h2 id="backend-testing">Backend Testing</h2>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050449#overview</p>
+<p>Presentation Layer - GUI
+Business Layer - API testing
+Database Layer - </p>
+<p>::i Postman Testing - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050459#overview</p>
+<h2 id="mobile-testing-strategies">Mobile Testing Strategies</h2>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/17053696#overview</p>
+<p>Unit tests &gt; Integration Tests &gt; Automated UI Tests &gt; Manual Mobile Testing</p>
+<h1 id="software-testing-tools">Software Testing Tools</h1>
+<h2 id="jira-for-bug-reporting">Jira for Bug Reporting</h2>
+<p>::i About JIRA for issue tracking https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050625#overview</p>
+<p>Issue Tracking
+Reporting</p>
+<p>JIRA and Confluence usually used together.</p>
+<h2 id="confluence">Confluence</h2>
+<p>::i Documenting in Confluence - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050635#overview</p>
+<p>Single Source of Truth - Team Wiki
+JIRA and Confluence usually used together.</p>
+<h2 id="github">GitHub</h2>
+<p>::i Github Issue tracking https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050631#overview</p>
+<h2 id="testrail">TestRail</h2>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050657#overview</p>
+<h2 id="testlodge">TestLodge</h2>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050659#overview</p>
+<h2 id="miro">Miro</h2>
+<p>::i Miro for collaboration - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/21295330#overview</p>
+<p>Meetings, Common whiteboard etc
+Even kanban can be added</p>
+<h2 id="charles-proxy">Charles Proxy</h2>
+<p>::i Charles Proxy for debugging - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14634586#overview</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
