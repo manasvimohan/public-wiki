@@ -349,53 +349,91 @@
 <h1 id="aws-terms">AWS Terms</h1>
 <h2 id="api-gateway">API Gateway</h2>
 <h2 id="load-balancing">Load Balancing</h2>
-<p>ELB - Elastic Load Balancer
-    ALB - Application LB    - HTTP - OSI Layer 7 - Application Layer - https://www.forcepoint.com/cyber-edu/osi-model
-    NLB - Network LB        - Any protocol - OSI Layer 4</p>
+<ul>
+<li>
+<p>ELB - Elastic Load Balancer</p>
+<ul>
+<li>ALB - Application LB    - HTTP - OSI Layer 7 - Application Layer - https://www.forcepoint.com/cyber-edu/osi-model</li>
+<li>NLB - Network LB        - Any protocol - OSI Layer 4</li>
+</ul>
+</li>
+<li>
 <p>ALB Ingress for Kubernetes</p>
+</li>
+</ul>
 <h2 id="vm-and-storage">VM and storage</h2>
-<p>EC2 - VM
-S3  - Storage - CloudFront for caching</p>
+<ul>
+<li>EC2 - VM</li>
+<li>S3  - Storage - CloudFront for caching</li>
+</ul>
 <h2 id="scaling">Scaling</h2>
+<ul>
+<li>
 <p>ASG - Auto Scaling Group - for EC2</p>
-<p>HPA - Horizontal Pod AutoScaler - Here, the PODS in the EC2 gets scaled up
-CA - Cluster Auto Scaling - for Kubernetes PODS in EC2 - The EC2 in which POD running gets scaled up</p>
+</li>
+<li>
+<p>HPA - Horizontal Pod AutoScaler - Here, the PODS in the EC2 gets scaled up</p>
+</li>
+<li>
+<p>CA - Cluster Auto Scaling - for Kubernetes PODS in EC2 - The EC2 in which POD running gets scaled up</p>
+</li>
+<li>
 <p>AWS Fargate - Kubernetes Auto Scaling - For kubernetes but in lambda fasion</p>
+</li>
+<li>
 <p>RS - Replica Set for Pods</p>
-<p>AMI - Amazon Machine Image - For high traffic days, AMI size should be small
-IEM - Infrastructure Event Management   - To manage high traffic day
-RDS Proxy for scaling database, managing connections properly</p>
+</li>
+<li>
+<p>AMI - Amazon Machine Image - For high traffic days, AMI size should be small</p>
+</li>
+<li>IEM - Infrastructure Event Management   - To manage high traffic day</li>
+<li>RDS Proxy for scaling database, managing connections properly</li>
+</ul>
 <h2 id="alternate-to-ec2">Alternate to EC2</h2>
-<p>Lambda - Serverless
-EKS - Elastic Kubernetes - Its inside EC2
-ECS - Elastic Container  - Its inside EC2</p>
+<ul>
+<li>Lambda - Serverless</li>
+<li>EKS - Elastic Kubernetes - Its inside EC2</li>
+<li>ECS - Elastic Container  - Its inside EC2</li>
+</ul>
 <h2 id="security">Security</h2>
-<p>AWS WAF - Web Application Firewall</p>
+<ul>
+<li>AWS WAF - Web Application Firewall</li>
+</ul>
 <h2 id="queue-pubsub-messaging-and-streaming">Queue PubSub Messaging and Streaming</h2>
 <p>-Queue - Pull Based in pipe
-SQS - Simple Queue Service - Messaging
-Amazon MQ - Message Queue</p>
+    - SQS - Simple Queue Service - Messaging
+    - Amazon MQ - Message Queue</p>
 <p>-PubSub - Push Based to topics
-SNS - Simple Notification Service - Push Based
-EventBridge - Push Based - Messaging</p>
-<p>KINESIS Stream - Streaming - Live Data Analysis
-MSK - Managed Service for Kafka - Streaming</p>
+    - SNS - Simple Notification Service - Push Based
+    - EventBridge - Push Based - Messaging</p>
+<ul>
+<li>KINESIS Stream - Streaming - Live Data Analysis</li>
+<li>MSK - Managed Service for Kafka - Streaming</li>
+</ul>
 <h2 id="database">Database</h2>
-<p>AZ - Availability Zone
-HA - High Availability</p>
+<ul>
+<li>AZ - Availability Zone</li>
+<li>HA - High Availability</li>
+</ul>
 <p>-SQL
-Amazon RDS - Relation Database Service
-Aurura</p>
+    - Amazon RDS - Relation Database Service
+    - Aurura</p>
 <p>-NoSQL
-DynamoDB - Has DAX Dynamo Accelerator for cache
-DocumentDB - Like Mongodb
-MCS - Managed Cassandra</p>
+    - DynamoDB - Has DAX Dynamo Accelerator for cache
+    - DocumentDB - Like Mongodb
+    - MCS - Managed Cassandra</p>
 <h2 id="caching">Caching</h2>
-<p>TTL - Time To Leave
-ElastiCache
-ElastiCache for redis and memcache</p>
-<p>DAX for DynamoDB
-CloudFront for S3</p>
+<ul>
+<li>TTL - Time To Leave</li>
+<li>ElastiCache</li>
+<li>
+<p>ElastiCache for redis and memcache</p>
+</li>
+<li>
+<p>DAX for DynamoDB</p>
+</li>
+<li>CloudFront for S3</li>
+</ul>
 <h1 id="monolith-vs-micro-services">Monolith vs Micro Services</h1>
 <h2 id="monolith">Monolith</h2>
 <p>Resource efficient in small scale.
