@@ -66,8 +66,22 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-level="1"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="1"><a href="#sdlc-software-development-life-cycle" class="nav-link">SDLC Software Development Life Cycle</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#test-planning-and-estimation" class="nav-link">Test Planning and Estimation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#test-management" class="nav-link">Test Management</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
@@ -226,15 +240,6 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#test-planning-and-estimation" class="nav-link">Test Planning and Estimation</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#test-management" class="nav-link">Test Management</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-            
             <li class="nav-item" data-level="1"><a href="#development-and-testing-environments" class="nav-link">Development and Testing Environments</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#stages-environments" class="nav-link">Stages/ Environments</a>
@@ -246,7 +251,7 @@
             
             <li class="nav-item" data-level="1"><a href="#back-end-mobile-and-web-testing" class="nav-link">Back end, Mobile and Web testing</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#backend-testing" class="nav-link">Backend Testing</a>
+            <li class="nav-item" data-level="2"><a href="#back-end-testing" class="nav-link">Back-end Testing</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -295,48 +300,107 @@
                     <div class="col-md-9" role="main">
 
 <p>Link - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14062723#overview</p>
+<h1 id="summary">Summary</h1>
+<p>Classification Ways
+    - White Box (Internal known) and Black Box (Internal not known)
+    - Black Box --&gt; Functional (functions etc), Non-Functional (performance, reliability) and Regression
+    - Black Box --&gt; Equivalence, Boundary Wall, Decision Table, State Transition and Use Case
+    - Smoke, Sanity (Surface Level Testing) and Regression (Verification Testing)
+    - Negative Testing, Experience Based Testing, Risk Based (probability of each case)
+    - Experience Based Testing - Error Guessing, Exploratory and Checklist based
+    - Static Testing (Manual review of test cases, code reviews, no code run etc) and Dynamic Testing (Running of code included)</p>
+<p>Important
+    - Bug reporting and life cycle
+    - Test Cases and Checklist
+    - Jira, Confluence, Gihub, Miro, TestRail and TestLodge (Test Management), Charles Proxy/ Wireshark/ Proxyman/ Fiddler (Network)
+    - Development Stages - Development, Testing, Staging, Production 
+    - Testing Activities - Planning, Specification, Execution, Completion
+    - Test Planning - Objectives, Resources and Processes (What to test, How to and How much time to spend)
+    - Test Management - Organisation, Planning and Estimation, Monitoring and Control, Configuration Management, Defect Management</p>
 <h1 id="sdlc-software-development-life-cycle">SDLC Software Development Life Cycle</h1>
-<p>Planning - What we want
-    Identification of the system development
-    Feasibility assessment
-    Creation of project plan
-Defining - How we get what we want
-    Gathering Business Requirements
-    Creating Process Diagrams
-    Performing a detailed analysis
-    Designing of IT infrastructure
-Building - Create what we want
-    Development of IT infra
-    Development of DB and code
-Testing - Did we get what we want?
-    Writing test cases
-    Execution of test cases
-Deploy - Lets start using what we got
-Maintain - Lets get this closer to what we want</p>
+<ul>
+<li>Planning - What we want<ul>
+<li>Identification of the system development</li>
+<li>Feasibility assessment</li>
+<li>Creation of project plan</li>
+</ul>
+</li>
+<li>Defining - How we get what we want<ul>
+<li>Gathering Business Requirements</li>
+<li>Creating Process Diagrams</li>
+<li>Performing a detailed analysis</li>
+<li>Designing of IT infrastructure</li>
+</ul>
+</li>
+<li>Building - Create what we want<ul>
+<li>Development of IT infra</li>
+<li>Development of DB and code</li>
+</ul>
+</li>
+<li>Testing - Did we get what we want?<ul>
+<li>Writing test cases</li>
+<li>Execution of test cases</li>
+</ul>
+</li>
+<li>Deploy - Lets start using what we got</li>
+<li>Maintain - Lets get this closer to what we want</li>
+</ul>
+<h1 id="test-planning-and-estimation">Test Planning and Estimation</h1>
+<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
+<p>Objectives, Resources and Processes for specific test</p>
+<ul>
+<li>What to test</li>
+<li>How to test</li>
+<li>How much time you'll spend to test</li>
+</ul>
+<h2 id="test-management">Test Management</h2>
+<ul>
+<li>Test Organisation</li>
+<li>Test planning and estimation</li>
+<li>Test Monitoring and Control</li>
+<li>Configuration Management</li>
+<li>Defect Management</li>
+</ul>
+<p>::i Test planning activity at 2 min - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
+<p>Entry Criteria - When to start
+Exit Criteria - When to stop</p>
+<p>::i Interesting Slide at 5 min - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
 <h1 id="testing-activities">Testing Activities</h1>
-<p>Test Planning
-    Testing scope
-    Testing activities
-Test Specifications
-    Design test cases - How
-    Build test cases - Implement
-Test Execution - Match expectation. Most important feature test first.
-Test Completion 
-    Check if all activities completed
-    All high level bugs solved
-    Product ready to deliver</p>
+<ul>
+<li>Test Planning<ul>
+<li>Testing scope</li>
+<li>Testing activities</li>
+</ul>
+</li>
+<li>Test Specifications<ul>
+<li>Design test cases - How</li>
+<li>Build test cases - Implement</li>
+</ul>
+</li>
+<li>Test Execution - Match expectation. Most important feature test first.</li>
+<li>Test Completion <ul>
+<li>Check if all activities completed</li>
+<li>All high level bugs solved</li>
+<li>Product ready to deliver</li>
+</ul>
+</li>
+</ul>
 <h1 id="bug-reporting">Bug Reporting</h1>
-<p>Visual Bugs
-Functional Bugs
-Performance Bugs</p>
+<ul>
+<li>Visual Bugs</li>
+<li>Functional Bugs</li>
+<li>Performance Bugs</li>
+</ul>
 <p>Bug Report - Simple and with Photos</p>
 <h1 id="bug-life-cycle-kanban-can-be-used">Bug Life Cycle - KANBAN can be used</h1>
-<p>New Bug
-Assigned
-Active - Reopened - Rejected
-Test
-Verified
-Closed</p>
+<ol>
+<li>New Bug</li>
+<li>Assigned</li>
+<li>Active - Reopened - Rejected</li>
+<li>Test</li>
+<li>Verified</li>
+<li>Closed</li>
+</ol>
 <h1 id="bug-reporting-practice">Bug Reporting Practice</h1>
 <p>::i Templates and all - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14049623#overview</p>
 <h1 id="software-requirement-specification">Software requirement Specification</h1>
@@ -509,26 +573,6 @@ Static testing is manual examination of test case or code reviews.</p>
 - Code
 - User Guides
 - Contracts, project plans, schedules and budgets</p>
-<h1 id="test-planning-and-estimation">Test Planning and Estimation</h1>
-<p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
-<p>Objectives, Resources and Processes for specific test</p>
-<ul>
-<li>What to test</li>
-<li>How to test</li>
-<li>How much time you'll spend to test</li>
-</ul>
-<h2 id="test-management">Test Management</h2>
-<ul>
-<li>Test Organisation</li>
-<li>Test planning and estimation</li>
-<li>Test Monitoring and Control</li>
-<li>Configuration Management</li>
-<li>Defect Management</li>
-</ul>
-<p>::i Test planning activity at 2 min - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
-<p>Entry Criteria - When to start
-Exit Criteria - When to stop</p>
-<p>::i Interesting Slide at 5 min - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050281#overview</p>
 <h1 id="development-and-testing-environments">Development and Testing Environments</h1>
 <p>Theory - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050295#overview
 Practice Questions and Answers - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050307#overview</p>
@@ -541,7 +585,7 @@ Practice Questions and Answers - https://www.udemy.com/course/software-testing-m
 </ol>
 <p>::i Good articles on testing - https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14158767#overview</p>
 <h1 id="back-end-mobile-and-web-testing">Back end, Mobile and Web testing</h1>
-<h2 id="backend-testing">Backend Testing</h2>
+<h2 id="back-end-testing">Back-end Testing</h2>
 <p>https://www.udemy.com/course/software-testing-masterclass-from-novice-to-expert/learn/lecture/14050449#overview</p>
 <p>Presentation Layer - GUI
 Business Layer - API testing
